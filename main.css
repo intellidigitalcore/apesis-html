@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body,
+input {
+    font-family: 'Public Sans', sans-serif;
+}
+
+.right-aside {
+    width: calc(100% - 280px);
+}
+
+.menu-style {
+    @apply flex items-center gap-x-4 py-4 text-sm text-text-100 cursor-pointer;
+}
+
+.menu-active-btn {
+    @apply font-semibold text-primary;
+}
+
+.dropdown-icon-rotaion {
+    transform: rotate(90deg);
+}
+
+.language-select::before {
+    @apply w-3 h-3 absolute -top-[14px] right-[20px] bg-white;
+    content: '';
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.notification-select::before {
+    @apply w-3 h-3 absolute -top-[7px] right-[20px] bg-white;
+    content: '';
+    transform: rotate(45deg);
+}
+
+.profile-select::before {
+    @apply w-3 h-3 absolute -top-[7px] right-[20px] bg-white;
+    content: '';
+    transform: rotate(45deg);
+}
+
+input:focus+label,
+input:valid+label {
+    @apply text-xs text-text-200 -top-[8px] left-[10px] bg-white;
+    padding: 0px 5px 0px 5px;
+}
+
+.input_wrap {
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+.input_wrap label {
+    @apply p-[14px] top-[2px] left-0 absolute;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    pointer-events: none;
+
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.tdata {
+    @apply text-sm font-medium text-text-200 my-3;
+}
+.table-head{
+  @apply text-left text-base font-bold text-text-400;
+}
+
+#chart {
+    height: 350px !important;
+}
+
+
+/*####################
+ admin profile page
+######################*/
+
+.admin-bg-image{
+    background-image: url('../assets/images/user-profile/banner.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-overview h2::after{
+    content: "";
+    @apply w-[170px] h-[2px] absolute -bottom-[1px] left-0 bg-text-100;
+}
+
+.switch {
+    @apply relative inline-block w-9 h-5;
+  }
+  
+  .switch input { 
+    @apply opacity-0 w-0 h-0;
+  }
+  
+  .slider {
+    @apply absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-[#ccc];
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    @apply absolute h-[14px] w-[14px] left-[2px] bottom-[3px] bg-white;
+    content: "";
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #228FF3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #228FF3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* new users  */
+  .steps li {
+    background-color: #858585;
+    width:8px ;
+    height: 8px;
+    border-radius: 50%;
+  }
