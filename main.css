@@ -131,30 +131,27 @@ input[type="text"]:focus {
     transform: translateX(17px);
   }
   
-  /* Rounded sliders */
+  /* Rounded sliders
   .slider.round {
     border-radius: 34px;
   }
   
   .slider.round:before {
     border-radius: 50%;
+  } */
+
+ 
+  .scroller::-webkit-scrollbar {
+      width: 2px;
+  }
+  .scroller::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  .scroller::-webkit-scrollbar-thumb {
+    background-color: #666;
+    outline: 1px solid #eee;
   }
 
-  /* new users  */
-  .steps li {
-    background-color: #858585;
-    width:8px ;
-    height: 8px;
-    border-radius: 50%;
-  }
-
-    .scroller::-webkit-scrollbar {
-        width: 2px;
-    }
-    .scroller::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    }
-    .scroller::-webkit-scrollbar-thumb {
-      background-color: #666;
-      outline: 1px solid #eee;
-    }
+.active-btn{
+  @apply !bg-primary !text-white;
+}
