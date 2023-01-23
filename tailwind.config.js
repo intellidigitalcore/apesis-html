@@ -19,6 +19,8 @@ module.exports = {
         'text-90' : '#858585',
         'text-80' : 'rgba(148, 148, 148, 1)',
         'text-50' : 'rgba(191, 191, 191, 1)',
+        'text-40' : 'rgba(222, 222, 222, 1)',
+        'text-10' : '#FAFAFA',
         'danger' : '#E31A1A', 
         'warning' : '#FFB547', 
         'success' : '#01B574', 

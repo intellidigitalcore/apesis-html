@@ -641,8 +641,28 @@ video {
   z-index: 10;
 }
 
+.z-\[30\]{
+  z-index: 30;
+}
+
+.z-\[100\]{
+  z-index: 100;
+}
+
 .z-\[50\]{
   z-index: 50;
+}
+
+.z-40{
+  z-index: 40;
+}
+
+.z-50{
+  z-index: 50;
+}
+
+.z-\[60\]{
+  z-index: 60;
 }
 
 .m-2{
@@ -760,6 +780,14 @@ video {
 
 .mb-6{
   margin-bottom: 1.5rem;
+}
+
+.mt-7{
+  margin-top: 1.75rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
 }
 
 .mt-11{
@@ -931,6 +959,10 @@ video {
   height: 142px;
 }
 
+.h-14{
+  height: 3.5rem;
+}
+
 .w-\[280px\]{
   width: 280px;
 }
@@ -1017,6 +1049,18 @@ video {
 
 .w-\[45\%\]{
   width: 45%;
+}
+
+.w-\[30\%\]{
+  width: 30%;
+}
+
+.w-\[70\%\]{
+  width: 70%;
+}
+
+.w-\[566px\]{
+  width: 566px;
 }
 
 .w-20{
@@ -1170,16 +1214,21 @@ video {
   row-gap: 1rem;
 }
 
-.gap-y-10{
-  row-gap: 2.5rem;
+.gap-y-3{
+  row-gap: 0.75rem;
 }
 
 .gap-y-6{
   row-gap: 1.5rem;
 }
 
-.gap-y-3{
-  row-gap: 0.75rem;
+.gap-x-\[10px\]{
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+.gap-y-10{
+  row-gap: 2.5rem;
 }
 
 .gap-x-\[25px\]{
@@ -1274,9 +1323,34 @@ video {
   border-color: rgb(191 191 191 / 0.2);
 }
 
+.border-text-50\/30{
+  border-color: rgb(191 191 191 / 0.3);
+}
+
+.border-danger{
+  --tw-border-opacity: 1;
+  border-color: rgb(227 26 26 / var(--tw-border-opacity));
+}
+
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-text-50\/50{
+  border-color: rgb(191 191 191 / 0.5);
+}
+
+.border-text-50\/80{
+  border-color: rgb(191 191 191 / 0.8);
+}
+
+.border-text-400{
+  border-color: rgba(74, 74, 74, 1);
+}
+
+.border-text-300{
+  border-color: rgba(87, 87, 87, 1);
 }
 
 .bg-white{
@@ -1346,6 +1420,23 @@ video {
   background-color: rgb(139 95 247 / var(--tw-bg-opacity));
 }
 
+.bg-text-40\/20{
+  background-color: rgb(222 222 222 / 0.2);
+}
+
+.bg-warning\/20{
+  background-color: rgb(255 181 71 / 0.2);
+}
+
+.bg-text-10{
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+}
+
+.bg-black\/25{
+  background-color: rgb(0 0 0 / 0.25);
+}
+
 .bg-text-primary\/10{
   background-color: rgb(59 59 59 / 0.1);
 }
@@ -1398,12 +1489,12 @@ video {
   padding: 2.5rem;
 }
 
-.p-3{
-  padding: 0.75rem;
-}
-
 .p-6{
   padding: 1.5rem;
+}
+
+.p-3{
+  padding: 0.75rem;
 }
 
 .py-4{
@@ -1446,6 +1537,11 @@ video {
   padding-bottom: 0.25rem;
 }
 
+.py-\[10px\]{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1454,11 +1550,6 @@ video {
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.py-\[10px\]{
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .py-5{
@@ -1479,6 +1570,11 @@ video {
 .px-\[18px\]{
   padding-left: 18px;
   padding-right: 18px;
+}
+
+.px-\[22px\]{
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 .py-10{
@@ -1504,6 +1600,11 @@ video {
 .py-12{
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.py-\[11px\]{
+  padding-top: 11px;
+  padding-bottom: 11px;
 }
 
 .pt-12{
@@ -1577,6 +1678,10 @@ video {
   font-size: 24px;
 }
 
+.text-\[45px\]{
+  font-size: 45px;
+}
+
 .text-\[22px\]{
   font-size: 22px;
 }
@@ -1634,6 +1739,10 @@ video {
   color: rgba(117, 117, 117, 1);
 }
 
+.text-text-40{
+  color: rgba(222, 222, 222, 1);
+}
+
 .text-\[\#4A4A4A\]{
   --tw-text-opacity: 1;
   color: rgb(74 74 74 / var(--tw-text-opacity));
@@ -1684,6 +1793,15 @@ video {
   color: rgba(46, 46, 46, 1);
 }
 
+.text-orange-700{
+  --tw-text-opacity: 1;
+  color: rgb(194 65 12 / var(--tw-text-opacity));
+}
+
+.text-text-50{
+  color: rgba(191, 191, 191, 1);
+}
+
 .text-text-primary{
   color: rgba(59, 59, 59, 1);
 }
@@ -1693,9 +1811,9 @@ video {
   color: rgb(163 163 163 / var(--tw-text-opacity));
 }
 
-.\!text-white{
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+.text-\[\#696F8C\]{
+  --tw-text-opacity: 1;
+  color: rgb(105 111 140 / var(--tw-text-opacity));
 }
 
 .opacity-0{
@@ -1887,9 +2005,9 @@ input[type="text"]:focus {
   height: 350px !important;
 }
 
-/*####################
+/*====================
  admin profile page
-######################*/
+=======================*/
 
 .admin-bg-image{
   background-image: url('../assets/images/user-profile/banner.png');
@@ -1978,10 +2096,29 @@ input:checked + .slider:before {
   outline: 1px solid #eee;
 }
 
+/*================
+ pricing  
+=================*/
+
 .active-btn{
   background-color: rgba(34, 143, 243, 1) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+/*================ 
+ billing  
+=================*/
+
+.invoice-tdata{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: rgba(102, 102, 102, 1);
 }
 
 .placeholder\:font-normal::-moz-placeholder{
@@ -1998,6 +2135,14 @@ input:checked + .slider:before {
 
 .placeholder\:text-text-300::placeholder{
   color: rgba(87, 87, 87, 1);
+}
+
+.placeholder\:text-text-600::-moz-placeholder{
+  color: rgba(46, 46, 46, 1);
+}
+
+.placeholder\:text-text-600::placeholder{
+  color: rgba(46, 46, 46, 1);
 }
 
 .hover\:bg-primary-50:hover{

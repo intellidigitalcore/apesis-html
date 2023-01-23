@@ -81,9 +81,9 @@ input[type="text"]:focus {
 }
 
 
-/*####################
+/*====================
  admin profile page
-######################*/
+=======================*/
 
 .admin-bg-image{
     background-image: url('../assets/images/user-profile/banner.png');
@@ -98,38 +98,38 @@ input[type="text"]:focus {
 
 .switch {
     @apply relative inline-block w-9 h-5;
-  }
+}
   
-  .switch input { 
-    @apply opacity-0 w-0 h-0;
-  }
-  
-  .slider {
-    @apply absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-[#ccc];
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    @apply absolute h-[14px] w-[14px] left-[2px] bottom-[3px] bg-white;
-    content: "";
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #228FF3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #228FF3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(17px);
-    -ms-transform: translateX(17px);
-    transform: translateX(17px);
-  }
+.switch input { 
+  @apply opacity-0 w-0 h-0;
+}
+
+.slider {
+  @apply absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-[#ccc];
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  @apply absolute h-[14px] w-[14px] left-[2px] bottom-[3px] bg-white;
+  content: "";
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #228FF3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #228FF3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
   
   /* Rounded sliders
   .slider.round {
@@ -141,17 +141,28 @@ input[type="text"]:focus {
   } */
 
  
-  .scroller::-webkit-scrollbar {
-      width: 2px;
-  }
-  .scroller::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-  .scroller::-webkit-scrollbar-thumb {
-    background-color: #666;
-    outline: 1px solid #eee;
-  }
+.scroller::-webkit-scrollbar {
+    width: 2px;
+}
+.scroller::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.scroller::-webkit-scrollbar-thumb {
+  background-color: #666;
+  outline: 1px solid #eee;
+}
 
+/*================
+ pricing  
+=================*/
 .active-btn{
   @apply !bg-primary !text-white;
+}
+
+/*================ 
+ billing  
+=================*/
+
+.invoice-tdata {
+  @apply text-text-200 font-medium text-base py-[10px] px-4;
 }
