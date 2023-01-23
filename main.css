@@ -166,3 +166,7 @@ input:checked + .slider:before {
 .invoice-tdata {
   @apply text-text-200 font-medium text-base py-[10px] px-4;
 }
+
+.invoice-form-tdata {
+  @apply text-text-200 font-normal text-sm py-[26px] px-4;
+}
