@@ -170,3 +170,59 @@ input:checked + .slider:before {
 .invoice-form-tdata {
   @apply text-text-200 font-normal text-sm py-[26px] px-4;
 }
+
+.fc-non-business {
+  background-color: white !important;
+}
+
+.fc-today-button.fc-button.fc-button-primary {
+  @apply !bg-success px-5 !outline-none !border-0 relative left-14;
+}
+.fc-prev-button.fc-button.fc-button-primary {
+  position: relative;
+  left: -83px;
+  background-color: white;
+  border: 0px;
+  box-shadow: none;
+}
+.fc-icon-chevron-left::before {
+  color: black;
+}
+.fc-next-button.fc-button.fc-button-primary {
+  background-color: white;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+}
+
+.fc-next-button.fc-button.fc-button-primary:focus-visible,
+.fc-next-button.fc-button.fc-button-primary:not(:disabled):active:focus,
+.fc-next-button.fc-button.fc-button-primary:focus{
+  box-shadow: none;
+  outline: none;
+  border: 0;
+  background-color: white;
+}
+
+.fc-prev-button.fc-button.fc-button-primary:focus-visible,
+.fc-prev-button.fc-button.fc-button-primary:not(:disabled):active:focus,
+.fc-prev-button.fc-button.fc-button-primary:focus{
+  box-shadow: none;
+  outline: none;
+  border: 0;
+  background-color: white;
+}
+
+
+.fc-next-button.fc-button.fc-button-primary:hover,.fc-prev-button.fc-button.fc-button-primary:hover {
+  background-color: white;
+}
+.fc-icon-chevron-right::before {
+  color: black;
+}
+.fc-event-main-frame{
+  @apply text-primary py-[2px] pl-1 ;
+}
+.fc-event.fc-event-draggable.fc-event-resizable.fc-event-start.fc-event-end.fc-event-past.fc-daygrid-event.fc-daygrid-block-event.fc-h-event {
+  @apply !bg-primary/20 text-text-400 border-none;
+}
