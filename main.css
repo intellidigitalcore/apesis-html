@@ -52,7 +52,7 @@ input:valid+label {
     padding: 0px 5px 0px 5px;
 }
 
-.input_wrap {
+.input_wrap , .new-user-input, .product-add-input {
     position: relative;
 }
 
@@ -64,12 +64,24 @@ input:valid+label {
     pointer-events: none;
 }
 
-.new-user-input {
-  position: relative;
-}
-
 .new-user-input label {
   @apply p-[14px] top-0 left-0 absolute;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  pointer-events: none;
+}
+
+.product-add-input label {
+  @apply p-[14px] top-1 left-0 absolute;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  pointer-events: none;
+}
+
+.product-select-input label {
+  @apply -top-[10px] left-[8px] px-[6px] absolute;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
@@ -108,7 +120,7 @@ input[type="text"]:focus {
 }
 
 .switch {
-    @apply relative inline-block w-9 h-5;
+    @apply relative inline-block w-9 h-5 rounded-full;
 }
   
 .switch input { 
@@ -116,13 +128,13 @@ input[type="text"]:focus {
 }
 
 .slider {
-  @apply absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-[#ccc];
+  @apply absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-[#ccc] rounded-[20px];
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 .slider:before {
-  @apply absolute h-[14px] w-[14px] left-[2px] bottom-[3px] bg-white;
+  @apply absolute h-[14px] w-[14px] left-[2px] bottom-[3px] bg-white rounded-[20px];
   content: "";
   -webkit-transition: .4s;
   transition: .4s;
@@ -245,4 +257,42 @@ input:checked + .slider:before {
 
 .kanban-image img {
   margin-left: -10px;
+}
+
+/*============ 
+  kanban  
+==============*/ 
+
+.tox-notification.tox-notification--in.tox-notification--warning {
+  display: none;
+}
+
+.tox .tox-statusbar {
+  opacity: 0;
+}
+
+.tox.tox-tinymce {
+  height: 112px !important;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 4px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+  @apply text-primary bg-primary/10 !flex !flex-row-reverse gap-x-[6px] border-0 text-sm;
+}
+
+.select2-selection.select2-selection--multiple {
+  @apply !border-0 ;
+}
+
+.select2-search.select2-search--inline{
+  @apply !bg-white ;
+}
+
+.select2-selection__choice__remove {
+  @apply !text-primary;
+}
+
+.select2-selection__rendered {
+  @apply flex flex-row gap-x-2;
 }
