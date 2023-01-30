@@ -639,13 +639,13 @@
                             <!-- first col  -->
                             <li class="column to-do-column w-1/3 p-6 rounded-[12px]">
                                 <div class="column-header flex items-center justify-between mb-8">
-                                <h4 class="text-[24px] font-bold text-text-400">Backlog</h4>
-                                <button class="px-8 py-[10px] bg-primary/10 rounded-[10px]">
-                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 3.5V12.5" stroke="#1866AD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M13.7648 8H4.23535" stroke="#1866AD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>                                    
-                                </button>
+                                    <h4 class="text-[24px] font-bold text-text-400">Backlog</h4>
+                                    <button class="px-8 py-[10px] bg-primary/10 rounded-[10px]">
+                                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 3.5V12.5" stroke="#1866AD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M13.7648 8H4.23535" stroke="#1866AD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                    
+                                    </button>
                                 </div>
 
                                 <ul class="task-list flex flex-col gap-y-10" id="to-do">
@@ -804,17 +804,108 @@
                             </li>
                       
                             <!-- 3rd column  -->
-                            <li class="column done-column w-1/3">
+                            <li class="column done-column w-1/3 p-6 rounded-[12px]">
                                 <div class="column-header">
-                                <h4>Done</h4>
+                                    <div class="column-header flex items-center justify-between mb-8">
+                                        <h4 class="text-[24px] font-bold text-text-400">Backlog</h4>
+                                        <button class="px-8 py-[10px] bg-primary/10 rounded-[10px]">
+                                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 3.5V12.5" stroke="#1866AD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M13.7648 8H4.23535" stroke="#1866AD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                    
+                                        </button>
+                                    </div>
                                 </div>
-                                <ul class="task-list" id="done">
-                                <li class="task">
-                                    <p>Ideation</p>
-                                </li>
-                                <li class="task">
-                                    <p>Sketches</p>
-                                </li>
+                                <ul class="task-list flex flex-col gap-y-10" id="done">
+
+                                    <li class="task p-6 rounded-xl">
+                                        <div class="flex items-center justify-between">
+                                            <h3 class="text-text-400 text-base font-medium">Copy/Paste elements between pages</h3>
+                                            <button>
+                                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.96641 18.5629H4.125C3.94267 18.5629 3.7678 18.4905 3.63887 18.3615C3.50994 18.2326 3.4375 18.0577 3.4375 17.8754V14.034C3.43719 13.9447 3.45449 13.8563 3.4884 13.7737C3.52232 13.6911 3.57219 13.616 3.63516 13.5528L13.9477 3.24026C14.0116 3.1753 14.0879 3.12371 14.172 3.0885C14.2561 3.05329 14.3463 3.03516 14.4375 3.03516C14.5287 3.03516 14.6189 3.05329 14.703 3.0885C14.7871 3.12371 14.8634 3.1753 14.9273 3.24026L18.7602 7.07307C18.8251 7.13704 18.8767 7.21329 18.9119 7.29739C18.9471 7.38148 18.9653 7.47174 18.9653 7.56291C18.9653 7.65408 18.9471 7.74434 18.9119 7.82844C18.8767 7.91253 18.8251 7.98879 18.7602 8.05276L8.44766 18.3653C8.38438 18.4282 8.3093 18.4781 8.22672 18.512C8.14414 18.5459 8.05568 18.5632 7.96641 18.5629V18.5629Z" stroke="#757575" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M11.6875 5.5L16.5 10.3125" stroke="#757575" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <p class="text-sm text-text-80 mt-3">We can only copy/paste elements (or group of elements) in the same page, which is quite limited.</p>
+                                        <div class="mt-7 flex items-center justify-between">
+                                            <div class="kanban-image flex items-center ml-[10px]">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people1.png" alt="">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people2.png" alt="">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people3.png" alt="">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people4.png" alt="">
+                                            </div>
+                                            <button class="text-[11px] px-4 py-[6px] bg-success text-white rounded-[4px] font-medium">DONE</button>
+                                        </div>
+                                    </li>
+
+                                    <li class="task p-6 rounded-xl">
+                                        <div class="flex items-center justify-between">
+                                            <h3 class="text-text-400 text-base font-medium">Remove Extra DIV for each container added</h3>
+                                            <button>
+                                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.96641 18.5629H4.125C3.94267 18.5629 3.7678 18.4905 3.63887 18.3615C3.50994 18.2326 3.4375 18.0577 3.4375 17.8754V14.034C3.43719 13.9447 3.45449 13.8563 3.4884 13.7737C3.52232 13.6911 3.57219 13.616 3.63516 13.5528L13.9477 3.24026C14.0116 3.1753 14.0879 3.12371 14.172 3.0885C14.2561 3.05329 14.3463 3.03516 14.4375 3.03516C14.5287 3.03516 14.6189 3.05329 14.703 3.0885C14.7871 3.12371 14.8634 3.1753 14.9273 3.24026L18.7602 7.07307C18.8251 7.13704 18.8767 7.21329 18.9119 7.29739C18.9471 7.38148 18.9653 7.47174 18.9653 7.56291C18.9653 7.65408 18.9471 7.74434 18.9119 7.82844C18.8767 7.91253 18.8251 7.98879 18.7602 8.05276L8.44766 18.3653C8.38438 18.4282 8.3093 18.4781 8.22672 18.512C8.14414 18.5459 8.05568 18.5632 7.96641 18.5629V18.5629Z" stroke="#757575" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M11.6875 5.5L16.5 10.3125" stroke="#757575" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <p class="text-sm text-text-80 mt-3">I still hope there won't have an extra div for each container we added. It should be something for better styling...</p>
+                                        <div class="mt-7 flex items-center justify-between">
+                                            <div class="kanban-image flex items-center ml-[10px]">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people1.png" alt="">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people2.png" alt="">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people3.png" alt="">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people4.png" alt="">
+                                            </div>
+                                            <button class="text-[11px] px-4 py-[6px] bg-success text-white rounded-[4px] font-medium">DONE</button>
+                                        </div>
+                                    </li>
+
+                                    <li class="task p-6 rounded-xl">
+                                        <div class="flex items-center justify-between">
+                                            <h3 class="text-text-400 text-base font-medium">Add Figma files for the Library design blocks</h3>
+                                            <button>
+                                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.96641 18.5629H4.125C3.94267 18.5629 3.7678 18.4905 3.63887 18.3615C3.50994 18.2326 3.4375 18.0577 3.4375 17.8754V14.034C3.43719 13.9447 3.45449 13.8563 3.4884 13.7737C3.52232 13.6911 3.57219 13.616 3.63516 13.5528L13.9477 3.24026C14.0116 3.1753 14.0879 3.12371 14.172 3.0885C14.2561 3.05329 14.3463 3.03516 14.4375 3.03516C14.5287 3.03516 14.6189 3.05329 14.703 3.0885C14.7871 3.12371 14.8634 3.1753 14.9273 3.24026L18.7602 7.07307C18.8251 7.13704 18.8767 7.21329 18.9119 7.29739C18.9471 7.38148 18.9653 7.47174 18.9653 7.56291C18.9653 7.65408 18.9471 7.74434 18.9119 7.82844C18.8767 7.91253 18.8251 7.98879 18.7602 8.05276L8.44766 18.3653C8.38438 18.4282 8.3093 18.4781 8.22672 18.512C8.14414 18.5459 8.05568 18.5632 7.96641 18.5629V18.5629Z" stroke="#757575" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M11.6875 5.5L16.5 10.3125" stroke="#757575" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <p class="text-sm text-text-80 mt-3">I want to present my clients the Figma files first, so it would be great if you add those as well, more manual downloads...</p>
+                                        <div class="mt-7 flex items-center justify-between">
+                                            <div class="kanban-image flex items-center ml-[10px]">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people1.png" alt="">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people2.png" alt="">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people3.png" alt="">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people4.png" alt="">
+                                            </div>
+                                            <button class="text-[11px] px-4 py-[6px] bg-success text-white rounded-[4px] font-medium">DONE</button>
+                                        </div>
+                                    </li>
+
+                                    <li class="task p-6 rounded-xl">
+                                        <div class="flex items-center justify-between">
+                                            <h3 class="text-text-400 text-base font-medium">Change Images Dimention</h3>
+                                            <button>
+                                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.96641 18.5629H4.125C3.94267 18.5629 3.7678 18.4905 3.63887 18.3615C3.50994 18.2326 3.4375 18.0577 3.4375 17.8754V14.034C3.43719 13.9447 3.45449 13.8563 3.4884 13.7737C3.52232 13.6911 3.57219 13.616 3.63516 13.5528L13.9477 3.24026C14.0116 3.1753 14.0879 3.12371 14.172 3.0885C14.2561 3.05329 14.3463 3.03516 14.4375 3.03516C14.5287 3.03516 14.6189 3.05329 14.703 3.0885C14.7871 3.12371 14.8634 3.1753 14.9273 3.24026L18.7602 7.07307C18.8251 7.13704 18.8767 7.21329 18.9119 7.29739C18.9471 7.38148 18.9653 7.47174 18.9653 7.56291C18.9653 7.65408 18.9471 7.74434 18.9119 7.82844C18.8767 7.91253 18.8251 7.98879 18.7602 8.05276L8.44766 18.3653C8.38438 18.4282 8.3093 18.4781 8.22672 18.512C8.14414 18.5459 8.05568 18.5632 7.96641 18.5629V18.5629Z" stroke="#757575" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M11.6875 5.5L16.5 10.3125" stroke="#757575" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <p class="text-sm text-text-80 mt-3">I still hope there won't have an extra div for each container we added. It should be something for better styling...</p>
+                                        <div class="mt-7 flex items-center justify-between">
+                                            <div class="kanban-image flex items-center ml-[10px]">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people1.png" alt="">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people2.png" alt="">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people3.png" alt="">
+                                                <img class="h-6 w-6 rounded-full" src="./../assets/images/kanban/people4.png" alt="">
+                                            </div>
+                                            <button class="text-[11px] px-4 py-[6px] bg-primary text-white rounded-[4px] font-medium">IN REVIEW</button>
+                                        </div>
+                                    </li>
+
                                 </ul>
                             </li>
 
