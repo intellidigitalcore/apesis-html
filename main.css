@@ -95,6 +95,9 @@ input[type="text"]:focus {
 .tdata {
     @apply text-sm font-medium text-text-200 my-3;
 }
+.order-tdata{
+    @apply text-sm font-medium text-text-200 py-3 px-4;
+}
 .table-head{
   @apply text-left text-base font-bold text-text-400;
 }
@@ -153,16 +156,6 @@ input:checked + .slider:before {
   -ms-transform: translateX(17px);
   transform: translateX(17px);
 }
-  
-  /* Rounded sliders
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  } */
-
  
 .scroller::-webkit-scrollbar {
     width: 2px;
