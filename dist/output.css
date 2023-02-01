@@ -1129,6 +1129,10 @@ video {
   margin-top:110px;
 }
 
+.-mt-\[60px\]{
+  margin-top:-60px;
+}
+
 .inline-block{
   display:inline-block;
 }
@@ -1726,6 +1730,10 @@ video {
 
 .rounded-\[6px\]{
   border-radius:6px;
+}
+
+.rounded-lg{
+  border-radius:0.5rem;
 }
 
 .\!border-0{
