@@ -265,9 +265,10 @@ input:checked + .slider:before {
 }
 
 .tox.tox-tinymce {
-  height: 112px !important;
-  border: 1px solid rgb(226, 226, 226);
+  height: 122px !important;
+  border: 1px solid #ebeaea;
   border-radius: 4px !important;
+  color: green !important;
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
@@ -288,4 +289,11 @@ input:checked + .slider:before {
 
 .select2-selection__rendered {
   @apply flex flex-row gap-x-2;
+}
+
+.select2-search__field {
+  border: 0px solid white !important;
+}
+.select2-search__field {
+  width: 220px !important;
 }
