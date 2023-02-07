@@ -19,7 +19,7 @@
                 </div>
 
                 <!-- registration form  -->
-                <div class="registration-form p-10 w-[504px] text-center bg-white shadow-md rounded-[12px] -mt-[110px]">
+                <div id="registration-form" class="p-10 w-[504px] text-center bg-white shadow-md rounded-[12px] -mt-[110px]">
     
                     <h3 class="text-center text-[32px] font-bold text-text-500">Get started with Apesis</h3>
                     <p class="text-text-100  font-base">Enter your details below to register</p>
@@ -61,7 +61,7 @@
                         </button>
                     </div>
     
-                    <div class="registration-form mt-14 flex flex-col gap-y-6">
+                    <div class="mt-14 flex flex-col gap-y-6">
                         <div class="input_wrap">
                             <input class="outline-none w-full h-[56px] border p-4 rounded-[4px] pl-3 text-sm text-text-300 placeholder:text-text-300 border-text-50" type="text" required>
                             <label class="text-base text-text-100">Enter your name</label>
@@ -84,27 +84,27 @@
                                 </svg>
                             </span>
                         </div>
-                        <button class="text-sm font-medium h-10 mt-2 w-full bg-primary text-white">Register</button>
+                        <button id="register-btn" class="text-sm font-medium h-10 mt-2 w-full bg-primary text-white">Register</button>
                         <p class="text-text-300 text-sm">Already have an account?  <span class="text-primary">Login here</span></p>
                     </div>
                 </div>
 
                 <!-- verification code  -->
-                <div class="p-10 w-[504px] text-center bg-white shadow-md rounded-[12px] hidden">
+                <div id="verfication-form" class="p-10 w-[504px] text-center bg-white shadow-md rounded-[12px] hidden">
                     <h3 class="text-center text-[32px] font-bold text-text-500">Account Verification</h3>
                     <p class="text-text-100 font-medium text-base">We have sent you 4 digit code to your  <br> ro***t@gmail.co </p>
                     <div class="flex items-center justify-center gap-x-6 my-10">
-                        <input class="w-16 h-16 border outline-none rounded-[4px] p-4" type="text">
-                        <input class="w-16 h-16 border outline-none rounded-[4px] p-4" type="text">
-                        <input class="w-16 h-16 border outline-none rounded-[4px] p-4" type="text">
-                        <input class="w-16 h-16 border outline-none rounded-[4px] p-4" type="text">
+                        <input id="input-field-1" class="w-16 h-16 border outline-none rounded-[4px] p-4" type="text" min="0" max="9">
+                        <input id="input-field-2" class="w-16 h-16 border outline-none rounded-[4px] p-4" type="text" min="0" max="9">
+                        <input id="input-field-3" class="w-16 h-16 border outline-none rounded-[4px] p-4" type="text" min="0" max="9">
+                        <input id="input-field-4" class="w-16 h-16 border outline-none rounded-[4px] p-4" type="text" min="0" max="9">
                     </div>
-                    <button class="text-sm font-medium h-10 mt-2 w-full bg-inactive text-text-300">Verify Account</button>
+                    <button id="submit-button" class="text-sm font-medium h-10 mt-2 w-full bg-inactive text-text-300">Verify Account</button>
                     <p class="text-text-300 text-base mt-4">Didn’t get a code? <span class="text-primary"> Click to resend</span></p>
                 </div>
 
                  <!--after verification  -->
-                <div class="p-10 w-[504px] text-center bg-white shadow-md rounded-[12px] mt-5 hidden">
+                <div id="after-verification" class="p-10 w-[504px] text-center bg-white shadow-md rounded-[12px] mt-5 hidden">
                     <div class="flex justify-center">
                         <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M54.375 34.125L38.625 49.875L30.75 42" stroke="#418341" stroke-width="3.9375" stroke-linecap="round" stroke-linejoin="round"/>
@@ -114,7 +114,9 @@
                     <h3 class="text-center text-[32px] font-bold text-text-500 mt-6">Successfully Joined!</h3>
                     <p class="text-text-100 font-medium text-base mt-1">Thanks For joining with Apesis latest software</p>
                    
-                    <button class="text-sm font-medium h-10 mt-12 w-full bg-primary text-white">Back to login</button>
+                    <a href="./login.html">
+                        <button class="text-sm font-medium h-10 mt-12 w-full bg-primary text-white">Back to login</button>
+                    </a>
                     
                 </div>
             </div>
@@ -126,5 +128,36 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="./../assets/js/custom/accountSettings.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            const $inputField1 = $("#input-field-1");
+            const $inputField2 = $("#input-field-2");
+            const $inputField3 = $("#input-field-3");
+            const $inputField4 = $("#input-field-4");
+            const $submitButton = $("#submit-button");
+            
+
+            $("#register-btn").click(function(e){
+                $("#registration-form").hide();
+                $("#verfication-form").show();
+            })
+
+            $inputField1.add($inputField2).add($inputField3).add($inputField4).on("input", function() {
+                if ($inputField1.val().length > 0 && $inputField2.val().length > 0 && $inputField3.val().length > 0 && $inputField4.val().length > 0) {
+                    $submitButton.prop("disabled", false);
+                    $submitButton.addClass("!bg-primary !text-white");
+                } else {
+                    $submitButton.removeClass("!bg-primary !text-white");
+                    $submitButton.prop("disabled", true);
+                }
+            });
+
+            $("#submit-button").click(function(e){
+                $("#verfication-form").hide();
+                $("#after-verification").show();
+            })
+        }); 
+    </script>
 </body>
 </html>

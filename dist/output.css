@@ -1576,6 +1576,12 @@ video {
   list-style-type:disc;
 }
 
+.appearance-none{
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+}
+
 .grid-cols-4{
   grid-template-columns:repeat(4, minmax(0, 1fr));
 }
@@ -2510,6 +2516,11 @@ video {
   color:rgb(163 163 163 / var(--tw-text-opacity));
 }
 
+.\!text-white{
+  --tw-text-opacity:1 !important;
+  color:rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
 .opacity-0{
   opacity:0;
 }
@@ -2585,6 +2596,18 @@ video {
 body,
 input {
   font-family: 'Public Sans', sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .right-aside {
