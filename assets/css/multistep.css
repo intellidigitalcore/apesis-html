@@ -52,7 +52,7 @@
 
 
 #progressbar {
-    @apply py-10 bg-text-40/50;
+    @apply py-10 bg-text-10;
   margin-bottom: 30px;
   overflow: hidden;
   counter-reset: step;

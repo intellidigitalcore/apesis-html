@@ -259,7 +259,7 @@ input:checked + .slider:before {
 .tox-notification.tox-notification--in.tox-notification--warning {
   display: none;
 }
-
+ 
 .tox .tox-statusbar {
   opacity: 0;
 }

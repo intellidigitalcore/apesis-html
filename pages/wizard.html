@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apesis - Add products</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" />
+    <title>Apesis - Wizard</title>
     <link rel="stylesheet" href="../dist/output.css">
-
 </head>
 <body>
-
     <main class="bg-[#F5F5F5] h-full w-full">
 
         <!-- left menu  -->
@@ -640,91 +637,97 @@
                 <!-- contents  -->
                 <div class="">
                     <div class="w-[1032px] bg-white mx-auto mt-[70px] rounded-3xl">
+
+
                         <!-- steps  -->
+
+                        
                         <form class="p-10 bg-white w-full flex flex-col items-center rounded-3xl" id="msform">
+
                             <!-- progressbar -->
-                            <ul class="w-full" id="progressbar">
-                                <li class="active">
-                                    <span class="mx-auto h-6 w-6 checkmark">
-                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10.7351 18.0009C10.4579 18 10.1936 17.8841 10.0051 17.6809L5.14509 12.5109C4.76677 12.1077 4.78692 11.4742 5.19009 11.0959C5.59326 10.7176 6.22677 10.7377 6.60509 11.1409L10.7251 15.5309L19.1351 6.33092C19.3676 6.04133 19.7415 5.90448 20.1061 5.97552C20.4706 6.04656 20.7658 6.31379 20.8726 6.66951C20.9794 7.02522 20.8802 7.41083 20.6151 7.67092L11.4751 17.6709C11.2884 17.8778 11.0238 17.9975 10.7451 18.0009H10.7351Z" fill="#228FF3"/>
-                                        </svg>
-                                    </span>
-                                    <span class="dot h-6 w-6 flex items-center justify-center"></span>
-                                    <span class="block mt-6">Product Info</span>
-                                </li>
-                                <li>
-                                    <span class="mx-auto h-6 w-6 checkmark">
-                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10.7351 18.0009C10.4579 18 10.1936 17.8841 10.0051 17.6809L5.14509 12.5109C4.76677 12.1077 4.78692 11.4742 5.19009 11.0959C5.59326 10.7176 6.22677 10.7377 6.60509 11.1409L10.7251 15.5309L19.1351 6.33092C19.3676 6.04133 19.7415 5.90448 20.1061 5.97552C20.4706 6.04656 20.7658 6.31379 20.8726 6.66951C20.9794 7.02522 20.8802 7.41083 20.6151 7.67092L11.4751 17.6709C11.2884 17.8778 11.0238 17.9975 10.7451 18.0009H10.7351Z" fill="#228FF3"/>
-                                        </svg>
-                                    </span>
-                                    <span class="dot h-6 w-6 flex items-center justify-center"></span>
-                                    <span class="block mt-6">Media</span>
-                                </li>
-                                <li>
-                                    <span class="mx-auto h-6 w-6 checkmark">
-                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10.7351 18.0009C10.4579 18 10.1936 17.8841 10.0051 17.6809L5.14509 12.5109C4.76677 12.1077 4.78692 11.4742 5.19009 11.0959C5.59326 10.7176 6.22677 10.7377 6.60509 11.1409L10.7251 15.5309L19.1351 6.33092C19.3676 6.04133 19.7415 5.90448 20.1061 5.97552C20.4706 6.04656 20.7658 6.31379 20.8726 6.66951C20.9794 7.02522 20.8802 7.41083 20.6151 7.67092L11.4751 17.6709C11.2884 17.8778 11.0238 17.9975 10.7451 18.0009H10.7351Z" fill="#228FF3"/>
-                                        </svg>
-                                    </span>
-                                    <span class="dot h-6 w-6 flex items-center justify-center"></span>
-                                    <span class="block mt-6">Social</span>
-                                </li>
-                                <li>
-                                    <span class="mx-auto h-6 w-6 checkmark">
-                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10.7351 18.0009C10.4579 18 10.1936 17.8841 10.0051 17.6809L5.14509 12.5109C4.76677 12.1077 4.78692 11.4742 5.19009 11.0959C5.59326 10.7176 6.22677 10.7377 6.60509 11.1409L10.7251 15.5309L19.1351 6.33092C19.3676 6.04133 19.7415 5.90448 20.1061 5.97552C20.4706 6.04656 20.7658 6.31379 20.8726 6.66951C20.9794 7.02522 20.8802 7.41083 20.6151 7.67092L11.4751 17.6709C11.2884 17.8778 11.0238 17.9975 10.7451 18.0009H10.7351Z" fill="#228FF3"/>
-                                        </svg>
-                                    </span>
-                                    <span class="dot h-6 w-6 flex items-center justify-center"></span>
-                                    <span class="block mt-6">Pricing</span>
-                                </li>
-                            </ul>
+                            <div class="mb-10">
+                                <h3 class="text-2xl font-bold text-text-500">Build Your Profile</h3>
+                                <p class="text-text-50 text-base font-medium">This information will let us know more about you.</p>
+                            </div>
+
+                            <div class="w-full">
+                                <ul class="w-full flex justify-center" id="progressbar">
+                                    <li class="active">
+                                        <span class="mx-auto h-6 w-6 checkmark">
+                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.7351 18.0009C10.4579 18 10.1936 17.8841 10.0051 17.6809L5.14509 12.5109C4.76677 12.1077 4.78692 11.4742 5.19009 11.0959C5.59326 10.7176 6.22677 10.7377 6.60509 11.1409L10.7251 15.5309L19.1351 6.33092C19.3676 6.04133 19.7415 5.90448 20.1061 5.97552C20.4706 6.04656 20.7658 6.31379 20.8726 6.66951C20.9794 7.02522 20.8802 7.41083 20.6151 7.67092L11.4751 17.6709C11.2884 17.8778 11.0238 17.9975 10.7451 18.0009H10.7351Z" fill="#228FF3"/>
+                                            </svg>
+                                        </span>
+                                        <span class="dot h-6 w-6 flex items-center justify-center"></span>
+                                        <span class="block mt-6">About</span>
+                                    </li>
+                                    <li>
+                                        <span class="mx-auto h-6 w-6 checkmark">
+                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.7351 18.0009C10.4579 18 10.1936 17.8841 10.0051 17.6809L5.14509 12.5109C4.76677 12.1077 4.78692 11.4742 5.19009 11.0959C5.59326 10.7176 6.22677 10.7377 6.60509 11.1409L10.7251 15.5309L19.1351 6.33092C19.3676 6.04133 19.7415 5.90448 20.1061 5.97552C20.4706 6.04656 20.7658 6.31379 20.8726 6.66951C20.9794 7.02522 20.8802 7.41083 20.6151 7.67092L11.4751 17.6709C11.2884 17.8778 11.0238 17.9975 10.7451 18.0009H10.7351Z" fill="#228FF3"/>
+                                            </svg>
+                                        </span>
+                                        <span class="dot h-6 w-6 flex items-center justify-center"></span>
+                                        <span class="block mt-6">Account</span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span class="mx-auto h-6 w-6 checkmark">
+                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.7351 18.0009C10.4579 18 10.1936 17.8841 10.0051 17.6809L5.14509 12.5109C4.76677 12.1077 4.78692 11.4742 5.19009 11.0959C5.59326 10.7176 6.22677 10.7377 6.60509 11.1409L10.7251 15.5309L19.1351 6.33092C19.3676 6.04133 19.7415 5.90448 20.1061 5.97552C20.4706 6.04656 20.7658 6.31379 20.8726 6.66951C20.9794 7.02522 20.8802 7.41083 20.6151 7.67092L11.4751 17.6709C11.2884 17.8778 11.0238 17.9975 10.7451 18.0009H10.7351Z" fill="#228FF3"/>
+                                            </svg>
+                                        </span>
+                                        <span class="dot h-6 w-6 flex items-center justify-center"></span>
+                                        <span class="block mt-6">Address</span>
+                                    </li>
+                                </ul>
+                            </div>
 
                             <!-- fieldsets -->
+
+                            <!-- step 01  -->
                             <fieldset>
-                                <h3 class="text-[24px] font-semibold text-text-300 text-left">Product Information</h3>
-                                <div class="mt-6 flex gap-x-6 mb-3">
-                                    <div class="flex items-center gap-x-6 w-1/2 flex-col">
-                                        <div class="new-user-input w-full">
-                                            <input class="w-full h-[48px] outline-none border p-4 text-sm" type="text" required>
-                                            <label class="text-sm text-text-100">Product Name</label>
-                                        </div>
-                                        <div class="w-full">
-                                            <h3 class="text-text-300 font-normal text-sm text-left">Description (optional) </h3>
-                                        
-                                            <div class="h-[112px] mt-3">
-                                                <textarea class="h-[112px] scroll-0 border" id="basic-example" name="content" placeholder="Write product description... "> </textarea>
-                                            </div>
+
+                                <div class="flex gap-x-6 mb-4 items-center">
+                                    <div class="flex w-1/6">
+                                        <div class="w-[82px] h-[82px] relative">
+                                            <img class="rounded-[4px]" src="./../assets/images/wiz.png" alt="">
+                                            <label for="upload-photo" class="p-1 bg-primary absolute right-2 bottom-2 rounded-[4px] cursor-pointer">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.79375 13.4999H3C2.86739 13.4999 2.74022 13.4473 2.64645 13.3535C2.55268 13.2597 2.5 13.1326 2.5 12.9999V10.2062C2.49978 10.1413 2.51236 10.0769 2.53702 10.0169C2.56169 9.95682 2.59796 9.90222 2.64375 9.85619L10.1438 2.3562C10.1903 2.30895 10.2457 2.27144 10.3069 2.24583C10.3681 2.22022 10.4337 2.20703 10.5 2.20703C10.5663 2.20703 10.632 2.22022 10.6931 2.24583C10.7543 2.27144 10.8097 2.30895 10.8563 2.3562L13.6438 5.1437C13.691 5.19022 13.7285 5.24568 13.7541 5.30684C13.7797 5.368 13.7929 5.43364 13.7929 5.49995C13.7929 5.56625 13.7797 5.63189 13.7541 5.69305C13.7285 5.75421 13.691 5.80967 13.6438 5.85619L6.14375 13.3562C6.09773 13.402 6.04313 13.4383 5.98307 13.4629C5.92301 13.4876 5.85868 13.5002 5.79375 13.4999V13.4999Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M8.5 4L12 7.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>    
+                                            </label>
+                                            <input class="opacity-0 absolute -z-[10]" type="file" name="photo" id="upload-photo" />
                                         </div>
                                     </div>
 
-                                    <div class="w-1/2 flex flex-col gap-y-3">
-                                        <!-- weight - collection  -->
-                                        <div class="product-add-input w-full">
-                                            <input class="w-full h-[56px] outline-none border p-4 text-sm rounded-[4px]"
-                                                type="number" placeholder="80">
-                                            <label class="text-sm text-text-100">Weight</label>
-                                        </div>
+                                    <div class="w-5/6 flex flex-col gap-y-3">
 
-                                        <div class="product-select-input px-3 border border-[#BFBFBF] h-[56px] flex items-center relative rounded-[4px] w-full">
-                                            <select class="w-full bg-white text-text-300 text-sm h-[45px] !border-0 mt-2" name="" id="">
-                                                <option value="">Woman Collection</option>
-                                                <option value="">Men Collection </option>
-                                                <option value="">Baby Collections</option>
-                                            </select>
-                                            <label class="text-xs text-text-100 bg-white">Category</label>
+                                        <h3 class="text-[24px] font-semibold text-text-300">Let's start with the basic information</h3>
+                                        <p class="mt-1 text-text-50 text-sm font-medium ">Let us know your name and email address. Use an address you don't mind other users contacting you at</p>
+                                        
+                                        
+                                        <div class="">
+                                            <div class="flex items-center gap-x-6 mt-6">
+                                                <div class="product-add-input w-full">
+                                                    <input class="w-full h-[56px] outline-none border p-4 text-sm rounded-[4px]"
+                                                        type="text" required >
+                                                    <label class="text-sm text-text-100">First Name</label>
+                                                </div>
+                                                <div class="product-add-input w-full">
+                                                    <input class="w-full h-[56px] outline-none border p-4 text-sm rounded-[4px]"
+                                                        type="text" required>
+                                                    <label class="text-sm text-text-100">Last Name</label>
+                                                </div>
+                                            </div>
+                                            <div class="product-add-input w-full mt-2">
+                                                <input class="w-full h-[56px] outline-none border p-4 text-sm rounded-[4px]"
+                                                    type="text" required>
+                                                <label class="text-sm text-text-100">Email Address</label>
+                                            </div>
                                         </div>
-
-                                        <div class="product-select-input px-3 border border-[#BFBFBF] h-[56px] flex items-center relative rounded-[4px] w-full mt-2">
-                                            <select class="w-full bg-white text-text-300 text-sm h-[45px] !border-0 mt-2" name="" id="">
-                                                <option value="">L</option>
-                                                <option value="">XL</option>
-                                                <option value="">XXL</option>
-                                            </select>
-                                            <label class="text-xs text-text-100 bg-white">Size</label>
-                                        </div>
+                                        
                                     </div>
 
                                  
@@ -735,104 +738,91 @@
 
                             </fieldset>
                            
-                            <fieldset>
-                                <h3 class="text-[24px] font-semibold text-text-300 text-left">Product Image</h3>
-                                <div class="flex flex-col gap-y-3 mt-5 mb-4">
-                                    <div class="border rounded-[6px]">
-                                        <label class="flex items-center gap-x-3 justify-center py-[70px]" for="upload-photo">
-                                            <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 26.5H9C7.14348 26.5 5.36301 25.7625 4.05025 24.4497C2.7375 23.137 2 21.3565 2 19.5C2 17.6435 2.7375 15.863 4.05025 14.5503C5.36301 13.2375 7.14348 12.5 9 12.5C9.58566 12.4998 10.1692 12.5711 10.7375 12.7125" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M10 16.5C10 14.9155 10.3765 13.3536 11.0986 11.9432C11.8206 10.5327 12.8675 9.31406 14.1529 8.38758C15.4383 7.46109 16.9255 6.85333 18.4919 6.61437C20.0583 6.37541 21.6591 6.5121 23.1623 7.01317C24.6655 7.51424 26.0281 8.36534 27.1378 9.49635C28.2476 10.6274 29.0727 12.0059 29.5451 13.5183C30.0176 15.0308 30.1239 16.6338 29.8552 18.1954C29.5866 19.757 28.9507 21.2324 28 22.5" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M14.7627 20.7375L19.0002 16.5L23.2377 20.7375" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M19 26.5V16.5" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <fieldset class="w-full">
+                                <h3 class="text-[24px] font-semibold text-text-300">What are you doing?</h3>
+                                <p class="mt-1 text-text-50 text-sm font-medium ">Give us more details about you. What do you enjoy doing in your spare time?</p>
+                                <div class="flex gap-x-10 mt-6 mb-6 items-center justify-center">
+                                    <div class="w-[168px] h-fit">
+                                        <div class=" h-[106px] border flex items-center justify-center rounded-[8px]">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 13V1" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M16 13C17.3807 13 18.5 14.1193 18.5 15.5C18.5 16.8807 17.3807 18 16 18C14.6193 18 13.5 16.8807 13.5 15.5C13.5 14.1193 14.6193 13 16 13Z" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M9 23V28C9 28.2652 9.10536 28.5196 9.29289 28.7071C9.48043 28.8946 9.73478 29 10 29H22C22.2652 29 22.5196 28.8946 22.7071 28.7071C22.8946 28.5196 23 28.2652 23 28V23" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M8.99908 23L5.57408 16.075C5.49466 15.91 5.46089 15.7268 5.47628 15.5443C5.49167 15.3619 5.55565 15.1869 5.66158 15.0375L15.9991 1L26.3366 15.0375C26.4425 15.1869 26.5065 15.3619 26.5219 15.5443C26.5373 15.7268 26.5035 15.91 26.4241 16.075L22.9991 23H8.99908Z" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
-                                            <span class="text-sm font-normal text-text-300">Upload your product image</span>
-                                        </label>
-                                        <input class="opacity-0 absolute -z-[10]" type="file" name="photo" id="upload-photo" />
+                                        </div>
+                                        <p class="text-base text-text-200 font-medium">Design</p>
+                                    </div>
+                                    <div class="w-[168px] h-fit">
+                                        <div class="h-[106px] border border-primary flex items-center justify-center rounded-[8px]">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 11L2 16L8 21" stroke="#228FF3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M24 11L30 16L24 21" stroke="#228FF3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M20 5L12 27" stroke="#228FF3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <p class="text-base text-primary font-medium">Code</p>
+                                    </div>
+                                    <div class="w-[168px] h-fit">
+                                        <div class="h-[106px] border flex items-center justify-center rounded-[8px]">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14 23H4C3.46957 23 2.96086 22.7893 2.58579 22.4142C2.21071 22.0391 2 21.5304 2 21V12C2 11.4696 2.21071 10.9609 2.58579 10.5858C2.96086 10.2107 3.46957 10 4 10H14" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M14 27H8" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M26 9H22" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M26 13H22" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M29 5H19C18.4477 5 18 5.44772 18 6V26C18 26.5523 18.4477 27 19 27H29C29.5523 27 30 26.5523 30 26V6C30 5.44772 29.5523 5 29 5Z" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M11 23V27" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M24 24C24.8284 24 25.5 23.3284 25.5 22.5C25.5 21.6716 24.8284 21 24 21C23.1716 21 22.5 21.6716 22.5 22.5C22.5 23.3284 23.1716 24 24 24Z" fill="#666666"/>
+                                            </svg>
+                                        </div>
+                                        <p class="text-base text-text-200 font-medium">Develop</p>
                                     </div>
                                 </div>
                               
                                 <input type="button" name="next" class="next action-button float-right ml-4" value="Next" />
                                 <input type="button" name="previous" class="previous action-button float-right !text-primary !bg-primary/10 !border-0" value="Back" />
                             </fieldset>
-                            
-
-                            <!-- social media  -->
-                            <fieldset>
-                                <h3 class="text-[24px] font-semibold text-text-300 text-left">Social Media</h3>
-                                <div class="flex flex-col gap-y-3 mt-5 mb-4">
-                                    <div class="new-user-input">
-                                        <input class="w-full h-[48px] outline-none border p-4 text-sm" type="text" required>
-                                        <label class="text-sm text-text-100">Facebook Link</label>
-                                    </div>
-                                    <div class="new-user-input">
-                                        <input class="w-full h-[48px] outline-none border p-4 text-sm" type="text" required>
-                                        <label class="text-sm text-text-100">Linkedin Link</label>
-                                    </div>
-                                    <div class="new-user-input">
-                                        <input class="w-full h-[48px] outline-none border p-4 text-sm" type="text" required>
-                                        <label class="text-sm text-text-100">Twitter Link</label>
-                                    </div>
-                                    <div class="new-user-input">
-                                        <input class="w-full h-[48px] outline-none border p-4 text-sm" type="text" required>
-                                        <label class="text-sm text-text-100">Youtube Link</label>
-                                    </div>
-                                </div>
-                                <input type="button" name="next" class="next action-button float-right ml-4" value="Next" />
-                                <input type="button" name="previous" class="previous action-button float-right !text-primary !bg-primary/10 !border-0" value="Back" />
-                            </fieldset>
 
 
-                            <fieldset class="!w-full">
-                                <h3 class="text-[24px] font-semibold text-text-300 text-left">Pricing</h3>
+                            <fieldset class="w-full">
                     
-                                <div class="!w-full">
-                                    <h4 class="text-text-400 font-bold text-base pb-2 border-b border-b-slate-100">Pricing</h4>
+                                <div class="w-full mb-4">
+                                    <h3 class="text-[24px] font-semibold text-text-300">Are you living in a nice area?</h3>
+                                    <p class="mt-1 text-text-50 text-sm font-medium">One thing I love about the later sunsets is the chance to go for a walk through the neighborhood woods before dinner</p>
         
-                                    <div class="flex flex-col gap-y-6 mt-4 mb-4">
-        
-                                        <div class="w-full flex items-center justify-between gap-x-6">
-                                            
-                                            <div class="product-add-input w-1/3">
-                                                <input class="w-full h-[56px] outline-none border p-4 text-sm rounded-[4px]"
-                                                    type="number" placeholder="Enter your price">
-                                                <label class="text-sm text-text-100">Price</label>
+                                    <div class="w-full flex items-center justify-between gap-x-6">
+                                        <div class="w-full mt-6">
+                                            <div class="flex items-center gap-x-6">
+                                                <div class="product-add-input w-1/2 ">
+                                                    <input class="w-full h-[56px] outline-none border p-4 text-sm rounded-[4px]"
+                                                        type="text" required>
+                                                    <label class="text-sm text-text-100">Street Name</label>
+                                                </div>
+                                                <div class="product-add-input w-1/2">
+                                                    <input class="w-full h-[56px] outline-none border p-4 text-sm rounded-[4px]"
+                                                        type="number" required>
+                                                    <label class="text-sm text-text-100">Street Number</label>
+                                                </div>
                                             </div>
-        
-                                            <div class="product-select-input w-1/3 px-3 border border-[#BFBFBF] h-[56px] flex items-center relative rounded-[4px] -mt-2">
-                                                <select class="w-full bg-white text-text-300 text-sm h-[50px] !border-0" name="" id="">
-                                                    <option value="">USD</option>
-                                                    <option value="">TAKA </option>
-                                                    <option value="">EURO</option>
-                                                </select>
-                                                <label class="text-xs text-text-100 bg-white">Currency</label>
-                                            </div>
-        
-                                            <div class="product-add-input w-1/3">
-                                                <input class="w-full h-[56px] outline-none border p-4 text-sm rounded-[4px]"
-                                                    type="text" placeholder="125545">
-                                                <label class="text-sm text-text-100">SKU</label>
-                                            </div>
-                                        </div>
-        
-                                        <div class="w-full">
-                                            <div class="w-full">
-                                                <div class="form-group border h-[56px] pr-5 flex items-center pt-3">
-                                                    <select class="form-control select2-multi w-full border-0 !bg-white" name="tags" multiple="multiple">
-                                                        <option value='tag1'>Sales</option>
-                                                        <option value='tag2'>In Stock</option>
-                                                        <option value='tag3'>New Arrival</option>
-                                                        <option value='tag3'>Black Friday</option>
-                                                    </select>
-                                                    
+
+                                            <div class="flex items-center gap-x-6 mt-2">
+                                                <div class="product-add-input w-1/2">
+                                                    <input class="w-full h-[56px] outline-none border p-4 text-sm rounded-[4px]"
+                                                        type="text" required >
+                                                    <label class="text-sm text-text-100">City Name</label>
+                                                </div>
+                                                <div class="product-add-input w-1/2">
+                                                    <input class="w-full h-[56px] outline-none border p-4 text-sm rounded-[4px]"
+                                                        type="text" required>
+                                                    <label class="text-sm text-text-100">Country Name</label>
                                                 </div>
                                             </div>
                                         </div>
-        
                                     </div>
+        
                                 </div>
                                 
-                                <input type="submit" name="submit" class="submit action-button float-right ml-4" value="Publish" id="form-submit" />
+                                <input type="submit" name="submit" class="submit action-button float-right ml-4" value="Send" id="form-submit" />
                                 <input type="button" name="previous" class="previous action-button float-right !text-primary !bg-primary/10 !border-0" value="Back" />
                             </fieldset>
                           </form>
@@ -852,10 +842,6 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./../assets/js/custom/muiltistepform.js"></script>
     <script src="../assets/js/custom/headerSidenav.js"></script>
-    <script src="https://cdn.tiny.cloud/1/<your API key>/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
     <script src="./../assets/js/custom/texteditor.js"></script>
-
-    
 </body>
 </html>
