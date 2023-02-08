@@ -68,7 +68,7 @@ input:valid+label {
 }
 
 .input_wrap label {
-    @apply p-[14px] top-[2px] left-0 absolute;
+    @apply p-[14px] -top-[2px] sm:top-[2px] left-0 absolute;
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
