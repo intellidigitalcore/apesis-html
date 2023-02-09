@@ -35,11 +35,23 @@ $( ".show-dropdown" ).click(function() {
 })
 
 $( "#mobile-menu-trigger" ).click(function() {
-    $( "#menu-bar" ).toggle(100);
+    $( "#menu-bar" ).toggle(50);
 })
 
 // $( "#menu-bar" ).click(function() {
 //     $( "#menu-bar" ).toggle(100);
+//     // $(".dashboard").prop('disabled', true);
+   
     
 // })
 
+// function toogleMenu(e){
+//     e.preventDefault();
+//     e.stopPropagation();
+    
+//     // $(".management").prop('disabled', true);
+//     $(".dashboard").unbind("click", toogleMenu);
+//     $( "#menu-bar" ).hide(100);
+//     gotoNext();
+// }
+// $( "#menu-bar" ).click(toogleMenu);
