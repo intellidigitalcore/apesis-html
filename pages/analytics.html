@@ -397,7 +397,7 @@
                    <!-- search  -->
                    <div class="search h-6 sm:h-11 w-[50%] lg:w-[490px] bg-[#F7F7F7] relative rounded-md">
                        <input
-                           class="w-[100%] lg:w-[440px] h-full pl-7 sm:pl-14 bg-[#F7F7F7] outline-none text-text-300 placeholder:text-text-300 placeholder:font-normal placeholder:text-[10px] sm:placeholder:text-base text-base sm:text-[10px]"
+                           class="w-[100%] lg:w-[440px] h-full pl-7 sm:pl-14 bg-[#F7F7F7] outline-none text-text-300 placeholder:text-text-300 placeholder:font-normal placeholder:text-[10px] sm:placeholder:text-base text-[10px] sm:text-base"
                            type="search" name="" id="" placeholder="Search here...">
                        <div class="w-6 sm:w-11 h-6 sm:h-11 bg-[#EBEBEB] flex items-center justify-center absolute top-0 left-0">
                            <svg class="w-[10px] sm:w-6 h-[10px] sm:h-6" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -647,7 +647,7 @@
                 </div>
 
                 <!-- monthlySelling-salesByCountry-totalOrder  -->
-                <div class="flex flex-col 2xl:flex-row items-center gap-x-6 mt-6">
+                <div class="flex flex-col 2xl:flex-row items-center gap-x-6 mt-5 sm:mt-10">
 
                     <!-- charts for revenue anaylsis  -->
                     <div class="chart-container w-full 2xl:w-[40%] bg-white px-4 sm:px-10 py-4 sm:py-11 rounded-[20px] h-fit xl:h-[370px] shadow">
@@ -723,7 +723,7 @@
                     </div>
 
                     <!-- totall oder ratio  -->
-                    <div class="bg-white px-4 sm:px-10 py-4 sm:py-11 h-[370px] rounded-[20px] mt-6 2xl:mt-0 shadow">
+                    <div class="bg-white px-4 sm:px-10 py-4 sm:py-11 h-fit xl:h-[370px] rounded-[20px] mt-6 2xl:mt-0 shadow">
                         <p class="text-text-400 text-base font-bold text-center">Total Order</p>
                         <h4 class="text-[24px] font-bold text-text-600 mt-1 mb-6 text-center">4,209</h4>
                         <canvas id="myChart" class="h-[100px]"></canvas>
@@ -735,17 +735,17 @@
                 <div class="flex flex-col 2xl:flex-row gap-x-6 mt-6">
 
                     <!-- Daily sale -->
-                    <div class="top-selling-products w-full 2xl:w-[55%] bg-white px-4 sm:px-10 py-4 sm:py-11 rounded-[20px]">
+                    <div class="top-selling-products w-full 2xl:w-[55%] bg-white px-4 sm:px-10 py-4 sm:py-11 rounded-[20px] shadow">
                         <div class="">
                             <h5 class="font-bold text-text-400 text-base">Daily Sales</h5>
                         </div>
-                        <div class="w-full mt-6 h-[350px]">
+                        <div class="w-full mt-6 h-fit xl:h-[370px]">
                             <canvas id="myChartSales" class=""></canvas>
                         </div>
                     </div>
 
                     <!-- graph for sales by age  -->
-                    <div class="sales-chart-container w-full 2xl:w-[45%] bg-white px-4 sm:px-10 py-4 sm:py-11 rounded-[20px] mt-6 2xl:mt-0">
+                    <div class="sales-chart-container w-full 2xl:w-[45%] bg-white px-4 sm:px-10 py-4 sm:py-11 rounded-[20px] mt-6 2xl:mt-0 shadow">
                         <div class="mb-3">
                             <div class="flex items-center justify-between relative">
                                 <h3 class="font-bold text-text-400 text-base">Sales by age</h3>
