@@ -11,378 +11,395 @@
 
 <body>
     <main class="">
-        <aside class="w-[280px] border-r h-screen bg-white fixed top-0 left-0">
-            <div class="logo pt-12 ml-6">
-                <img src="./assets/images/common/logo.png" alt="">
-            </div>
-
-            <!-- dashboard  -->
-            <div class="dashboard mx-2 mt-10">
-                <div id="dashboard"
-                    class="flex items-center justify-between border-l-4 border-primary bg-gradient-to-r from-primary-20 to-primary-10 py-4 pl-2 pr-4 cursor-pointer">
-                    <button class="flex gap-x-4 font-semibold text-primary">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.0625 15.8126V13.8446C2.0625 8.90319 6.03281 4.82975 10.9656 4.81257C12.1422 4.80804 13.3081 5.03588 14.3964 5.483C15.4847 5.93013 16.4741 6.58774 17.3076 7.41811C18.1412 8.24849 18.8026 9.23528 19.2539 10.3219C19.7052 11.4085 19.9375 12.5735 19.9375 13.7501V15.8126C19.9375 15.9949 19.8651 16.1698 19.7361 16.2987C19.6072 16.4276 19.4323 16.5001 19.25 16.5001H2.75C2.56766 16.5001 2.3928 16.4276 2.26386 16.2987C2.13493 16.1698 2.0625 15.9949 2.0625 15.8126Z"
-                                stroke="#228FF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M11 4.8125V7.5625" stroke="#228FF3" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M2.36328 11.4375L5.02734 12.1508" stroke="#228FF3" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M19.6367 11.4375L16.9727 12.1508" stroke="#228FF3" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M8.88574 16.5008L14.7639 8.84375" stroke="#228FF3" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <span class="text-sm">Dashboard</span>
-                    </button>
-                    <div id="dropdown-icon" class="transition-all duration-300">
-                        <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M0.666866 9.66728C0.511097 9.66759 0.36014 9.61334 0.240199 9.51395C0.103861 9.40092 0.0181003 9.23828 0.00184094 9.06193C-0.0144184 8.88558 0.0401596 8.71 0.153532 8.57395L3.1402 5.00061L0.260199 1.42061C0.148352 1.28289 0.0960196 1.10625 0.114789 0.929826C0.133557 0.753398 0.221879 0.59173 0.360199 0.480614C0.499643 0.357921 0.68395 0.298964 0.868715 0.317947C1.05348 0.336929 1.22195 0.432131 1.33353 0.580614L4.55353 4.58061C4.75574 4.82662 4.75574 5.18128 4.55353 5.42728L1.2202 9.42728C1.08456 9.59091 0.879022 9.68006 0.666866 9.66728Z"
-                                fill="#575757" />
-                        </svg>
-                    </div>
+        <aside id="menu-bar" class="w-full transition-all duration-200 ease-in-out md:w-fit backdrop-blur-[2px] fixed top-10 sm:top-[76px] md:top-0 left-0 hidden md:block">
+            <div class="w-[230px] sm:w-[280px] border-r h-screen bg-white">
+                <div class="logo pt-12 ml-6">
+                    <img src="./assets/images/common/logo.png" alt="">
                 </div>
-                <ul id="dashboard-menu" class="ml-[12px] hidden">
-                    <li>
-                        <button class="menu-style menu-active-btn w-full">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+    
+                <!-- dashboard  -->
+                <div class="dashboard mx-2 mt-10">
+                    <div id="dashboard"
+                        class="flex items-center justify-between border-l-4 border-primary bg-gradient-to-r from-primary-20 to-primary-10 py-4 pl-2 pr-4 cursor-pointer">
+                        <button class="flex gap-x-4 font-semibold text-primary">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.0625 15.8126V13.8446C2.0625 8.90319 6.03281 4.82975 10.9656 4.81257C12.1422 4.80804 13.3081 5.03588 14.3964 5.483C15.4847 5.93013 16.4741 6.58774 17.3076 7.41811C18.1412 8.24849 18.8026 9.23528 19.2539 10.3219C19.7052 11.4085 19.9375 12.5735 19.9375 13.7501V15.8126C19.9375 15.9949 19.8651 16.1698 19.7361 16.2987C19.6072 16.4276 19.4323 16.5001 19.25 16.5001H2.75C2.56766 16.5001 2.3928 16.4276 2.26386 16.2987C2.13493 16.1698 2.0625 15.9949 2.0625 15.8126Z"
+                                    stroke="#228FF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M11 4.8125V7.5625" stroke="#228FF3" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M2.36328 11.4375L5.02734 12.1508" stroke="#228FF3" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M19.6367 11.4375L16.9727 12.1508" stroke="#228FF3" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.88574 16.5008L14.7639 8.84375" stroke="#228FF3" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            <span>Sales</span>
+                            <span class="text-sm">Dashboard</span>
                         </button>
-                    </li>
-                    <li>
-                        <button class="menu-style w-full">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                        <div id="dropdown-icon" class="transition-all duration-300">
+                            <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.666866 9.66728C0.511097 9.66759 0.36014 9.61334 0.240199 9.51395C0.103861 9.40092 0.0181003 9.23828 0.00184094 9.06193C-0.0144184 8.88558 0.0401596 8.71 0.153532 8.57395L3.1402 5.00061L0.260199 1.42061C0.148352 1.28289 0.0960196 1.10625 0.114789 0.929826C0.133557 0.753398 0.221879 0.59173 0.360199 0.480614C0.499643 0.357921 0.68395 0.298964 0.868715 0.317947C1.05348 0.336929 1.22195 0.432131 1.33353 0.580614L4.55353 4.58061C4.75574 4.82662 4.75574 5.18128 4.55353 5.42728L1.2202 9.42728C1.08456 9.59091 0.879022 9.68006 0.666866 9.66728Z"
+                                    fill="#575757" />
                             </svg>
-                            <span>Analytics</span>
-                        </button>
-                    </li>
-                </ul>
+                        </div>
+                    </div>
+                    <ul id="dashboard-menu" class="ml-[12px] hidden">
+                        <li>
+                            <button class="menu-style menu-active-btn w-full">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                </svg>
+                                <span>Sales</span>
+                            </button>
+                        </li>
+                        <li>
+                            <a href="./pages/analytics.html">
+                                <button class="menu-style w-full">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                    </svg>
+                                    <span>Analytics</span>
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- managments  -->
+                <div class="management mt-6 ml-6 mr-4">
+                    <h5 class="uppercase text-sm font-semibold text-text-300 py-2">Management</h5>
+                    <ul class="management-contents">
+                        <!-- pages  -->
+                        <li class="pages">
+                            <div id="managment-pages" class="flex items-center justify-between cursor-pointer">
+                                <button class="text-text-100 flex gap-x-4 py-4">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.4375 19.25H4.8125C4.63016 19.25 4.4553 19.1776 4.32636 19.0486C4.19743 18.9197 4.125 18.7448 4.125 18.5625V6.1875C4.125 6.00516 4.19743 5.8303 4.32636 5.70136C4.4553 5.57243 4.63016 5.5 4.8125 5.5H11.6875L15.125 8.9375V18.5625C15.125 18.7448 15.0526 18.9197 14.9236 19.0486C14.7947 19.1776 14.6198 19.25 14.4375 19.25Z"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M6.875 5.5V3.4375C6.875 3.25516 6.94743 3.0803 7.07636 2.95136C7.2053 2.82243 7.38016 2.75 7.5625 2.75H14.4375L17.875 6.1875V15.8125C17.875 15.9948 17.8026 16.1697 17.6736 16.2986C17.5447 16.4276 17.3698 16.5 17.1875 16.5H15.125"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M7.5625 13.0625H11.6875" stroke="#757575" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M7.5625 15.8125H11.6875" stroke="#757575" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm">Pages</span>
+                                </button>
+                                <span id="managment-dropdown-icon" class="transition-all duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
+                                            fill="#575757" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div id="pages-menus" class="hidden">
+                                <ul>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Profile</span>
+                                    </li>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Integrations</span>
+                                    </li>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>New User</span>
+                                    </li>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Account Setting</span>
+                                    </li>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Billing</span>
+                                    </li>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Invoice</span>
+                                    </li>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Pricing</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+    
+                        <li class="applications">
+                            <div id="managment-applications" class="flex items-center justify-between cursor-pointer">
+                                <button class="text-text-100 flex gap-x-4 py-4">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.625 4.125H4.125V9.625H9.625V4.125Z" stroke="#757575" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M17.875 4.125H12.375V9.625H17.875V4.125Z" stroke="#757575"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M9.625 12.375H4.125V17.875H9.625V12.375Z" stroke="#757575"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M17.875 12.375H12.375V17.875H17.875V12.375Z" stroke="#757575"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm">Application</span>
+                                </button>
+                                <span id="applications-dropdown-icon" class="transition-all duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
+                                            fill="#575757" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div id="application-menus" class="hidden">
+                                <ul>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Data Table</span>
+                                    </li>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Calender</span>
+                                    </li>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Kanban</span>
+                                    </li>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Wizard</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+    
+                        <li class="e-commerce">
+                            <div id="managment-e-commerce" class="flex items-center justify-between cursor-pointer">
+                                <button class="text-text-100 flex gap-x-4 py-4">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19.25 15.2371V6.76363C19.2493 6.64124 19.2164 6.52118 19.1546 6.41556C19.0927 6.30995 19.0041 6.22251 18.8977 6.16207L11.3352 1.90816C11.2333 1.84933 11.1177 1.81836 11 1.81836C10.8823 1.81836 10.7667 1.84933 10.6648 1.90816L3.10234 6.16207C2.99591 6.22251 2.9073 6.30995 2.84544 6.41556C2.78358 6.52118 2.75066 6.64124 2.75 6.76363V15.2371C2.75066 15.3595 2.78358 15.4795 2.84544 15.5851C2.9073 15.6908 2.99591 15.7782 3.10234 15.8386L10.6648 20.0925C10.7667 20.1514 10.8823 20.1823 11 20.1823C11.1177 20.1823 11.2333 20.1514 11.3352 20.0925L18.8977 15.8386C19.0041 15.7782 19.0927 15.6908 19.1546 15.5851C19.2164 15.4795 19.2493 15.3595 19.25 15.2371V15.2371Z"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M19.1557 6.41016L11.0775 10.9992L2.84473 6.41016" stroke="#757575"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M11.0773 11L11 20.1781" stroke="#757575" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm">Ecommerce</span>
+                                </button>
+                                <span id="e-commerce-dropdown-icon" class="transition-all duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
+                                            fill="#575757" />
+                                    </svg>
+                                </span>
+                            </div>
+    
+                            <div id="e-commerce-menus" class="hidden">
+                                <ul>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>New Product</span>
+                                    </li>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Edit product</span>
+                                    </li>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Product Page</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+    
+                        <li class="orders">
+                            <div id="managment-order" class="flex items-center justify-between">
+                                <button class="text-text-100 flex gap-x-4 py-4">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.8125 15.8125H5.99844L3.60078 2.62969C3.57273 2.47182 3.49038 2.32871 3.36797 2.22514C3.24556 2.12157 3.09081 2.06404 2.93047 2.0625H1.375"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M6.875 19.25C7.82424 19.25 8.59375 18.4805 8.59375 17.5312C8.59375 16.582 7.82424 15.8125 6.875 15.8125C5.92576 15.8125 5.15625 16.582 5.15625 17.5312C5.15625 18.4805 5.92576 19.25 6.875 19.25Z"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M15.8125 19.25C16.7617 19.25 17.5312 18.4805 17.5312 17.5312C17.5312 16.582 16.7617 15.8125 15.8125 15.8125C14.8633 15.8125 14.0938 16.582 14.0938 17.5312C14.0938 18.4805 14.8633 19.25 15.8125 19.25Z"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M5.37109 12.375H16.1648C16.4862 12.376 16.7977 12.2636 17.0444 12.0578C17.2912 11.8519 17.4575 11.5656 17.5141 11.2492L18.5625 5.5H4.125"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm">Orders</span>
+                                </button>
+                                <span id="order-dropdown-icon" class="transition-all duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
+                                            fill="#575757" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div id="orders-menus" class="hidden">
+                                <ul>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Order List</span>
+                                    </li>
+                                    <li class="menu-style">
+                                        <span>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                            </svg>
+                                        </span>
+                                        <span>Order List</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+    
+                        <li class="authentications">
+                            <div id="managment-authentications" class="flex items-center justify-between">
+                                <button class="text-text-100 flex gap-x-4 py-4">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.00937 10.5531C7.71135 9.822 7.55953 9.03954 7.5625 8.25C7.5625 7.02623 7.92539 5.82994 8.60528 4.81241C9.28517 3.79488 10.2515 3.00182 11.3821 2.5335C12.5128 2.06518 13.7569 1.94265 14.9571 2.18139C16.1574 2.42014 17.2599 3.00944 18.1252 3.87478C18.9906 4.74012 19.5799 5.84262 19.8186 7.04288C20.0574 8.24314 19.9348 9.48724 19.4665 10.6179C18.9982 11.7485 18.2051 12.7148 17.1876 13.3947C16.1701 14.0746 14.9738 14.4375 13.75 14.4375C12.9605 14.4405 12.178 14.2887 11.4469 13.9906V13.9906L10.3125 15.125H8.25V17.1875H6.1875V19.25H2.75V15.8125L8.00937 10.5531Z"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M15.4688 7.5625C16.0383 7.5625 16.5 7.10079 16.5 6.53125C16.5 5.96171 16.0383 5.5 15.4688 5.5C14.8992 5.5 14.4375 5.96171 14.4375 6.53125C14.4375 7.10079 14.8992 7.5625 15.4688 7.5625Z"
+                                            fill="#757575" />
+                                    </svg>
+                                    <span class="text-sm">Authentication</span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
-            <!-- managments  -->
-            <div class="management mt-6 ml-6 mr-4">
-                <h5 class="uppercase text-sm font-semibold text-text-300 py-2">Management</h5>
-                <ul class="management-contents">
-                    <!-- pages  -->
-                    <li class="pages">
-                        <div id="managment-pages" class="flex items-center justify-between cursor-pointer">
-                            <button class="text-text-100 flex gap-x-4 py-4">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14.4375 19.25H4.8125C4.63016 19.25 4.4553 19.1776 4.32636 19.0486C4.19743 18.9197 4.125 18.7448 4.125 18.5625V6.1875C4.125 6.00516 4.19743 5.8303 4.32636 5.70136C4.4553 5.57243 4.63016 5.5 4.8125 5.5H11.6875L15.125 8.9375V18.5625C15.125 18.7448 15.0526 18.9197 14.9236 19.0486C14.7947 19.1776 14.6198 19.25 14.4375 19.25Z"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M6.875 5.5V3.4375C6.875 3.25516 6.94743 3.0803 7.07636 2.95136C7.2053 2.82243 7.38016 2.75 7.5625 2.75H14.4375L17.875 6.1875V15.8125C17.875 15.9948 17.8026 16.1697 17.6736 16.2986C17.5447 16.4276 17.3698 16.5 17.1875 16.5H15.125"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M7.5625 13.0625H11.6875" stroke="#757575" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M7.5625 15.8125H11.6875" stroke="#757575" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span class="text-sm">Pages</span>
-                            </button>
-                            <span id="managment-dropdown-icon" class="transition-all duration-300">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
-                                        fill="#575757" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div id="pages-menus" class="hidden">
-                            <ul>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Profile</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Integrations</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>New User</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Account Setting</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Billing</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Invoice</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Pricing</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="applications">
-                        <div id="managment-applications" class="flex items-center justify-between cursor-pointer">
-                            <button class="text-text-100 flex gap-x-4 py-4">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.625 4.125H4.125V9.625H9.625V4.125Z" stroke="#757575" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M17.875 4.125H12.375V9.625H17.875V4.125Z" stroke="#757575"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M9.625 12.375H4.125V17.875H9.625V12.375Z" stroke="#757575"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M17.875 12.375H12.375V17.875H17.875V12.375Z" stroke="#757575"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span class="text-sm">Application</span>
-                            </button>
-                            <span id="applications-dropdown-icon" class="transition-all duration-300">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
-                                        fill="#575757" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div id="application-menus" class="hidden">
-                            <ul>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Data Table</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Calender</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Kanban</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Wizard</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="e-commerce">
-                        <div id="managment-e-commerce" class="flex items-center justify-between cursor-pointer">
-                            <button class="text-text-100 flex gap-x-4 py-4">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M19.25 15.2371V6.76363C19.2493 6.64124 19.2164 6.52118 19.1546 6.41556C19.0927 6.30995 19.0041 6.22251 18.8977 6.16207L11.3352 1.90816C11.2333 1.84933 11.1177 1.81836 11 1.81836C10.8823 1.81836 10.7667 1.84933 10.6648 1.90816L3.10234 6.16207C2.99591 6.22251 2.9073 6.30995 2.84544 6.41556C2.78358 6.52118 2.75066 6.64124 2.75 6.76363V15.2371C2.75066 15.3595 2.78358 15.4795 2.84544 15.5851C2.9073 15.6908 2.99591 15.7782 3.10234 15.8386L10.6648 20.0925C10.7667 20.1514 10.8823 20.1823 11 20.1823C11.1177 20.1823 11.2333 20.1514 11.3352 20.0925L18.8977 15.8386C19.0041 15.7782 19.0927 15.6908 19.1546 15.5851C19.2164 15.4795 19.2493 15.3595 19.25 15.2371V15.2371Z"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M19.1557 6.41016L11.0775 10.9992L2.84473 6.41016" stroke="#757575"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M11.0773 11L11 20.1781" stroke="#757575" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span class="text-sm">Ecommerce</span>
-                            </button>
-                            <span id="e-commerce-dropdown-icon" class="transition-all duration-300">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
-                                        fill="#575757" />
-                                </svg>
-                            </span>
-                        </div>
-
-                        <div id="e-commerce-menus" class="hidden">
-                            <ul>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>New Product</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Edit product</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Product Page</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="orders">
-                        <div id="managment-order" class="flex items-center justify-between">
-                            <button class="text-text-100 flex gap-x-4 py-4">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M15.8125 15.8125H5.99844L3.60078 2.62969C3.57273 2.47182 3.49038 2.32871 3.36797 2.22514C3.24556 2.12157 3.09081 2.06404 2.93047 2.0625H1.375"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M6.875 19.25C7.82424 19.25 8.59375 18.4805 8.59375 17.5312C8.59375 16.582 7.82424 15.8125 6.875 15.8125C5.92576 15.8125 5.15625 16.582 5.15625 17.5312C5.15625 18.4805 5.92576 19.25 6.875 19.25Z"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M15.8125 19.25C16.7617 19.25 17.5312 18.4805 17.5312 17.5312C17.5312 16.582 16.7617 15.8125 15.8125 15.8125C14.8633 15.8125 14.0938 16.582 14.0938 17.5312C14.0938 18.4805 14.8633 19.25 15.8125 19.25Z"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M5.37109 12.375H16.1648C16.4862 12.376 16.7977 12.2636 17.0444 12.0578C17.2912 11.8519 17.4575 11.5656 17.5141 11.2492L18.5625 5.5H4.125"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="text-sm">Orders</span>
-                            </button>
-                            <span id="order-dropdown-icon" class="transition-all duration-300">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
-                                        fill="#575757" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div id="orders-menus" class="hidden">
-                            <ul>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Order List</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Order List</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="authentications">
-                        <div id="managment-authentications" class="flex items-center justify-between">
-                            <button class="text-text-100 flex gap-x-4 py-4">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8.00937 10.5531C7.71135 9.822 7.55953 9.03954 7.5625 8.25C7.5625 7.02623 7.92539 5.82994 8.60528 4.81241C9.28517 3.79488 10.2515 3.00182 11.3821 2.5335C12.5128 2.06518 13.7569 1.94265 14.9571 2.18139C16.1574 2.42014 17.2599 3.00944 18.1252 3.87478C18.9906 4.74012 19.5799 5.84262 19.8186 7.04288C20.0574 8.24314 19.9348 9.48724 19.4665 10.6179C18.9982 11.7485 18.2051 12.7148 17.1876 13.3947C16.1701 14.0746 14.9738 14.4375 13.75 14.4375C12.9605 14.4405 12.178 14.2887 11.4469 13.9906V13.9906L10.3125 15.125H8.25V17.1875H6.1875V19.25H2.75V15.8125L8.00937 10.5531Z"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M15.4688 7.5625C16.0383 7.5625 16.5 7.10079 16.5 6.53125C16.5 5.96171 16.0383 5.5 15.4688 5.5C14.8992 5.5 14.4375 5.96171 14.4375 6.53125C14.4375 7.10079 14.8992 7.5625 15.4688 7.5625Z"
-                                        fill="#757575" />
-                                </svg>
-                                <span class="text-sm">Authentication</span>
-                            </button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
         </aside>
 
-        <aside class="right-aside bg-[#F5F5F5] ml-[280px] pb-10">
-            <header class="h-[76px] py-4 pr-10 shadow-md bg-white fixed top-0 w-[calc(100%-280px)]">
-                <div class="flex w-full gap-x-6 justify-end">
-                    <div class="search h-[44px] w-[490px] bg-[#F7F7F7] relative">
+        
+
+        <aside class="right-aside bg-white sm:bg-[#F5F5F5] md:ml-[280px] pb-10 ">
+            <header class="h-10 sm:h-[76px] py-2 sm:py-4 md:pr-10 shadow-md bg-white fixed top-0 w-full md:w-[calc(100%-280px)] px-4 md:px-0 flex justify-between items-center">
+                 <!-- mobile menu btn -->
+                 <div class="block md:hidden">
+                    <button id="mobile-menu-trigger">
+                        <svg class="w-3 h-3 sm:w-6 sm:h-6" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.5 8H13.5" stroke="#575757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.5 4H13.5" stroke="#575757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.5 12H13.5" stroke="#575757" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex w-full gap-x-2 sm:gap-x-6 justify-end items-center">
+
+                    <!-- search  -->
+                    <div class="search h-6 sm:h-11 w-[50%] lg:w-[490px] bg-[#F7F7F7] relative rounded-md">
                         <input
-                            class="w-[440px] h-full pl-14 bg-[#F7F7F7] outline-none text-text-300 placeholder:text-text-300 placeholder:font-normal"
+                            class="w-[100%] lg:w-[440px] h-full pl-7 sm:pl-14 bg-[#F7F7F7] outline-none text-text-300 placeholder:text-text-300 placeholder:font-normal placeholder:text-[10px] sm:placeholder:text-base text-base sm:text-[10px]"
                             type="search" name="" id="" placeholder="Search here...">
-                        <div class="w-11 h-11 bg-[#EBEBEB] flex items-center justify-center absolute top-0 left-0">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <div class="w-6 sm:w-11 h-6 sm:h-11 bg-[#EBEBEB] flex items-center justify-center absolute top-0 left-0">
+                            <svg class="w-[10px] sm:w-6 h-[10px] sm:h-6" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M16.425 15.25L19.2583 18.075C19.4161 18.2315 19.5048 18.4445 19.5048 18.6667C19.5048 18.8889 19.4161 19.1019 19.2583 19.2583C19.1019 19.4161 18.8889 19.5048 18.6667 19.5048C18.4445 19.5048 18.2315 19.4161 18.075 19.2583L15.25 16.425C14.0854 17.3392 12.6472 17.8352 11.1667 17.8333C7.48477 17.8333 4.5 14.8486 4.5 11.1667C4.5 7.48477 7.48477 4.5 11.1667 4.5C14.8486 4.5 17.8333 7.48477 17.8333 11.1667C17.8352 12.6472 17.3392 14.0854 16.425 15.25ZM11.1667 6.16667C8.40524 6.16667 6.16667 8.40524 6.16667 11.1667C6.16667 13.9281 8.40524 16.1667 11.1667 16.1667C13.9281 16.1667 16.1667 13.9281 16.1667 11.1667C16.1667 8.40524 13.9281 6.16667 11.1667 6.16667Z"
@@ -391,9 +408,10 @@
                         </div>
                     </div>
 
+                    <!-- language  -->
                     <div class="parent language relative">
-                        <button id="toogle-btn" class="show-dropdown p-[10px] bg-[#F4F4F4] rouned-[4px]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <button id="toogle-btn" class="show-dropdown p-[5px] sm:p-[10px] bg-[#F4F4F4] rouned-[4px]">
+                            <svg class="w-3 sm:w-6 h-3 sm:h-6" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21.75 20.25L16.5 9.75L11.25 20.25" stroke="#5D6277" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" />
@@ -411,6 +429,7 @@
                                     stroke="#5D6277" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
+
                         <div id="toogle-div"
                             class="dropdown-item w-[200px] absolute bg-white shadow top-full mt-8 right-0 rounded-[12px] hidden">
                             <div class="language-select relative">
@@ -429,9 +448,10 @@
                         </div>
                     </div>
 
+                    <!-- notifications  -->
                     <div class="parent notifications relative">
-                        <button id="toogle-btn" class="show-dropdown p-[10px] bg-[#F4F4F4] rouned-[4px]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <button id="toogle-btn" class="show-dropdown p-[5px] sm:p-[10px] bg-[#F4F4F4] rouned-[4px]">
+                            <svg class="w-3 sm:w-6 h-3 sm:h-6"viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 21H15" stroke="#5D6277" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round" />
@@ -558,10 +578,11 @@
                         </div>
                     </div>
 
-                    <div class="parent profile-details pl-6 border-l relative">
+                    <!-- profile details  -->
+                    <div class="parent profile-details pl-2 sm:pl-6 border-l relative">
                         <button class="show-dropdown flex items-center gap-x-4">
-                            <img class="w-10 h-10 rounded-full" src="./assets/images/common/admin-img.png" alt="">
-                            <div class="name-role">
+                            <img class="w-6 sm:w-10 h-6 sm:h-10 rounded-full" src="./assets/images/common/admin-img.png" alt="">
+                            <div class="name-role hidden lg:block">
                                 <p class="text-base text-[#151D48] font-semibold">Robert Hook</p>
                                 <p class="text-sm text-text-200 text-left">Admin</p>
                             </div>
@@ -592,7 +613,7 @@
                 </div>
             </header>
 
-            <div class="main-content pt-32 mx-10">
+            <div class="main-content pt-14 sm:pt-32 mx-4 sm:mx-10">
 
                 <!-- breadcrumb -->
                 <div class="breadcrumb">
@@ -612,7 +633,7 @@
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </li>
-                        <li class="text-text-300">Dashboard</li>
+                        <li class="text-text-300 text-[10px] sm:text-base">Dashboard</li>
                         <li>
                             <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -620,12 +641,12 @@
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </li>
-                        <li class="text-text-80">Sales</li>
+                        <li class="text-text-300 text-[10px] sm:text-base">Sales</li>
                     </ul>
                 </div>
 
                 <!-- vertical-cards-container -->
-                <div class="grid grid-cols-4 gap-4 mt-10">
+                <div class="grid gird-cols-1 sm:grid-cols-2 md:grid-cols-2 2xl:grid-cols-4 gap-4 mt-4 sm:mt-10">
 
                     <div class="totall-sells rounded-[10px] bg-white shadow">
                         <div class="my-6 pl-6 border-l-4 border-primary mr-4">
@@ -678,19 +699,21 @@
                 </div>
 
                 <!-- Revenue-topselling  -->
-                <div class="grid grid-cols-2 gap-x-6 mt-6">
+                <div class="grid grid-cols-1 md:grid-cols-1 2xl:grid-cols-2 gap-x-6 mt-6">
 
                     <!-- charts for revenue anaylsis  -->
-                    <div class="chart-container w-full bg-white px-10 py-11 rounded-[20px]">
-                        <div class="mb-3">
+                    <div class="chart-container w-full bg-white px-4 lg:px-10 py-4 lg:py-11 rounded-lg md:rounded-[20px] shadow">
+                        <div class="mb-8 sm:mb-3">
                             <h3 class="font-bold text-text-400 text-base">Revenue Analytics</h3>
                         </div>
                         
-                        <canvas id="chartLite"></canvas>
+                        <div class="!flex !justify-center">
+                            <canvas id="chartLite" class="!h-[250px] lg:h-[300px] xl:!h-[350px] "></canvas>
+                        </div>
                     </div>
 
                     <!-- table for top selling products  -->
-                    <div class="top-selling-products bg-white px-10 py-11 rounded-[20px]">
+                    <div class="top-selling-products bg-white px-4 lg:px-10 py-4 lg:py-11 rounded-lg md:rounded-[20px] mt-6 2xl:mt-0 shadow !w-full">
                         <h5 class="font-bold text-text-400 text-base">Top Selling Products</h5>
                         <div class="w-full mt-6">
                             <table class="table-auto w-full">
@@ -751,15 +774,15 @@
                 </div>
 
                 <!-- country-age  -->
-                <div class="flex gap-x-6 mt-6">
+                <div class="flex flex-col 2xl:flex-row gap-6 mt-6">
 
                     <!-- table for sales by country  -->
-                    <div class="top-selling-products bg-white px-10 py-11 rounded-[20px] w-[40%] h-min-[400px]">
+                    <div class="top-selling-products bg-white  px-4 lg:px-10 py-4 lg:py-11 rounded-lg md:rounded-[20px] w-full 2xl:w-[40%] h-min-[400px] shadow">
                         <div class="">
                             <h5 class="font-bold text-text-400 text-base">Top Selling Products</h5>
                         </div>
                         <div class="w-full mt-6">
-                            <table class="table-auto w-full">
+                            <table class="table-auto w-full overflow-x-auto">
                                 <thead>
                                   <tr>
                                     <th class="text-left w-[60px] text-sm font-semibold text-text-400 pb-3">#</th>
@@ -837,7 +860,7 @@
                     </div>
 
                     <!-- graph for sales by age  -->
-                    <div class="sales-chart-container bg-white px-10 py-11 rounded-[20px] w-[60%]">
+                    <div class="sales-chart-container bg-white  px-4 lg:px-10 py-4 lg:py-11 rounded-lg md:rounded-[20px] w-full 2xl:w-[60%] shadow">
                         <div class="mb-3">
                             <div class="flex items-center justify-between relative">
                                 <h3 class="font-bold text-text-400 text-base">Sales by age</h3>
@@ -865,7 +888,7 @@
                                 </div>
                             </div>
                             <div class="sales-chart mt-2">
-                                <canvas id="chart" class="h-full"></canvas>
+                                <canvas id="chart" class="!h-[250px] lg:h-[300px] xl:!h-[350px]"></canvas>
                             </div>
                         </div>
                     </div>

@@ -28,14 +28,18 @@ $( "#managment-order" ).click(function() {
     $("#order-dropdown-icon").toggleClass("dropdown-icon-rotaion")
 })
 
-// $( "#toogle-btn" ).click(function() {
-//     this.siblings().toggle();
-// })
 
 $( ".show-dropdown" ).click(function() {
     $(this).parent().find(".dropdown-item").toggle();
     $(this).parent().siblings().find(".dropdown-item").hide()
 })
 
+$( "#mobile-menu-trigger" ).click(function() {
+    $( "#menu-bar" ).toggle(100);
+})
 
+// $( "#menu-bar" ).click(function() {
+//     $( "#menu-bar" ).toggle(100);
+    
+// })
 

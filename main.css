@@ -104,7 +104,7 @@ input[type="text"]:focus {
 }
 
 .tdata {
-    @apply text-sm font-medium text-text-200 my-3;
+    @apply text-sm font-medium text-text-200 my-3 w-fit;
 }
 .order-tdata{
     @apply text-sm font-medium text-text-200 py-3 px-4;
@@ -113,9 +113,9 @@ input[type="text"]:focus {
   @apply text-left text-base font-bold text-text-400;
 }
 
-#chart {
+/* #chart {
     height: 350px !important;
-}
+} */
 
 
 /*====================
@@ -307,4 +307,18 @@ input:checked + .slider:before {
 }
 .select2-search__field {
   width: 220px !important;
+}
+
+
+
+/* mobile resposive  */
+@media screen and (max-width: 640px) {
+  .right-aside {
+    width: 100% !important;
+  }
+}
+@media (min-width: 641px) and (max-width: 768px) {
+  .right-aside {
+    width: 100% !important;
+  }
 }
