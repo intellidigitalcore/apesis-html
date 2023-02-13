@@ -9,6 +9,7 @@
 </head>
 <body>
     <main class="">
+
         <aside id="menu-bar" class="w-full transition-all duration-200 ease-in-out md:w-fit backdrop-blur-[2px] fixed top-10 sm:top-[76px] md:top-0 left-0 hidden md:block z-50">
             <div class="w-[230px] sm:w-[280px] border-r h-screen bg-white">
                 <div class="logo pt-12 ml-6">
@@ -18,21 +19,15 @@
                 <!-- dashboard  -->
                 <div class="dashboard mx-2 mt-10">
                     <div id="dashboard"
-                        class="flex items-center justify-between border-l-4 border-primary bg-gradient-to-r from-primary-20 to-primary-10 py-4 pl-2 pr-4 cursor-pointer">
-                        <button class="flex gap-x-4 font-semibold text-primary">
+                        class="flex items-center justify-between  py-4 pl-3 pr-4 cursor-pointer">
+                        <button class="flex gap-x-4 font-semibold text-text-100">
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M2.0625 15.8126V13.8446C2.0625 8.90319 6.03281 4.82975 10.9656 4.81257C12.1422 4.80804 13.3081 5.03588 14.3964 5.483C15.4847 5.93013 16.4741 6.58774 17.3076 7.41811C18.1412 8.24849 18.8026 9.23528 19.2539 10.3219C19.7052 11.4085 19.9375 12.5735 19.9375 13.7501V15.8126C19.9375 15.9949 19.8651 16.1698 19.7361 16.2987C19.6072 16.4276 19.4323 16.5001 19.25 16.5001H2.75C2.56766 16.5001 2.3928 16.4276 2.26386 16.2987C2.13493 16.1698 2.0625 15.9949 2.0625 15.8126Z"
-                                    stroke="#228FF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M11 4.8125V7.5625" stroke="#228FF3" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M2.36328 11.4375L5.02734 12.1508" stroke="#228FF3" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M19.6367 11.4375L16.9727 12.1508" stroke="#228FF3" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M8.88574 16.5008L14.7639 8.84375" stroke="#228FF3" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
+                                <path d="M2.0625 15.8124V13.8445C2.0625 8.90307 6.03281 4.82963 10.9656 4.81244C12.1422 4.80792 13.3081 5.03575 14.3964 5.48288C15.4847 5.93 16.4741 6.58762 17.3076 7.41799C18.1412 8.24837 18.8026 9.23516 19.2539 10.3218C19.7052 11.4083 19.9375 12.5734 19.9375 13.7499V15.8124C19.9375 15.9948 19.8651 16.1696 19.7361 16.2986C19.6072 16.4275 19.4323 16.4999 19.25 16.4999H2.75C2.56766 16.4999 2.3928 16.4275 2.26386 16.2986C2.13493 16.1696 2.0625 15.9948 2.0625 15.8124Z" stroke="#757575" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11 4.8125V7.5625" stroke="#757575" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2.36328 11.4382L5.02734 12.1515" stroke="#757575" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.6367 11.4382L16.9727 12.1515" stroke="#757575" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.88574 16.5L14.7639 8.84302" stroke="#757575" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
                             <span class="text-sm">Dashboard</span>
                         </button>
                         <div id="dropdown-icon" class="transition-all duration-300">
@@ -57,10 +52,10 @@
                         </li>
                         <li>
                             <a href="./analytics.html">
-                                <button class="menu-style w-full menu-active-btn">
+                                <button class="menu-style w-full ">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="9" y="9" width="6" height="6" fill="#228FF3"  />
+                                        <rect x="9" y="9" width="6" height="6" fill="#757575"  />
                                     </svg>
                                     <span>Analytics</span>
                                 </button>
@@ -70,12 +65,13 @@
                 </div>
     
                 <!-- managments  -->
-                <div class="management mt-6 ml-6 mr-4">
+                <div class="management mt-6 ml-2 mr-2">
                     <h5 class="uppercase text-sm font-semibold text-text-300 py-2">Management</h5>
                     <ul class="management-contents">
+
                         <!-- pages  -->
                         <li class="pages">
-                            <div id="managment-pages" class="flex items-center justify-between cursor-pointer">
+                            <div id="managment-pages" class="flex items-center justify-between border-l-4 border-primary bg-gradient-to-r from-primary-20 to-primary-10 pl-2 pr-3 cursor-pointer">
                                 <button class="text-text-100 flex gap-x-4 py-4">
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -104,53 +100,64 @@
                                 </span>
                             </div>
                             <div id="pages-menus" class="hidden">
-                                <ul>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>Profile</span>
+                                <ul class="ml-[12px]">
+                                    <li>
+                                        <a href="./user-profile.html" class="menu-style menu-active-btn">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6"  fill="#228FF3"/>
+                                                </svg>
+                                            </span>
+                                            <span>Profile</span>
+                                        </a>
                                     </li>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>Integrations</span>
+                                    <li>
+                                        <a class="menu-style" href="./integrations.html" >
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Integrations</span>
+                                        </a>
                                     </li>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>New User</span>
+                                    <li >
+                                        <a href="./newuser.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>New User</span>
+                                        </a>
                                     </li>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>Account Setting</span>
+                                    <li>
+                                        <a href="./accountsettings.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Account Setting</span>
+                                        </a>
                                     </li>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>Billing</span>
+                                    <li>
+                                        <a href="./billing.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Billing</span>
+                                        </a>
                                     </li>
-                                    <li class="menu-style">
+                                    <li >
+                                       <a class="menu-style" href="./invoice.html">
                                         <span>
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -158,22 +165,26 @@
                                             </svg>
                                         </span>
                                         <span>Invoice</span>
+                                       </a>
                                     </li>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>Pricing</span>
+                                    <li >
+                                        <a href="./pricing.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Pricing</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
     
+                        <!-- applications  -->
                         <li class="applications">
-                            <div id="managment-applications" class="flex items-center justify-between cursor-pointer">
+                            <div id="managment-applications" class="flex items-center justify-between cursor-pointer pl-2 pr-3">
                                 <button class="text-text-100 flex gap-x-4 py-4">
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -198,49 +209,58 @@
                                 </span>
                             </div>
                             <div id="application-menus" class="hidden">
-                                <ul>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>Data Table</span>
+                                <ul class="ml-[12px]">
+                                    <li >
+                                        <a href="./datatable.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Data Table</span>
+                                        </a>
                                     </li>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>Calender</span>
+                                    <li>
+                                        <a href="./calender.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Calender</span>
+                                        </a>
                                     </li>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>Kanban</span>
+                                    <li>
+                                        <a href="./kanban.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Kanban</span>
+                                        </a>
                                     </li>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>Wizard</span>
+                                    <li>
+                                        <a class="menu-style" href="./wizard.html">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Wizard</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
     
+                        <!-- E-commerce  -->
                         <li class="e-commerce">
-                            <div id="managment-e-commerce" class="flex items-center justify-between cursor-pointer">
+                            <div id="managment-e-commerce" class="flex items-center justify-between cursor-pointer pl-2 pr-3">
                                 <button class="text-text-100 flex gap-x-4 py-4">
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -266,40 +286,47 @@
                             </div>
     
                             <div id="e-commerce-menus" class="hidden">
-                                <ul>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>New Product</span>
+                                <ul class="ml-[12px]">
+                                    <li>
+                                        <a href="./addproducts.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>New Product</span>
+                                        </a>
                                     </li>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>Edit product</span>
+                                    <li>
+                                        <a href="./addproducts.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Edit product</span>
+                                        </a>
                                     </li>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>Product Page</span>
+                                    <li>
+                                        <a class="menu-style" href="./productdetails.html">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Product Page</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
     
+                        <!-- orders  -->
                         <li class="orders">
-                            <div id="managment-order" class="flex items-center justify-between">
+                            <div id="managment-order" class="flex items-center justify-between pl-2 pr-3">
                                 <button class="text-text-100 flex gap-x-4 py-4">
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -332,31 +359,36 @@
                                 </span>
                             </div>
                             <div id="orders-menus" class="hidden">
-                                <ul>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>Order List</span>
+                                <ul class="ml-[12px]">
+                                    <li >
+                                        <a href="./orderlist.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Order List</span>
+                                        </a>
                                     </li>
-                                    <li class="menu-style">
-                                        <span>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
-                                            </svg>
-                                        </span>
-                                        <span>Order List</span>
+                                    <li>
+                                        <a href="./orderdetails.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Order Details</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
     
+                        <!-- authentications  -->
                         <li class="authentications">
-                            <div id="managment-authentications" class="flex items-center justify-between">
+                            <div id="managment-authentications" class="flex items-center justify-between pl-2 pr-3">
                                 <button class="text-text-100 flex gap-x-4 py-4">
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -372,6 +404,7 @@
                                 </button>
                             </div>
                         </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -379,7 +412,7 @@
 
         <aside class="right-aside bg-[#F5F5F5] md:ml-[280px] pb-10">
 
-             <header class="h-10 sm:h-[76px] py-2 sm:py-4 md:pr-10 shadow-md bg-white fixed top-0 w-full md:w-[calc(100%-280px)] px-4 md:px-0 flex justify-between items-center z-[50]">
+            <header class="h-10 sm:h-[76px] py-2 sm:py-4 md:pr-10 shadow-md bg-white fixed top-0 w-full md:w-[calc(100%-280px)] px-4 md:px-0 flex justify-between items-center z-[50]">
                 <!-- mobile menu btn -->
                 <div class="block md:hidden">
                    <button id="mobile-menu-trigger">
@@ -637,7 +670,7 @@
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </li>
-                        <li class="text-text-300 text-[10px] sm:text-base">Dashboard</li>
+                        <li class="text-text-300 text-[10px] sm:text-base">Pages</li>
                         <li>
                             <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -645,7 +678,7 @@
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </li>
-                        <li class="text-text-300 text-[10px] sm:text-base">Analytics</li>
+                        <li class="text-text-300 text-[10px] sm:text-base">Projects</li>
                     </ul>
                 </div>
                 
