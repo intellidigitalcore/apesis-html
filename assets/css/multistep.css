@@ -33,7 +33,7 @@
 
 /*buttons*/
 #msform .action-button {
-  @apply bg-primary w-[160px] text-white text-sm h-10 flex rounded-[4px];
+  @apply bg-primary w-[160px] text-white text-sm h-10 flex rounded-[4px] justify-center cursor-pointer;
 }
 
 
