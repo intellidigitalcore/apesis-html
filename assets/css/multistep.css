@@ -9,11 +9,7 @@
 }
 
 #msform fieldset {
-    background: white;
-    border: 0 none;
-    padding: 20px 30px;
-    /* box-sizing: border-box; */
-    width: 100%;
+  @apply border-0  bg-white py-5 px-0 sm:px-8;
 }
 
 /*Hide all except first fieldset*/
@@ -33,7 +29,7 @@
 
 /*buttons*/
 #msform .action-button {
-  @apply bg-primary w-[160px] text-white text-sm h-10 flex rounded-[4px] justify-center cursor-pointer;
+  @apply bg-primary w-[120px] sm:w-[160px] md:w-[127px] text-white text-sm h-10 flex rounded-[4px] justify-center cursor-pointer;
 }
 
 
@@ -52,10 +48,9 @@
 
 
 #progressbar {
-    @apply py-10 bg-text-10;
-  margin-bottom: 30px;
-  overflow: hidden;
-  counter-reset: step;
+    @apply py-5 sm:py-10 bg-text-10 sm:mb-10;
+    overflow: hidden;
+    counter-reset: step;
 }
 
 #progressbar li {
