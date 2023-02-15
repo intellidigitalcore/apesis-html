@@ -195,7 +195,7 @@ input:checked + .slider:before {
 }
 
 .invoice-form-tdata {
-  @apply text-text-200 font-normal text-sm py-[26px] px-4;
+  @apply text-text-200 font-normal text-xs sm:text-sm py-[26px] px-4;
 }
 
 .fc-non-business {
