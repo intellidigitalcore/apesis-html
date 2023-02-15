@@ -76,7 +76,7 @@ input:valid+label {
 }
 
 .new-user-input label {
-  @apply p-[14px] top-0 left-0 absolute;
+  @apply p-[14px] -top-[2px] sm:top-0 left-0 absolute;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
@@ -191,7 +191,7 @@ input:checked + .slider:before {
 =================*/
 
 .invoice-tdata {
-  @apply text-text-200 font-medium text-base py-[10px] px-4;
+  @apply text-text-200 font-medium text-sm sm:text-base py-[10px] px-4;
 }
 
 .invoice-form-tdata {

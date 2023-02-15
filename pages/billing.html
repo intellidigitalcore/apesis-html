@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,394 +7,466 @@
     <title>Apesis - Billing</title>
     <link rel="stylesheet" href="../dist/output.css">
 </head>
+
 <body>
     <main class="">
 
-        <aside class="w-[280px] border-r h-screen bg-white fixed top-0 left-0">
-            <div class="logo pt-12 ml-6">
-                <img src="../assets/images/common/logo.png" alt="">
-            </div>
-    
-            <!-- dashboard  -->
-            <div class="dashboard mx-2 mt-10">
-                <div id="dashboard"
-                    class="flex items-center justify-between border-l-4 border-primary bg-gradient-to-r from-primary-20 to-primary-10 py-4 pl-2 pr-4 cursor-pointer">
-                    <button class="flex gap-x-4 font-semibold text-primary">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.0625 15.8126V13.8446C2.0625 8.90319 6.03281 4.82975 10.9656 4.81257C12.1422 4.80804 13.3081 5.03588 14.3964 5.483C15.4847 5.93013 16.4741 6.58774 17.3076 7.41811C18.1412 8.24849 18.8026 9.23528 19.2539 10.3219C19.7052 11.4085 19.9375 12.5735 19.9375 13.7501V15.8126C19.9375 15.9949 19.8651 16.1698 19.7361 16.2987C19.6072 16.4276 19.4323 16.5001 19.25 16.5001H2.75C2.56766 16.5001 2.3928 16.4276 2.26386 16.2987C2.13493 16.1698 2.0625 15.9949 2.0625 15.8126Z"
-                                stroke="#228FF3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M11 4.8125V7.5625" stroke="#228FF3" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M2.36328 11.4375L5.02734 12.1508" stroke="#228FF3" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M19.6367 11.4375L16.9727 12.1508" stroke="#228FF3" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M8.88574 16.5008L14.7639 8.84375" stroke="#228FF3" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <span class="text-sm">Dashboard</span>
-                    </button>
-                    <div id="dropdown-icon" class="transition-all duration-300">
-                        <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M0.666866 9.66728C0.511097 9.66759 0.36014 9.61334 0.240199 9.51395C0.103861 9.40092 0.0181003 9.23828 0.00184094 9.06193C-0.0144184 8.88558 0.0401596 8.71 0.153532 8.57395L3.1402 5.00061L0.260199 1.42061C0.148352 1.28289 0.0960196 1.10625 0.114789 0.929826C0.133557 0.753398 0.221879 0.59173 0.360199 0.480614C0.499643 0.357921 0.68395 0.298964 0.868715 0.317947C1.05348 0.336929 1.22195 0.432131 1.33353 0.580614L4.55353 4.58061C4.75574 4.82662 4.75574 5.18128 4.55353 5.42728L1.2202 9.42728C1.08456 9.59091 0.879022 9.68006 0.666866 9.66728Z"
-                                fill="#575757" />
-                        </svg>
-                    </div>
+        <!-- left menu  -->
+        <aside id="menu-bar"
+            class="w-full transition-all duration-200 ease-in-out md:w-fit backdrop-blur-[2px] fixed top-10 sm:top-[76px] md:top-0 left-0 hidden md:block z-20">
+            <div class="w-[230px] sm:w-[280px] border-r h-screen bg-white">
+                <div class="logo pt-12 ml-6">
+                    <img src="./../assets/images/common/logo.png" alt="">
                 </div>
-                <ul id="dashboard-menu" class="ml-[12px] hidden">
-                    <li>
-                        <button class="menu-style w-full">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+
+                <!-- dashboard  -->
+                <div class="dashboard mx-2 mt-10">
+                    <div id="dashboard" class="flex items-center justify-between  py-4 pl-3 pr-4 cursor-pointer">
+                        <button class="flex gap-x-4 font-semibold text-text-100">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                <path
+                                    d="M2.0625 15.8124V13.8445C2.0625 8.90307 6.03281 4.82963 10.9656 4.81244C12.1422 4.80792 13.3081 5.03575 14.3964 5.48288C15.4847 5.93 16.4741 6.58762 17.3076 7.41799C18.1412 8.24837 18.8026 9.23516 19.2539 10.3218C19.7052 11.4083 19.9375 12.5734 19.9375 13.7499V15.8124C19.9375 15.9948 19.8651 16.1696 19.7361 16.2986C19.6072 16.4275 19.4323 16.4999 19.25 16.4999H2.75C2.56766 16.4999 2.3928 16.4275 2.26386 16.2986C2.13493 16.1696 2.0625 15.9948 2.0625 15.8124Z"
+                                    stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M11 4.8125V7.5625" stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M2.36328 11.4382L5.02734 12.1515" stroke="#757575" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M19.6367 11.4382L16.9727 12.1515" stroke="#757575" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8.88574 16.5L14.7639 8.84302" stroke="#757575" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                            <span>Sales</span>
+                            <span class="text-sm">Dashboard</span>
                         </button>
-                    </li>
-                    <li>
-                        <button class="menu-style w-full menu-active-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <div id="dropdown-icon" class="transition-all duration-300">
+                            <svg width="5" height="10" viewBox="0 0 5 10" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                <path
+                                    d="M0.666866 9.66728C0.511097 9.66759 0.36014 9.61334 0.240199 9.51395C0.103861 9.40092 0.0181003 9.23828 0.00184094 9.06193C-0.0144184 8.88558 0.0401596 8.71 0.153532 8.57395L3.1402 5.00061L0.260199 1.42061C0.148352 1.28289 0.0960196 1.10625 0.114789 0.929826C0.133557 0.753398 0.221879 0.59173 0.360199 0.480614C0.499643 0.357921 0.68395 0.298964 0.868715 0.317947C1.05348 0.336929 1.22195 0.432131 1.33353 0.580614L4.55353 4.58061C4.75574 4.82662 4.75574 5.18128 4.55353 5.42728L1.2202 9.42728C1.08456 9.59091 0.879022 9.68006 0.666866 9.66728Z"
+                                    fill="#575757" />
                             </svg>
-                            <span>Analytics</span>
-                        </button>
-                    </li>
-                </ul>
+                        </div>
+                    </div>
+                    <ul id="dashboard-menu" class="ml-[12px] hidden">
+                        <li>
+                            <a href="./../index.html">
+                                <button class="menu-style w-full">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                    </svg>
+                                    <span>Sales</span>
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./analytics.html">
+                                <button class="menu-style w-full ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                    </svg>
+                                    <span>Analytics</span>
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- managments  -->
+                <div class="management mt-6 ml-2 mr-2">
+                    <h5 class="uppercase text-sm font-semibold text-text-300 py-2">Management</h5>
+                    <ul class="management-contents">
+
+                        <!-- pages  -->
+                        <li class="pages">
+                            <div id="managment-pages"
+                                class="flex items-center justify-between border-l-4 border-primary bg-gradient-to-r from-primary-20 to-primary-10 pl-2 pr-3 cursor-pointer">
+                                <button class="text-text-100 flex gap-x-4 py-4">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.4375 19.25H4.8125C4.63016 19.25 4.4553 19.1776 4.32636 19.0486C4.19743 18.9197 4.125 18.7448 4.125 18.5625V6.1875C4.125 6.00516 4.19743 5.8303 4.32636 5.70136C4.4553 5.57243 4.63016 5.5 4.8125 5.5H11.6875L15.125 8.9375V18.5625C15.125 18.7448 15.0526 18.9197 14.9236 19.0486C14.7947 19.1776 14.6198 19.25 14.4375 19.25Z"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M6.875 5.5V3.4375C6.875 3.25516 6.94743 3.0803 7.07636 2.95136C7.2053 2.82243 7.38016 2.75 7.5625 2.75H14.4375L17.875 6.1875V15.8125C17.875 15.9948 17.8026 16.1697 17.6736 16.2986C17.5447 16.4276 17.3698 16.5 17.1875 16.5H15.125"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M7.5625 13.0625H11.6875" stroke="#757575" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M7.5625 15.8125H11.6875" stroke="#757575" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm">Pages</span>
+                                </button>
+                                <span id="managment-dropdown-icon" class="transition-all duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
+                                            fill="#575757" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div id="pages-menus" class="hidden">
+                                <ul class="ml-[12px]">
+                                    <li>
+                                        <a href="./user-profile.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Profile</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-style" href="./integrations.html">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Integrations</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./newuser.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>New User</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./accountsettings.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575"/>
+                                                </svg>
+                                            </span>
+                                            <span>Account Setting</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./billing.html" class="menu-style menu-active-btn">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#228FF3"/>
+                                                </svg>
+                                            </span>
+                                            <span>Billing</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-style" href="./invoice.html">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Invoice</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./pricing.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Pricing</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- applications  -->
+                        <li class="applications">
+                            <div id="managment-applications"
+                                class="flex items-center justify-between cursor-pointer pl-2 pr-3">
+                                <button class="text-text-100 flex gap-x-4 py-4">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.625 4.125H4.125V9.625H9.625V4.125Z" stroke="#757575"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M17.875 4.125H12.375V9.625H17.875V4.125Z" stroke="#757575"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M9.625 12.375H4.125V17.875H9.625V12.375Z" stroke="#757575"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M17.875 12.375H12.375V17.875H17.875V12.375Z" stroke="#757575"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm">Application</span>
+                                </button>
+                                <span id="applications-dropdown-icon" class="transition-all duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
+                                            fill="#575757" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div id="application-menus" class="hidden">
+                                <ul class="ml-[12px]">
+                                    <li>
+                                        <a href="./datatable.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Data Table</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./calender.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Calender</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./kanban.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Kanban</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-style" href="./wizard.html">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Wizard</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- E-commerce  -->
+                        <li class="e-commerce">
+                            <div id="managment-e-commerce"
+                                class="flex items-center justify-between cursor-pointer pl-2 pr-3">
+                                <button class="text-text-100 flex gap-x-4 py-4">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19.25 15.2371V6.76363C19.2493 6.64124 19.2164 6.52118 19.1546 6.41556C19.0927 6.30995 19.0041 6.22251 18.8977 6.16207L11.3352 1.90816C11.2333 1.84933 11.1177 1.81836 11 1.81836C10.8823 1.81836 10.7667 1.84933 10.6648 1.90816L3.10234 6.16207C2.99591 6.22251 2.9073 6.30995 2.84544 6.41556C2.78358 6.52118 2.75066 6.64124 2.75 6.76363V15.2371C2.75066 15.3595 2.78358 15.4795 2.84544 15.5851C2.9073 15.6908 2.99591 15.7782 3.10234 15.8386L10.6648 20.0925C10.7667 20.1514 10.8823 20.1823 11 20.1823C11.1177 20.1823 11.2333 20.1514 11.3352 20.0925L18.8977 15.8386C19.0041 15.7782 19.0927 15.6908 19.1546 15.5851C19.2164 15.4795 19.2493 15.3595 19.25 15.2371V15.2371Z"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M19.1557 6.41016L11.0775 10.9992L2.84473 6.41016" stroke="#757575"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M11.0773 11L11 20.1781" stroke="#757575" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm">Ecommerce</span>
+                                </button>
+                                <span id="e-commerce-dropdown-icon" class="transition-all duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
+                                            fill="#575757" />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div id="e-commerce-menus" class="hidden">
+                                <ul class="ml-[12px]">
+                                    <li>
+                                        <a href="./addproducts.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>New Product</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./addproducts.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Edit product</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="menu-style" href="./productdetails.html">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Product Page</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- orders  -->
+                        <li class="orders">
+                            <div id="managment-order" class="flex items-center justify-between pl-2 pr-3">
+                                <button class="text-text-100 flex gap-x-4 py-4">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.8125 15.8125H5.99844L3.60078 2.62969C3.57273 2.47182 3.49038 2.32871 3.36797 2.22514C3.24556 2.12157 3.09081 2.06404 2.93047 2.0625H1.375"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M6.875 19.25C7.82424 19.25 8.59375 18.4805 8.59375 17.5312C8.59375 16.582 7.82424 15.8125 6.875 15.8125C5.92576 15.8125 5.15625 16.582 5.15625 17.5312C5.15625 18.4805 5.92576 19.25 6.875 19.25Z"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M15.8125 19.25C16.7617 19.25 17.5312 18.4805 17.5312 17.5312C17.5312 16.582 16.7617 15.8125 15.8125 15.8125C14.8633 15.8125 14.0938 16.582 14.0938 17.5312C14.0938 18.4805 14.8633 19.25 15.8125 19.25Z"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M5.37109 12.375H16.1648C16.4862 12.376 16.7977 12.2636 17.0444 12.0578C17.2912 11.8519 17.4575 11.5656 17.5141 11.2492L18.5625 5.5H4.125"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm">Orders</span>
+                                </button>
+                                <span id="order-dropdown-icon" class="transition-all duration-300">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
+                                            fill="#575757" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div id="orders-menus" class="hidden">
+                                <ul class="ml-[12px]">
+                                    <li>
+                                        <a href="./orderlist.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Order List</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./orderdetails.html" class="menu-style">
+                                            <span>
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                </svg>
+                                            </span>
+                                            <span>Order Details</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- authentications  -->
+                        <li class="authentications">
+                            <div id="managment-authentications" class="flex items-center justify-between pl-2 pr-3">
+                                <button class="text-text-100 flex gap-x-4 py-4">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.00937 10.5531C7.71135 9.822 7.55953 9.03954 7.5625 8.25C7.5625 7.02623 7.92539 5.82994 8.60528 4.81241C9.28517 3.79488 10.2515 3.00182 11.3821 2.5335C12.5128 2.06518 13.7569 1.94265 14.9571 2.18139C16.1574 2.42014 17.2599 3.00944 18.1252 3.87478C18.9906 4.74012 19.5799 5.84262 19.8186 7.04288C20.0574 8.24314 19.9348 9.48724 19.4665 10.6179C18.9982 11.7485 18.2051 12.7148 17.1876 13.3947C16.1701 14.0746 14.9738 14.4375 13.75 14.4375C12.9605 14.4405 12.178 14.2887 11.4469 13.9906V13.9906L10.3125 15.125H8.25V17.1875H6.1875V19.25H2.75V15.8125L8.00937 10.5531Z"
+                                            stroke="#757575" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M15.4688 7.5625C16.0383 7.5625 16.5 7.10079 16.5 6.53125C16.5 5.96171 16.0383 5.5 15.4688 5.5C14.8992 5.5 14.4375 5.96171 14.4375 6.53125C14.4375 7.10079 14.8992 7.5625 15.4688 7.5625Z"
+                                            fill="#757575" />
+                                    </svg>
+                                    <span class="text-sm">Authentication</span>
+                                </button>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-    
-            <!-- managments  -->
-            <div class="management mt-6 ml-6 mr-4">
-                <h5 class="uppercase text-sm font-semibold text-text-300 py-2">Management</h5>
-                <ul class="management-contents">
-                    <!-- pages  -->
-                    <li class="pages">
-                        <div id="managment-pages" class="flex items-center justify-between cursor-pointer">
-                            <button class="text-text-100 flex gap-x-4 py-4">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14.4375 19.25H4.8125C4.63016 19.25 4.4553 19.1776 4.32636 19.0486C4.19743 18.9197 4.125 18.7448 4.125 18.5625V6.1875C4.125 6.00516 4.19743 5.8303 4.32636 5.70136C4.4553 5.57243 4.63016 5.5 4.8125 5.5H11.6875L15.125 8.9375V18.5625C15.125 18.7448 15.0526 18.9197 14.9236 19.0486C14.7947 19.1776 14.6198 19.25 14.4375 19.25Z"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M6.875 5.5V3.4375C6.875 3.25516 6.94743 3.0803 7.07636 2.95136C7.2053 2.82243 7.38016 2.75 7.5625 2.75H14.4375L17.875 6.1875V15.8125C17.875 15.9948 17.8026 16.1697 17.6736 16.2986C17.5447 16.4276 17.3698 16.5 17.1875 16.5H15.125"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M7.5625 13.0625H11.6875" stroke="#757575" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M7.5625 15.8125H11.6875" stroke="#757575" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span class="text-sm">Pages</span>
-                            </button>
-                            <span id="managment-dropdown-icon" class="transition-all duration-300">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
-                                        fill="#575757" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div id="pages-menus" class="hidden">
-                            <ul>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Profile</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Integrations</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>New User</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Account Setting</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Billing</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Invoice</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Pricing</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-    
-                    <li class="applications">
-                        <div id="managment-applications" class="flex items-center justify-between cursor-pointer">
-                            <button class="text-text-100 flex gap-x-4 py-4">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.625 4.125H4.125V9.625H9.625V4.125Z" stroke="#757575" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M17.875 4.125H12.375V9.625H17.875V4.125Z" stroke="#757575"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M9.625 12.375H4.125V17.875H9.625V12.375Z" stroke="#757575"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M17.875 12.375H12.375V17.875H17.875V12.375Z" stroke="#757575"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span class="text-sm">Application</span>
-                            </button>
-                            <span id="applications-dropdown-icon" class="transition-all duration-300">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
-                                        fill="#575757" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div id="application-menus" class="hidden">
-                            <ul>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Data Table</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Calender</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Kanban</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Wizard</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-    
-                    <li class="e-commerce">
-                        <div id="managment-e-commerce" class="flex items-center justify-between cursor-pointer">
-                            <button class="text-text-100 flex gap-x-4 py-4">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M19.25 15.2371V6.76363C19.2493 6.64124 19.2164 6.52118 19.1546 6.41556C19.0927 6.30995 19.0041 6.22251 18.8977 6.16207L11.3352 1.90816C11.2333 1.84933 11.1177 1.81836 11 1.81836C10.8823 1.81836 10.7667 1.84933 10.6648 1.90816L3.10234 6.16207C2.99591 6.22251 2.9073 6.30995 2.84544 6.41556C2.78358 6.52118 2.75066 6.64124 2.75 6.76363V15.2371C2.75066 15.3595 2.78358 15.4795 2.84544 15.5851C2.9073 15.6908 2.99591 15.7782 3.10234 15.8386L10.6648 20.0925C10.7667 20.1514 10.8823 20.1823 11 20.1823C11.1177 20.1823 11.2333 20.1514 11.3352 20.0925L18.8977 15.8386C19.0041 15.7782 19.0927 15.6908 19.1546 15.5851C19.2164 15.4795 19.2493 15.3595 19.25 15.2371V15.2371Z"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M19.1557 6.41016L11.0775 10.9992L2.84473 6.41016" stroke="#757575"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M11.0773 11L11 20.1781" stroke="#757575" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span class="text-sm">Ecommerce</span>
-                            </button>
-                            <span id="e-commerce-dropdown-icon" class="transition-all duration-300">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
-                                        fill="#575757" />
-                                </svg>
-                            </span>
-                        </div>
-    
-                        <div id="e-commerce-menus" class="hidden">
-                            <ul>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>New Product</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Edit product</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Product Page</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-    
-                    <li class="orders">
-                        <div id="managment-order" class="flex items-center justify-between">
-                            <button class="text-text-100 flex gap-x-4 py-4">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M15.8125 15.8125H5.99844L3.60078 2.62969C3.57273 2.47182 3.49038 2.32871 3.36797 2.22514C3.24556 2.12157 3.09081 2.06404 2.93047 2.0625H1.375"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M6.875 19.25C7.82424 19.25 8.59375 18.4805 8.59375 17.5312C8.59375 16.582 7.82424 15.8125 6.875 15.8125C5.92576 15.8125 5.15625 16.582 5.15625 17.5312C5.15625 18.4805 5.92576 19.25 6.875 19.25Z"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M15.8125 19.25C16.7617 19.25 17.5312 18.4805 17.5312 17.5312C17.5312 16.582 16.7617 15.8125 15.8125 15.8125C14.8633 15.8125 14.0938 16.582 14.0938 17.5312C14.0938 18.4805 14.8633 19.25 15.8125 19.25Z"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M5.37109 12.375H16.1648C16.4862 12.376 16.7977 12.2636 17.0444 12.0578C17.2912 11.8519 17.4575 11.5656 17.5141 11.2492L18.5625 5.5H4.125"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                <span class="text-sm">Orders</span>
-                            </button>
-                            <span id="order-dropdown-icon" class="transition-all duration-300">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6.66687 12.6673C6.5111 12.6676 6.36014 12.6133 6.2402 12.5139C6.10386 12.4009 6.0181 12.2383 6.00184 12.0619C5.98558 11.8856 6.04016 11.71 6.15353 11.5739L9.1402 8.00061L6.2602 4.42061C6.14835 4.28289 6.09602 4.10625 6.11479 3.92983C6.13356 3.7534 6.22188 3.59173 6.3602 3.48061C6.49964 3.35792 6.68395 3.29896 6.86871 3.31795C7.05348 3.33693 7.22195 3.43213 7.33353 3.58061L10.5535 7.58061C10.7557 7.82662 10.7557 8.18128 10.5535 8.42728L7.2202 12.4273C7.08456 12.5909 6.87902 12.6801 6.66687 12.6673Z"
-                                        fill="#575757" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div id="orders-menus" class="hidden">
-                            <ul>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Order List</span>
-                                </li>
-                                <li class="menu-style">
-                                    <span>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
-                                        </svg>
-                                    </span>
-                                    <span>Order List</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-    
-                    <li class="authentications">
-                        <div id="managment-authentications" class="flex items-center justify-between">
-                            <button class="text-text-100 flex gap-x-4 py-4">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8.00937 10.5531C7.71135 9.822 7.55953 9.03954 7.5625 8.25C7.5625 7.02623 7.92539 5.82994 8.60528 4.81241C9.28517 3.79488 10.2515 3.00182 11.3821 2.5335C12.5128 2.06518 13.7569 1.94265 14.9571 2.18139C16.1574 2.42014 17.2599 3.00944 18.1252 3.87478C18.9906 4.74012 19.5799 5.84262 19.8186 7.04288C20.0574 8.24314 19.9348 9.48724 19.4665 10.6179C18.9982 11.7485 18.2051 12.7148 17.1876 13.3947C16.1701 14.0746 14.9738 14.4375 13.75 14.4375C12.9605 14.4405 12.178 14.2887 11.4469 13.9906V13.9906L10.3125 15.125H8.25V17.1875H6.1875V19.25H2.75V15.8125L8.00937 10.5531Z"
-                                        stroke="#757575" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path
-                                        d="M15.4688 7.5625C16.0383 7.5625 16.5 7.10079 16.5 6.53125C16.5 5.96171 16.0383 5.5 15.4688 5.5C14.8992 5.5 14.4375 5.96171 14.4375 6.53125C14.4375 7.10079 14.8992 7.5625 15.4688 7.5625Z"
-                                        fill="#757575" />
-                                </svg>
-                                <span class="text-sm">Authentication</span>
-                            </button>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-    
         </aside>
-    
-        <!-- h-[100vh] -->
-        <aside class="right-aside bg-[#F5F5F5] ml-[280px] pb-10">
-    
-            <header class="h-[76px] py-4 pr-10 shadow-md bg-white fixed top-0 w-[calc(100%-280px)] z-[30]">
-                <div class="flex w-full gap-x-6 justify-end">
-                    <div class="search h-[44px] w-[490px] bg-[#F7F7F7] relative">
+
+
+        <!-- right header and content   -->
+        <aside class="right-aside bg-[#F5F5F5] md:ml-[280px] pb-10">
+
+            <!-- header  -->
+            <header class="h-10 sm:h-[76px] py-2 sm:py-4 md:pr-10 shadow-md bg-white fixed top-0 w-full md:w-[calc(100%-280px)] px-4 md:px-0 flex justify-between items-center z-[20]">
+                <!-- mobile menu btn -->
+                <div class="block md:hidden">
+                    <button id="mobile-menu-trigger">
+                        <svg class="w-3 h-3 sm:w-6 sm:h-6" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.5 8H13.5" stroke="#575757" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2.5 4H13.5" stroke="#575757" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2.5 12H13.5" stroke="#575757" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="flex w-full gap-x-2 sm:gap-x-6 justify-end items-center">
+
+                    <!-- search  -->
+                    <div class="search h-6 sm:h-11 w-[50%] lg:w-[490px] bg-[#F7F7F7] relative rounded-md">
                         <input
-                            class="w-[440px] h-full pl-14 bg-[#F7F7F7] outline-none text-text-300 placeholder:text-text-300 placeholder:font-normal"
+                            class="w-[100%] lg:w-[440px] h-full pl-7 sm:pl-14 bg-[#F7F7F7] outline-none text-text-300 placeholder:text-text-300 placeholder:font-normal placeholder:text-[10px] sm:placeholder:text-base text-[10px] sm:text-base"
                             type="search" name="" id="" placeholder="Search here...">
-                        <div class="w-11 h-11 bg-[#EBEBEB] flex items-center justify-center absolute top-0 left-0">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                        <div
+                            class="w-6 sm:w-11 h-6 sm:h-11 bg-[#EBEBEB] flex items-center justify-center absolute top-0 left-0">
+                            <svg class="w-[10px] sm:w-6 h-[10px] sm:h-6" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M16.425 15.25L19.2583 18.075C19.4161 18.2315 19.5048 18.4445 19.5048 18.6667C19.5048 18.8889 19.4161 19.1019 19.2583 19.2583C19.1019 19.4161 18.8889 19.5048 18.6667 19.5048C18.4445 19.5048 18.2315 19.4161 18.075 19.2583L15.25 16.425C14.0854 17.3392 12.6472 17.8352 11.1667 17.8333C7.48477 17.8333 4.5 14.8486 4.5 11.1667C4.5 7.48477 7.48477 4.5 11.1667 4.5C14.8486 4.5 17.8333 7.48477 17.8333 11.1667C17.8352 12.6472 17.3392 14.0854 16.425 15.25ZM11.1667 6.16667C8.40524 6.16667 6.16667 8.40524 6.16667 11.1667C6.16667 13.9281 8.40524 16.1667 11.1667 16.1667C13.9281 16.1667 16.1667 13.9281 16.1667 11.1667C16.1667 8.40524 13.9281 6.16667 11.1667 6.16667Z"
                                     fill="#4A4A4A" />
                             </svg>
                         </div>
                     </div>
-    
-                    <div class="parent language relative">
-                        <button id="toogle-btn" class="show-dropdown p-[10px] bg-[#F4F4F4] rouned-[4px]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+
+                    <!-- language  -->
+                    <div class="parent language relative z-50">
+                        <button id="toogle-btn" class="show-dropdown p-[5px] sm:p-[10px] bg-[#F4F4F4] rouned-[4px]">
+                            <svg class="w-3 sm:w-6 h-3 sm:h-6" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21.75 20.25L16.5 9.75L11.25 20.25" stroke="#5D6277" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" />
@@ -411,27 +484,29 @@
                                     stroke="#5D6277" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
+
                         <div id="toogle-div"
-                            class="dropdown-item w-[200px] absolute bg-white shadow top-full mt-8 right-0 rounded-[12px] hidden">
+                            class="dropdown-item w-[180px] sm:w-[200px] absolute bg-white shadow top-full mt-5 sm:mt-8 right-0 rounded-[4px] sm:rounded-[12px] hidden z-[99]">
                             <div class="language-select relative">
                                 <ul class="m-2 language-container">
                                     <li
-                                        class="text-text-40 font-medium hover:bg-primary-50 p-2 text-sm hover:transition-all hover:duration-200 cursor-pointer rounded-[4px] text-[#4A4A4A] relative z-10">
+                                        class="text-text-40 font-medium hover:bg-primary-50 p-2 text-xs sm:text-sm hover:transition-all hover:duration-200 cursor-pointer rounded-[4px] text-[#4A4A4A] relative z-10">
                                         English</li>
                                     <li
-                                        class="text-text-40 font-medium hover:bg-primary-50 p-2 text-sm hover:transition-all hover:duration-200 cursor-pointer rounded-[4px] text-[#4A4A4A] relative z-10">
+                                        class="text-text-40 font-medium hover:bg-primary-50 p-2 text-xs sm:text-sm hover:transition-all hover:duration-200 cursor-pointer rounded-[4px] text-[#4A4A4A] relative z-10">
                                         Germany</li>
                                     <li
-                                        class="text-text-40 font-medium hover:bg-primary-50 p-2 text-sm hover:transition-all hover:duration-200 cursor-pointer rounded-[4px] text-[#4A4A4A] relative z-10">
+                                        class="text-text-40 font-medium hover:bg-primary-50 p-2 text-xs sm:text-sm hover:transition-all hover:duration-200 cursor-pointer rounded-[4px] text-[#4A4A4A] relative z-10">
                                         France</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-    
+
+                    <!-- notifications  -->
                     <div class="parent notifications relative">
-                        <button id="toogle-btn" class="show-dropdown p-[10px] bg-[#F4F4F4] rouned-[4px]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <button id="toogle-btn" class="show-dropdown p-[5px] sm:p-[10px] bg-[#F4F4F4] rouned-[4px]">
+                            <svg class="w-3 sm:w-6 h-3 sm:h-6" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 21H15" stroke="#5D6277" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round" />
@@ -445,25 +520,26 @@
                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
-    
                         <div id="toogle-div"
-                            class="dropdown-item w-[360px] absolute bg-white shadow-2xl top-full mt-8 right-0 rounded-[12px] hidden ">
+                            class="dropdown-item w-[250px] sm:w-[360px] absolute bg-white shadow-2xl top-full mt-5 sm:mt-8 right-0 rounded-[4px] sm:rounded-[12px] hidden ">
                             <div class="notification-select relative">
                                 <div class="num-of-notifications py-4 px-5 border-b">
-                                    <h4 class="text-text-500 font-bold">Notifications</h4>
-                                    <p class="text-sm text-text-200">You have 1 unread messages</p>
+                                    <h4 class="text-text-500 font-bold text-sm sm:text-base">Notifications</h4>
+                                    <p class="text-xs sm:text-sm text-text-200">You have 1 unread messages</p>
                                 </div>
-                                <div class="h-[410px] overflow-y-auto">
+                                <div class="h-[350px] sm:h-[410px] overflow-y-auto">
                                     <div class="new">
-                                        <h3 class="py-3 text-sm px-5">New</h3>
-    
-                                        <div class="px-5 flex items-center py-3 gap-x-4 cursor-pointer hover:bg-primary-10">
+                                        <h3 class="py-2 sm:py-3 text-xs sm:text-sm px-5">New</h3>
+
+                                        <div
+                                            class="px-5 flex items-center py-3 gap-x-4 cursor-pointer hover:bg-primary-10">
                                             <div
                                                 class="w-10 h-10 bg-[#F4F6F8] rounded-full flex items-center justify-center ">
-                                                <img src="../assets/images/common/chat.png" alt="">
+                                                <img src="./../assets/images/common/chat.png" alt="">
                                             </div>
                                             <div class="">
-                                                <h5>Check your new messages</h5>
+                                                <h5 class="text-text-500 text-xs sm:text-sm font-normal">Check your new
+                                                    messages</h5>
                                                 <p class="flex gap-x-[6px] mt-1">
                                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -471,18 +547,21 @@
                                                             d="M6.99967 0.333984C3.33301 0.333984 0.333008 3.33398 0.333008 7.00065C0.333008 10.6673 3.33301 13.6673 6.99967 13.6673C10.6663 13.6673 13.6663 10.6673 13.6663 7.00065C13.6663 3.33398 10.6663 0.333984 6.99967 0.333984ZM6.99967 12.334C4.05967 12.334 1.66634 9.94065 1.66634 7.00065C1.66634 4.06065 4.05967 1.66732 6.99967 1.66732C9.93967 1.66732 12.333 4.06065 12.333 7.00065C12.333 9.94065 9.93967 12.334 6.99967 12.334ZM7.33301 3.66732H6.33301V7.66732L9.79967 9.80065L10.333 8.93398L7.33301 7.13398V3.66732Z"
                                                             fill="#858585" />
                                                     </svg>
-                                                    <span class="text-text-90 text-xs">07 Sep 2020 05:15 pm</span>
+                                                    <span class="text-text-90 text-[10px] sm:text-xs">07 Sep 2020 05:15
+                                                        pm</span>
                                                 </p>
                                             </div>
                                         </div>
-    
-                                        <div class="px-5 flex items-center py-3 gap-x-4 cursor-pointer hover:bg-primary-10">
+
+                                        <div
+                                            class="px-5 flex items-center py-3 gap-x-4 cursor-pointer hover:bg-primary-10">
                                             <div
                                                 class="w-10 h-10 bg-[#F4F6F8] rounded-full flex items-center justify-center shrink-0">
-                                                <img src="../assets/images/common/receive.png" alt="">
+                                                <img src="./../assets/images/common/receive.png" alt="">
                                             </div>
                                             <div class="">
-                                                <h5>Your order is placed <span class="text-text-100">waiting for
+                                                <h5 class="text-text-500 text-xs sm:text-sm font-bold">Your order is
+                                                    placed <span class="text-text-100">waiting for
                                                         confiramtion</span></h5>
                                                 <p class="flex gap-x-[6px] mt-1">
                                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -491,22 +570,24 @@
                                                             d="M6.99967 0.333984C3.33301 0.333984 0.333008 3.33398 0.333008 7.00065C0.333008 10.6673 3.33301 13.6673 6.99967 13.6673C10.6663 13.6673 13.6663 10.6673 13.6663 7.00065C13.6663 3.33398 10.6663 0.333984 6.99967 0.333984ZM6.99967 12.334C4.05967 12.334 1.66634 9.94065 1.66634 7.00065C1.66634 4.06065 4.05967 1.66732 6.99967 1.66732C9.93967 1.66732 12.333 4.06065 12.333 7.00065C12.333 9.94065 9.93967 12.334 6.99967 12.334ZM7.33301 3.66732H6.33301V7.66732L9.79967 9.80065L10.333 8.93398L7.33301 7.13398V3.66732Z"
                                                             fill="#858585" />
                                                     </svg>
-                                                    <span class="text-text-90 text-xs">07 Sep 2020 05:15 pm</span>
+                                                    <span class="text-text-90 text-[10px] sm:text-xs">07 Sep 2020 05:15
+                                                        pm</span>
                                                 </p>
                                             </div>
                                         </div>
-    
                                     </div>
                                     <div class="before-that">
-                                        <h3 class="py-3 text-sm px-5">Before that</h3>
-    
-                                        <div class="px-5 flex items-center py-3 gap-x-4 cursor-pointer hover:bg-primary-10">
+                                        <h3 class="py-2 sm:py-3 text-xs sm:text-sm px-5">Before that</h3>
+
+                                        <div
+                                            class="px-5 flex items-center py-3 gap-x-4 cursor-pointer hover:bg-primary-10">
                                             <div
                                                 class="w-10 h-10 bg-[#F4F6F8] rounded-full flex items-center justify-center shrink-0">
-                                                <img src="../assets/images/common/chat.png" alt="">
+                                                <img src="./../assets/images/common/chat.png" alt="">
                                             </div>
                                             <div class="">
-                                                <h5>Check your new messages</h5>
+                                                <h5 class="text-text-500 text-xs sm:text-sm font-normal">Check your new
+                                                    messages</h5>
                                                 <p class="flex gap-x-[6px] mt-1">
                                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
@@ -514,18 +595,21 @@
                                                             d="M6.99967 0.333984C3.33301 0.333984 0.333008 3.33398 0.333008 7.00065C0.333008 10.6673 3.33301 13.6673 6.99967 13.6673C10.6663 13.6673 13.6663 10.6673 13.6663 7.00065C13.6663 3.33398 10.6663 0.333984 6.99967 0.333984ZM6.99967 12.334C4.05967 12.334 1.66634 9.94065 1.66634 7.00065C1.66634 4.06065 4.05967 1.66732 6.99967 1.66732C9.93967 1.66732 12.333 4.06065 12.333 7.00065C12.333 9.94065 9.93967 12.334 6.99967 12.334ZM7.33301 3.66732H6.33301V7.66732L9.79967 9.80065L10.333 8.93398L7.33301 7.13398V3.66732Z"
                                                             fill="#858585" />
                                                     </svg>
-                                                    <span class="text-text-90 text-xs">07 Sep 2020 05:15 pm</span>
+                                                    <span class="text-text-90 text-[10px] sm:text-xs">07 Sep 2020 05:15
+                                                        pm</span>
                                                 </p>
                                             </div>
                                         </div>
-    
-                                        <div class="px-5 flex items-center py-3 gap-x-4 cursor-pointer hover:bg-primary-10">
+
+                                        <div
+                                            class="px-5 flex items-center py-3 gap-x-4 cursor-pointer hover:bg-primary-10">
                                             <div
                                                 class="w-10 h-10 bg-[#F4F6F8] rounded-full flex items-center justify-center shrink-0">
-                                                <img class="" src="../assets/images/common/on-time.png" alt="">
+                                                <img class="" src="./../assets/images/common/on-time.png" alt="">
                                             </div>
                                             <div class="">
-                                                <h5>Your order is placed <span class="text-text-100">waiting for
+                                                <h5 class="text-text-500 text-xs sm:text-sm font-bold">Your order is
+                                                    placed <span class="text-text-100">waiting for
                                                         confiramtion</span></h5>
                                                 <p class="flex gap-x-[6px] mt-1">
                                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -534,18 +618,21 @@
                                                             d="M6.99967 0.333984C3.33301 0.333984 0.333008 3.33398 0.333008 7.00065C0.333008 10.6673 3.33301 13.6673 6.99967 13.6673C10.6663 13.6673 13.6663 10.6673 13.6663 7.00065C13.6663 3.33398 10.6663 0.333984 6.99967 0.333984ZM6.99967 12.334C4.05967 12.334 1.66634 9.94065 1.66634 7.00065C1.66634 4.06065 4.05967 1.66732 6.99967 1.66732C9.93967 1.66732 12.333 4.06065 12.333 7.00065C12.333 9.94065 9.93967 12.334 6.99967 12.334ZM7.33301 3.66732H6.33301V7.66732L9.79967 9.80065L10.333 8.93398L7.33301 7.13398V3.66732Z"
                                                             fill="#858585" />
                                                     </svg>
-                                                    <span class="text-text-90 text-xs">07 Sep 2020 05:15 pm</span>
+                                                    <span class="text-text-90 text-[10px] sm:text-xs">07 Sep 2020 05:15
+                                                        pm</span>
                                                 </p>
                                             </div>
                                         </div>
-    
-                                        <div class="px-5 flex items-center py-3 gap-x-4 cursor-pointer hover:bg-primary-10">
+
+                                        <div
+                                            class="px-5 flex items-center py-3 gap-x-4 cursor-pointer hover:bg-primary-10">
                                             <div
                                                 class="w-10 h-10 bg-[#F4F6F8] rounded-full flex items-center justify-center shrink-0">
-                                                <img class="" src="../assets/images/common/on-time.png" alt="">
+                                                <img class="" src="./../assets/images/common/on-time.png" alt="">
                                             </div>
                                             <div class="">
-                                                <h5>Your order is placed <span class="text-text-100">waiting for
+                                                <h5 class="text-text-500 text-xs sm:text-sm font-bold">Your order is
+                                                    placed <span class="text-text-100">waiting for
                                                         confiramtion</span></h5>
                                                 <p class="flex gap-x-[6px] mt-1">
                                                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -554,58 +641,61 @@
                                                             d="M6.99967 0.333984C3.33301 0.333984 0.333008 3.33398 0.333008 7.00065C0.333008 10.6673 3.33301 13.6673 6.99967 13.6673C10.6663 13.6673 13.6663 10.6673 13.6663 7.00065C13.6663 3.33398 10.6663 0.333984 6.99967 0.333984ZM6.99967 12.334C4.05967 12.334 1.66634 9.94065 1.66634 7.00065C1.66634 4.06065 4.05967 1.66732 6.99967 1.66732C9.93967 1.66732 12.333 4.06065 12.333 7.00065C12.333 9.94065 9.93967 12.334 6.99967 12.334ZM7.33301 3.66732H6.33301V7.66732L9.79967 9.80065L10.333 8.93398L7.33301 7.13398V3.66732Z"
                                                             fill="#858585" />
                                                     </svg>
-                                                    <span class="text-text-90 text-xs">07 Sep 2020 05:15 pm</span>
+                                                    <span class="text-text-90 text-[10px] sm:text-xs">07 Sep 2020 05:15
+                                                        pm</span>
                                                 </p>
                                             </div>
                                         </div>
-    
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
-                    <div class="parent profile-details pl-6 border-l relative">
+
+                    <!-- profile details  -->
+                    <div class="parent profile-details pl-2 sm:pl-6 border-l relative">
                         <button class="show-dropdown flex items-center gap-x-4">
-                            <img class="w-10 h-10 rounded-full" src="../assets/images/common/admin-img.png" alt="">
-                            <div class="name-role">
+                            <img class="w-6 sm:w-10 h-6 sm:h-10 rounded-full"
+                                src="./../assets/images/common/admin-img.png" alt="">
+                            <div class="name-role hidden lg:block">
                                 <p class="text-base text-[#151D48] font-semibold">Robert Hook</p>
                                 <p class="text-sm text-text-200 text-left">Admin</p>
                             </div>
                         </button>
                         <div
-                            class="dropdown-item w-[200px] absolute bg-white top-full mt-8 right-0 rounded-[12px] shadow-lg hidden">
+                            class="dropdown-item w-[150px] sm:w-[200px] absolute bg-white top-full mt-8 right-0 rounded-[12px] shadow-lg hidden">
                             <div class="profile-select relative">
-                                <div class="name-role px-5 py-3 border-b">
-                                    <p class="text-base text-[#151D48] font-semibold">Robert Hook</p>
-                                    <p class="text-sm text-text-200 text-left">Admin</p>
+                                <div class="name-role px-3 sm:px-5 py-2 sm:py-3 border-b">
+                                    <p class="text-sm sm:text-base text-[#151D48] font-semibold">Robert Hook</p>
+                                    <p class="text-xs sm:text-sm text-text-200 text-left">Admin</p>
                                 </div>
-                                <ul class="m-2 language-container">
+                                <ul class="m-1 sm:m-2 language-container">
                                     <li
-                                        class="text-text-40 font-medium hover:bg-primary-50 p-2 px-3 text-sm hover:transition-all hover:duration-200 cursor-pointer rounded-[4px] text-[#4A4A4A]">
+                                        class="text-text-40 font-medium hover:bg-primary-50 py-1 sm:py-2 px-1 sm:px-3 text-xs sm:text-sm hover:transition-all hover:duration-200 cursor-pointer rounded-[4px] text-[#4A4A4A]">
                                         Profile</li>
                                     <li
-                                        class="text-text-40 font-medium hover:bg-primary-50 p-2 px-3 text-sm hover:transition-all hover:duration-200 cursor-pointer rounded-[4px] text-[#4A4A4A]">
+                                        class="text-text-40 font-medium hover:bg-primary-50 py-1 sm:py-2 px-1 sm:px-3 text-xs sm:text-sm hover:transition-all hover:duration-200 cursor-pointer rounded-[4px] text-[#4A4A4A]">
                                         Settings</li>
                                     <li
-                                        class="text-text-40 font-medium hover:bg-primary-50 p-2 px-3 text-sm hover:transition-all hover:duration-200 cursor-pointer rounded-[4px] text-danger">
+                                        class="text-text-40 font-medium hover:bg-primary-50 py-1 sm:py-2 px-1 sm:px-3 text-xs sm:text-sm hover:transition-all hover:duration-200 cursor-pointer rounded-[4px] text-danger">
                                         Logout</li>
                                 </ul>
                             </div>
                         </div>
-    
+
                     </div>
-    
+
                 </div>
             </header>
-    
-            <div class="main-content pt-32 mx-10">
-    
+
+            <div class="main-content pt-14 sm:pt-32 mx-4 sm:mx-10">
+
                 <!-- breadcrumb -->
-                <div class="breadcrumb ">
+                <div class="breadcrumb">
                     <ul class="text-sm flex flex-row gap-x-2 items-center">
                         <li>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            <svg class="w-[14px] sm:w-4 h-[14px] sm:h-4" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M13.6751 6.48171L8.67513 1.93796C8.49079 1.76931 8.24999 1.67578 8.00013 1.67578C7.75028 1.67578 7.50948 1.76931 7.32513 1.93796L2.32513 6.48171C2.22276 6.57537 2.141 6.6893 2.08505 6.81627C2.0291 6.94324 2.00018 7.08046 2.00013 7.21921V12.9755C1.99607 13.2276 2.08507 13.4723 2.25013 13.663C2.34381 13.7695 2.45922 13.8547 2.58858 13.9129C2.71795 13.9712 2.85827 14.001 3.00013 14.0005H6.00013C6.13274 14.0005 6.25992 13.9478 6.35369 13.854C6.44745 13.7602 6.50013 13.6331 6.50013 13.5005V10.5005C6.50013 10.3679 6.55281 10.2407 6.64658 10.1469C6.74035 10.0531 6.86753 10.0005 7.00013 10.0005H9.00013C9.13274 10.0005 9.25992 10.0531 9.35369 10.1469C9.44746 10.2407 9.50013 10.3679 9.50013 10.5005V13.5005C9.50013 13.6331 9.55281 13.7602 9.64658 13.854C9.74035 13.9478 9.86753 14.0005 10.0001 14.0005H13.0001C13.166 14.0019 13.3295 13.9611 13.4751 13.8817C13.6336 13.7954 13.766 13.6681 13.8584 13.513C13.9507 13.358 13.9997 13.1809 14.0001 13.0005V7.21921C14.0001 7.08046 13.9712 6.94324 13.9152 6.81627C13.8593 6.6893 13.7775 6.57537 13.6751 6.48171V6.48171Z"
@@ -613,31 +703,27 @@
                             </svg>
                         </li>
                         <li>
-                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.25 1.625L5.625 6L1.25 10.375" stroke="#575757" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                            <svg class="w-[14px] sm:w-4 h-[14px] sm:h-4" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.25 2.625L9.625 7L5.25 11.375" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </li>
-                        <li class="text-text-300">Pages</li>
+                        <li class="text-text-300 text-[10px] sm:text-base">Pages</li>
                         <li>
-                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.25 1.625L5.625 6L1.25 10.375" stroke="#757575" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                            <svg class="w-[12px] sm:w-4 h-[12px] sm:h-4" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.25 2.625L9.625 7L5.25 11.375" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </li>
-                        <li class="text-text-80">Billing</li>
+                        <li class="text-text-80 text-[10px] sm:text-base">Billing</li>
                     </ul>
-                </div> 
-    
+                </div>
+
                 <!-- blns and invoice  -->
-                <div class="flex gap-x-6 mt-10">
+                <div class="flex flex-col xl:flex-row gap-6 mt-10">
 
                     <!-- current blns details  -->
-                    <div class="w-[30%] p-10 bg-white rounded-[20px]">
-                        <h4 class="text-base font-medium text-text-200">Your Current Balance</h4>
-                        <p class="text-[45px] font-semibold text-text-400 mt-2">$18,000</p>
+                    <div class="w-full xl:w-[50%] 2xl:w-[30%] p-4 sm:p-10 bg-white rounded-[20px]">
+                        <h4 class="text-sm sm:text-base font-medium text-text-200">Your Current Balance</h4>
+                        <p class="text-[22px] sm:text-[45px] font-semibold text-text-400 mt-2">$18,000</p>
 
                         <!-- bank details  -->
                         <div class="">
@@ -645,48 +731,67 @@
                             <div class="mt-4 flex flex-col gap-y-3">
 
                                 <!-- salary  -->
-                                <div class="flex justify-between">
+                                <div class="flex justify-between items-center">
                                     <div class="flex items-center gap-x-4">
-                                        <span class="w-10 h-10 bg-[#F7F7F7] rounded-[4px] flex items-center justify-center">
-                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3 12H29L16 4L3 12Z" stroke="#228FF3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M7 12V22" stroke="#228FF3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M13 12V22" stroke="#228FF3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M19 12V22" stroke="#228FF3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M25 12V22" stroke="#228FF3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M4 22H28" stroke="#228FF3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M2 26H30" stroke="#228FF3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <span
+                                            class="w-8 sm:w-10 h-8 sm:h-10 bg-[#F7F7F7] rounded-[4px] flex items-center justify-center">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3 12H29L16 4L3 12Z" stroke="#228FF3" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M7 12V22" stroke="#228FF3" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M13 12V22" stroke="#228FF3" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M19 12V22" stroke="#228FF3" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M25 12V22" stroke="#228FF3" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4 22H28" stroke="#228FF3" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M2 26H30" stroke="#228FF3" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </span>
-                                        <span class="text-[22px] font-medium text-text-400">Salary</span>
+                                        <span class="text-sm sm:text-[22px] font-medium text-text-400">Salary</span>
                                     </div>
-                                    <span class="text-text-400 font-base font-bold">+ $12000.00</span>
-                                </div>
-                                
-                                <!-- paypal  -->
-                                <div class="flex justify-between">
-                                    <div class="flex items-center gap-x-4">
-                                        <span class="w-10 h-10 bg-[#F7F7F7] rounded-[4px] flex items-center justify-center">
-                                            <svg width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5271 7.5323H20.5528C25.3988 7.5323 27.2231 9.98559 26.9412 13.5898C26.4752 19.5402 22.878 22.8322 18.1065 22.8322H15.6975C15.0428 22.8322 14.6025 23.2655 14.4254 24.4398L13.4026 31.2661C13.3351 31.7088 13.1021 31.9651 12.7526 32H7.08185C6.54832 32 6.35961 31.5923 6.4994 30.7093L9.95684 8.82535C10.092 7.94934 10.5719 7.5323 11.5271 7.5323Z" fill="#02B7C8"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.88201 0H14.917C17.4612 0 20.4806 0.0815434 22.4982 1.86385C23.8472 3.05438 24.5555 4.94852 24.3924 6.98944C23.8379 13.888 19.7118 17.7532 14.1761 17.7532H9.72154C8.96202 17.7532 8.46111 18.2564 8.24677 19.617L7.00265 27.5384C6.9211 28.0509 6.69977 28.3538 6.3037 28.3911H0.728463C0.111063 28.3911 -0.107942 27.9251 0.0528154 26.8954L4.06009 1.50506C4.22085 0.484599 4.78234 0 5.88201 0Z" fill="#8BDEE6"/>
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.37723 18.8132L9.95452 8.8253C10.092 7.94929 10.5719 7.52991 11.5271 7.52991H20.5528C22.0462 7.52991 23.2554 7.7629 24.2013 8.19391C23.295 14.3353 19.3227 17.7461 14.1226 17.7461H9.67494C9.07851 17.7485 8.6405 18.0467 8.37723 18.8132Z" fill="#35C5D3"/>
-                                            </svg>
-                                        </span>
-                                        <span class="text-[22px] font-medium text-text-400">Paypal</span>
-                                    </div>
-                                    <span class="text-text-400 font-base font-bold">+ $12000.00</span>
+                                    <span class="text-text-400 font-base font-bold text-sm sm:text-base">+ $12000.00</span>
                                 </div>
 
-                                    
+                                <!-- paypal  -->
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-x-4">
+                                        <span
+                                            class="w-8 sm:w-10 h-8 sm:h-10 bg-[#F7F7F7] rounded-[4px] flex items-center justify-center">
+                                            <svg width="27" height="32" viewBox="0 0 27 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M11.5271 7.5323H20.5528C25.3988 7.5323 27.2231 9.98559 26.9412 13.5898C26.4752 19.5402 22.878 22.8322 18.1065 22.8322H15.6975C15.0428 22.8322 14.6025 23.2655 14.4254 24.4398L13.4026 31.2661C13.3351 31.7088 13.1021 31.9651 12.7526 32H7.08185C6.54832 32 6.35961 31.5923 6.4994 30.7093L9.95684 8.82535C10.092 7.94934 10.5719 7.5323 11.5271 7.5323Z"
+                                                    fill="#02B7C8" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M5.88201 0H14.917C17.4612 0 20.4806 0.0815434 22.4982 1.86385C23.8472 3.05438 24.5555 4.94852 24.3924 6.98944C23.8379 13.888 19.7118 17.7532 14.1761 17.7532H9.72154C8.96202 17.7532 8.46111 18.2564 8.24677 19.617L7.00265 27.5384C6.9211 28.0509 6.69977 28.3538 6.3037 28.3911H0.728463C0.111063 28.3911 -0.107942 27.9251 0.0528154 26.8954L4.06009 1.50506C4.22085 0.484599 4.78234 0 5.88201 0Z"
+                                                    fill="#8BDEE6" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.37723 18.8132L9.95452 8.8253C10.092 7.94929 10.5719 7.52991 11.5271 7.52991H20.5528C22.0462 7.52991 23.2554 7.7629 24.2013 8.19391C23.295 14.3353 19.3227 17.7461 14.1226 17.7461H9.67494C9.07851 17.7485 8.6405 18.0467 8.37723 18.8132Z"
+                                                    fill="#35C5D3" />
+                                            </svg>
+                                        </span>
+                                        <span class="text-sm sm:text-[22px] font-medium text-text-400">Paypal</span>
+                                    </div>
+                                    <span class="text-text-400 font-base font-bold text-sm sm:text-base">+ $12000.00</span>
+                                </div>
+
+
                             </div>
                         </div>
 
                         <!-- payment method -->
                         <div class="mt-7">
                             <div class="flex items-center justify-between">
-                                <h2 class="text-text-400 font-medium text-[22px]">Payment Method</h2>
-                                <button id="add-card" class="px-4 py-2 bg-primary text-white text-sm font-medium rounded-[4px]">Add Card</button>
+                                <h2 class="text-text-400 font-bold sm:font-medium text-base sm:text-[22px]">Payment Method</h2>
+                                <button id="add-card"
+                                    class="px-4 py-2 bg-primary text-white text-xs sm:text-sm font-medium rounded-[4px]">Add
+                                    Card</button>
                             </div>
 
                             <!-- cards  -->
@@ -694,28 +799,38 @@
 
                                 <!-- master card  -->
                                 <div class="flex items-center justify-between border px-4 rounded-[8px]">
-                                    <div class="flex gap-x-4 items-center">
-                                        <img src="./../assets/images/common/mastercard.jpg" alt="">
-                                        <p class="text-base text-text-400 font-semibold">**** **** **** 4575</p>
+                                    <div class="flex gap-x-2 sm:gap-x-4 items-center">
+                                        <img class="w-12 sm:w-[58px] h-12 sm:h-[58px]" src="./../assets/images/common/mastercard.jpg" alt="">
+                                        <p class="text-sm sm:text-base text-text-400 font-semibold">**** **** **** 4575</p>
                                     </div>
                                     <button class="edit-card-details">
-                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.96641 18.5629H4.125C3.94267 18.5629 3.7678 18.4905 3.63887 18.3615C3.50994 18.2326 3.4375 18.0577 3.4375 17.8754V14.034C3.43719 13.9447 3.45449 13.8563 3.4884 13.7737C3.52232 13.6911 3.57219 13.616 3.63516 13.5528L13.9477 3.24026C14.0116 3.1753 14.0879 3.12371 14.172 3.0885C14.2561 3.05329 14.3463 3.03516 14.4375 3.03516C14.5287 3.03516 14.6189 3.05329 14.703 3.0885C14.7871 3.12371 14.8634 3.1753 14.9273 3.24026L18.7602 7.07307C18.8251 7.13704 18.8767 7.21329 18.9119 7.29739C18.9471 7.38148 18.9653 7.47174 18.9653 7.56291C18.9653 7.65408 18.9471 7.74434 18.9119 7.82844C18.8767 7.91253 18.8251 7.98879 18.7602 8.05276L8.44766 18.3653C8.38438 18.4282 8.3093 18.4781 8.22672 18.512C8.14414 18.5459 8.05568 18.5632 7.96641 18.5629V18.5629Z" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M11.6875 5.5L16.5 10.3125" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.96641 18.5629H4.125C3.94267 18.5629 3.7678 18.4905 3.63887 18.3615C3.50994 18.2326 3.4375 18.0577 3.4375 17.8754V14.034C3.43719 13.9447 3.45449 13.8563 3.4884 13.7737C3.52232 13.6911 3.57219 13.616 3.63516 13.5528L13.9477 3.24026C14.0116 3.1753 14.0879 3.12371 14.172 3.0885C14.2561 3.05329 14.3463 3.03516 14.4375 3.03516C14.5287 3.03516 14.6189 3.05329 14.703 3.0885C14.7871 3.12371 14.8634 3.1753 14.9273 3.24026L18.7602 7.07307C18.8251 7.13704 18.8767 7.21329 18.9119 7.29739C18.9471 7.38148 18.9653 7.47174 18.9653 7.56291C18.9653 7.65408 18.9471 7.74434 18.9119 7.82844C18.8767 7.91253 18.8251 7.98879 18.7602 8.05276L8.44766 18.3653C8.38438 18.4282 8.3093 18.4781 8.22672 18.512C8.14414 18.5459 8.05568 18.5632 7.96641 18.5629V18.5629Z"
+                                                stroke="#757575" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M11.6875 5.5L16.5 10.3125" stroke="#757575" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </button>
                                 </div>
 
                                 <!-- master card  -->
                                 <div class="flex items-center justify-between border px-4 rounded-[8px]">
-                                    <div class="flex gap-x-4 items-center">
-                                        <img src="./../assets/images/common/visa.png" alt="">
-                                        <p class="text-base text-text-400 font-semibold">**** **** **** 4575</p>
+                                    <div class="flex gap-x-2 sm:gap-x-4 items-center">
+                                        <img class="w-12 sm:w-[58px] h-12 sm:h-[58px]" src="./../assets/images/common/visa.png" alt="">
+                                        <p class="text-sm sm:text-base text-text-400 font-semibold">**** **** **** 4575</p>
                                     </div>
                                     <button class="edit-card-details">
-                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.96641 18.5629H4.125C3.94267 18.5629 3.7678 18.4905 3.63887 18.3615C3.50994 18.2326 3.4375 18.0577 3.4375 17.8754V14.034C3.43719 13.9447 3.45449 13.8563 3.4884 13.7737C3.52232 13.6911 3.57219 13.616 3.63516 13.5528L13.9477 3.24026C14.0116 3.1753 14.0879 3.12371 14.172 3.0885C14.2561 3.05329 14.3463 3.03516 14.4375 3.03516C14.5287 3.03516 14.6189 3.05329 14.703 3.0885C14.7871 3.12371 14.8634 3.1753 14.9273 3.24026L18.7602 7.07307C18.8251 7.13704 18.8767 7.21329 18.9119 7.29739C18.9471 7.38148 18.9653 7.47174 18.9653 7.56291C18.9653 7.65408 18.9471 7.74434 18.9119 7.82844C18.8767 7.91253 18.8251 7.98879 18.7602 8.05276L8.44766 18.3653C8.38438 18.4282 8.3093 18.4781 8.22672 18.512C8.14414 18.5459 8.05568 18.5632 7.96641 18.5629V18.5629Z" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M11.6875 5.5L16.5 10.3125" stroke="#757575" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.96641 18.5629H4.125C3.94267 18.5629 3.7678 18.4905 3.63887 18.3615C3.50994 18.2326 3.4375 18.0577 3.4375 17.8754V14.034C3.43719 13.9447 3.45449 13.8563 3.4884 13.7737C3.52232 13.6911 3.57219 13.616 3.63516 13.5528L13.9477 3.24026C14.0116 3.1753 14.0879 3.12371 14.172 3.0885C14.2561 3.05329 14.3463 3.03516 14.4375 3.03516C14.5287 3.03516 14.6189 3.05329 14.703 3.0885C14.7871 3.12371 14.8634 3.1753 14.9273 3.24026L18.7602 7.07307C18.8251 7.13704 18.8767 7.21329 18.9119 7.29739C18.9471 7.38148 18.9653 7.47174 18.9653 7.56291C18.9653 7.65408 18.9471 7.74434 18.9119 7.82844C18.8767 7.91253 18.8251 7.98879 18.7602 8.05276L8.44766 18.3653C8.38438 18.4282 8.3093 18.4781 8.22672 18.512C8.14414 18.5459 8.05568 18.5632 7.96641 18.5629V18.5629Z"
+                                                stroke="#757575" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M11.6875 5.5L16.5 10.3125" stroke="#757575" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </button>
                                 </div>
@@ -725,168 +840,285 @@
                     </div>
 
                     <!-- invoice details  -->
-                    <div class="w-[70%] p-10 bg-white rounded-[20px]">
+                    <div class="w-full xl:w-[50%] 2xl:w-[70%] p-4 sm:p-10 bg-white rounded-[20px]">
                         <h3 class="text-[24px] font-semibold text-text-400">Invoices</h3>
 
-                        <table class="table-auto w-full mt-4">
-                            <thead>
-                                <tr>
-                                <th class="text-text-400 font-bold text-base text-left py-[10px] px-4 bg-text-40/20 border-b border-text-50/30">Date</th>
-                                <th class="text-text-400 font-bold text-base text-left py-[10px] px-4 bg-text-40/20 border-b border-text-50/30">#ID</th>
-                                <th class="text-text-400 font-bold text-base text-left py-[10px] px-4 bg-text-40/20 border-b border-text-50/30">Status</th>
-                                <th class="text-text-400 font-bold text-base text-left py-[10px] px-4 bg-text-40/20 border-b border-text-50/30">Customer</th>
-                                <th class="text-text-400 font-bold text-base text-left py-[10px] px-4 bg-text-40/20 border-b border-text-50/30">Total</th>
-                                <th class="text-text-400 font-bold text-base text-left py-[10px] px-4 bg-text-40/20 border-b border-text-50/30">PDF</th>
-                                
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                <td class="invoice-tdata">12/11/2022</td>
-                                <td class="invoice-tdata">#001245</td>
-                                <td>
-                                    <button class="text-orange-700 bg-warning/20 text-xs font-semibold px-[22px] py-1">Pending</button>
-                                </td>
-                                <td class="invoice-tdata">Richard John</td>
-                                <td class="invoice-tdata">$40.00</td>
-                                <td class="invoice-tdata">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 16V5C6 4.73478 6.10536 4.48043 6.29289 4.29289C6.48043 4.10536 6.73478 4 7 4H19L26 11V16" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M19 4V11H26" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M6 25H8C8.53043 25 9.03914 24.7893 9.41421 24.4142C9.78929 24.0391 10 23.5304 10 23C10 22.4696 9.78929 21.9609 9.41421 21.5858C9.03914 21.2107 8.53043 21 8 21H6V27" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M27 21H23.5V27" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M26.5 24.5H23.5" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M16 27C16.7956 27 17.5587 26.6839 18.1213 26.1213C18.6839 25.5587 19 24.7956 19 24C19 23.2044 18.6839 22.4413 18.1213 21.8787C17.5587 21.3161 16.7956 21 16 21H14.25V27H16Z" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>                                            
-                                </td>
-                                </tr>
-                                <tr>
-                                <td class="invoice-tdata">12/11/2022</td>
-                                <td class="invoice-tdata">#001447</td>
-                                <td>
-                                    <button class="text-orange-700 bg-warning/20 text-xs font-semibold px-[22px] py-1">Pending</button>
-                                </td>
-                                <td class="invoice-tdata">Michel Miller</td>
-                                <td class="invoice-tdata">$40.00</td>
-                                <td class="invoice-tdata">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 16V5C6 4.73478 6.10536 4.48043 6.29289 4.29289C6.48043 4.10536 6.73478 4 7 4H19L26 11V16" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M19 4V11H26" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M6 25H8C8.53043 25 9.03914 24.7893 9.41421 24.4142C9.78929 24.0391 10 23.5304 10 23C10 22.4696 9.78929 21.9609 9.41421 21.5858C9.03914 21.2107 8.53043 21 8 21H6V27" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M27 21H23.5V27" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M26.5 24.5H23.5" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M16 27C16.7956 27 17.5587 26.6839 18.1213 26.1213C18.6839 25.5587 19 24.7956 19 24C19 23.2044 18.6839 22.4413 18.1213 21.8787C17.5587 21.3161 16.7956 21 16 21H14.25V27H16Z" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>                                            
-                                </td>
-                                </tr>
-                                <tr>
-                                <td class="invoice-tdata">12/11/2022</td>
-                                <td class="invoice-tdata">#001230</td>
-                                <td>
-                                    <button class="text-orange-700 bg-warning/20 text-xs font-semibold px-[22px] py-1">Pending</button>
-                                </td>
-                                <td class="invoice-tdata">Brian Hook</td>
-                                <td class="invoice-tdata">$40.00</td>
-                                <td class="invoice-tdata">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 16V5C6 4.73478 6.10536 4.48043 6.29289 4.29289C6.48043 4.10536 6.73478 4 7 4H19L26 11V16" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M19 4V11H26" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M6 25H8C8.53043 25 9.03914 24.7893 9.41421 24.4142C9.78929 24.0391 10 23.5304 10 23C10 22.4696 9.78929 21.9609 9.41421 21.5858C9.03914 21.2107 8.53043 21 8 21H6V27" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M27 21H23.5V27" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M26.5 24.5H23.5" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M16 27C16.7956 27 17.5587 26.6839 18.1213 26.1213C18.6839 25.5587 19 24.7956 19 24C19 23.2044 18.6839 22.4413 18.1213 21.8787C17.5587 21.3161 16.7956 21 16 21H14.25V27H16Z" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>                                            
-                                </td>
-                                </tr>
-                                <tr>
-                                <td class="invoice-tdata">12/11/2022</td>
-                                <td class="invoice-tdata">#001230</td>
-                                <td>
-                                    <button class="text-orange-700 bg-warning/20 text-xs font-semibold px-[22px] py-1">Pending</button>
-                                </td>
-                                <td class="invoice-tdata">Richard John</td>
-                                <td class="invoice-tdata">$40.00</td>
-                                <td class="invoice-tdata">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 16V5C6 4.73478 6.10536 4.48043 6.29289 4.29289C6.48043 4.10536 6.73478 4 7 4H19L26 11V16" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M19 4V11H26" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M6 25H8C8.53043 25 9.03914 24.7893 9.41421 24.4142C9.78929 24.0391 10 23.5304 10 23C10 22.4696 9.78929 21.9609 9.41421 21.5858C9.03914 21.2107 8.53043 21 8 21H6V27" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M27 21H23.5V27" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M26.5 24.5H23.5" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M16 27C16.7956 27 17.5587 26.6839 18.1213 26.1213C18.6839 25.5587 19 24.7956 19 24C19 23.2044 18.6839 22.4413 18.1213 21.8787C17.5587 21.3161 16.7956 21 16 21H14.25V27H16Z" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>                                            
-                                </td>
-                                </tr>
-                                <tr>
-                                <td class="invoice-tdata">12/11/2022</td>
-                                <td class="invoice-tdata">#001245</td>
-                                <td>
-                                    <button class="text-orange-700 bg-warning/20 text-xs font-semibold px-[22px] py-1">Pending</button>
-                                </td>
-                                <td class="invoice-tdata">Richard John</td>
-                                <td class="invoice-tdata">$40.00</td>
-                                <td class="invoice-tdata">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 16V5C6 4.73478 6.10536 4.48043 6.29289 4.29289C6.48043 4.10536 6.73478 4 7 4H19L26 11V16" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M19 4V11H26" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M6 25H8C8.53043 25 9.03914 24.7893 9.41421 24.4142C9.78929 24.0391 10 23.5304 10 23C10 22.4696 9.78929 21.9609 9.41421 21.5858C9.03914 21.2107 8.53043 21 8 21H6V27" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M27 21H23.5V27" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M26.5 24.5H23.5" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M16 27C16.7956 27 17.5587 26.6839 18.1213 26.1213C18.6839 25.5587 19 24.7956 19 24C19 23.2044 18.6839 22.4413 18.1213 21.8787C17.5587 21.3161 16.7956 21 16 21H14.25V27H16Z" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>                                            
-                                </td>
-                                </tr>
-                                <tr>
-                                <td class="invoice-tdata">12/11/2022</td>
-                                <td class="invoice-tdata">#001245</td>
-                                <td>
-                                    <button class="text-orange-700 bg-warning/20 text-xs font-semibold px-[22px] py-1">Pending</button>
-                                </td>
-                                <td class="invoice-tdata">Richard John</td>
-                                <td class="invoice-tdata">$40.00</td>
-                                <td class="invoice-tdata">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 16V5C6 4.73478 6.10536 4.48043 6.29289 4.29289C6.48043 4.10536 6.73478 4 7 4H19L26 11V16" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M19 4V11H26" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M6 25H8C8.53043 25 9.03914 24.7893 9.41421 24.4142C9.78929 24.0391 10 23.5304 10 23C10 22.4696 9.78929 21.9609 9.41421 21.5858C9.03914 21.2107 8.53043 21 8 21H6V27" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M27 21H23.5V27" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M26.5 24.5H23.5" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M16 27C16.7956 27 17.5587 26.6839 18.1213 26.1213C18.6839 25.5587 19 24.7956 19 24C19 23.2044 18.6839 22.4413 18.1213 21.8787C17.5587 21.3161 16.7956 21 16 21H14.25V27H16Z" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>                                            
-                                </td>
-                                </tr>
-                            </tbody>
+                        <div class="overflow-y-auto">
+                            <table class="table-auto w-full mt-4 whitespace-nowrap">
+
+                                <thead>
+                                    <tr>
+                                        <th
+                                            class="text-text-400 font-bold text-sm sm:text-base text-left py-[10px] px-4 bg-text-40/20 border-b border-text-50/30">
+                                            Date</th>
+                                        <th
+                                            class="text-text-400 font-bold text-sm sm:text-base text-left py-[10px] px-4 bg-text-40/20 border-b border-text-50/30">
+                                            #ID</th>
+                                        <th
+                                            class="text-text-400 font-bold text-sm sm:text-base text-left py-[10px] px-4 bg-text-40/20 border-b border-text-50/30">
+                                            Status</th>
+                                        <th
+                                            class="text-text-400 font-bold text-sm sm:text-base text-left py-[10px] px-4 bg-text-40/20 border-b border-text-50/30">
+                                            Customer</th>
+                                        <th
+                                            class="text-text-400 font-bold text-sm sm:text-base text-left py-[10px] px-4 bg-text-40/20 border-b border-text-50/30">
+                                            Total</th>
+                                        <th
+                                            class="text-text-400 font-bold text-sm sm:text-base text-left py-[10px] px-4 bg-text-40/20 border-b border-text-50/30">
+                                            PDF</th>
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td class="invoice-tdata">12/11/2022</td>
+                                        <td class="invoice-tdata">#001245</td>
+                                        <td>
+                                            <button
+                                                class="text-orange-700 bg-warning/20 text-xs font-semibold px-[22px] py-1">Pending</button>
+                                        </td>
+                                        <td class="invoice-tdata">Richard John</td>
+                                        <td class="invoice-tdata">$40.00</td>
+                                        <td class="invoice-tdata">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6 16V5C6 4.73478 6.10536 4.48043 6.29289 4.29289C6.48043 4.10536 6.73478 4 7 4H19L26 11V16"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M19 4V11H26" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M6 25H8C8.53043 25 9.03914 24.7893 9.41421 24.4142C9.78929 24.0391 10 23.5304 10 23C10 22.4696 9.78929 21.9609 9.41421 21.5858C9.03914 21.2107 8.53043 21 8 21H6V27"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M27 21H23.5V27" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M26.5 24.5H23.5" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M16 27C16.7956 27 17.5587 26.6839 18.1213 26.1213C18.6839 25.5587 19 24.7956 19 24C19 23.2044 18.6839 22.4413 18.1213 21.8787C17.5587 21.3161 16.7956 21 16 21H14.25V27H16Z"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="invoice-tdata">12/11/2022</td>
+                                        <td class="invoice-tdata">#001447</td>
+                                        <td>
+                                            <button
+                                                class="text-orange-700 bg-warning/20 text-xs font-semibold px-[22px] py-1">Pending</button>
+                                        </td>
+                                        <td class="invoice-tdata">Michel Miller</td>
+                                        <td class="invoice-tdata">$40.00</td>
+                                        <td class="invoice-tdata">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6 16V5C6 4.73478 6.10536 4.48043 6.29289 4.29289C6.48043 4.10536 6.73478 4 7 4H19L26 11V16"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M19 4V11H26" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M6 25H8C8.53043 25 9.03914 24.7893 9.41421 24.4142C9.78929 24.0391 10 23.5304 10 23C10 22.4696 9.78929 21.9609 9.41421 21.5858C9.03914 21.2107 8.53043 21 8 21H6V27"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M27 21H23.5V27" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M26.5 24.5H23.5" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M16 27C16.7956 27 17.5587 26.6839 18.1213 26.1213C18.6839 25.5587 19 24.7956 19 24C19 23.2044 18.6839 22.4413 18.1213 21.8787C17.5587 21.3161 16.7956 21 16 21H14.25V27H16Z"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="invoice-tdata">12/11/2022</td>
+                                        <td class="invoice-tdata">#001230</td>
+                                        <td>
+                                            <button
+                                                class="text-orange-700 bg-warning/20 text-xs font-semibold px-[22px] py-1">Pending</button>
+                                        </td>
+                                        <td class="invoice-tdata">Brian Hook</td>
+                                        <td class="invoice-tdata">$40.00</td>
+                                        <td class="invoice-tdata">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6 16V5C6 4.73478 6.10536 4.48043 6.29289 4.29289C6.48043 4.10536 6.73478 4 7 4H19L26 11V16"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M19 4V11H26" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M6 25H8C8.53043 25 9.03914 24.7893 9.41421 24.4142C9.78929 24.0391 10 23.5304 10 23C10 22.4696 9.78929 21.9609 9.41421 21.5858C9.03914 21.2107 8.53043 21 8 21H6V27"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M27 21H23.5V27" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M26.5 24.5H23.5" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M16 27C16.7956 27 17.5587 26.6839 18.1213 26.1213C18.6839 25.5587 19 24.7956 19 24C19 23.2044 18.6839 22.4413 18.1213 21.8787C17.5587 21.3161 16.7956 21 16 21H14.25V27H16Z"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="invoice-tdata">12/11/2022</td>
+                                        <td class="invoice-tdata">#001230</td>
+                                        <td>
+                                            <button
+                                                class="text-orange-700 bg-warning/20 text-xs font-semibold px-[22px] py-1">Pending</button>
+                                        </td>
+                                        <td class="invoice-tdata">Richard John</td>
+                                        <td class="invoice-tdata">$40.00</td>
+                                        <td class="invoice-tdata">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6 16V5C6 4.73478 6.10536 4.48043 6.29289 4.29289C6.48043 4.10536 6.73478 4 7 4H19L26 11V16"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M19 4V11H26" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M6 25H8C8.53043 25 9.03914 24.7893 9.41421 24.4142C9.78929 24.0391 10 23.5304 10 23C10 22.4696 9.78929 21.9609 9.41421 21.5858C9.03914 21.2107 8.53043 21 8 21H6V27"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M27 21H23.5V27" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M26.5 24.5H23.5" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M16 27C16.7956 27 17.5587 26.6839 18.1213 26.1213C18.6839 25.5587 19 24.7956 19 24C19 23.2044 18.6839 22.4413 18.1213 21.8787C17.5587 21.3161 16.7956 21 16 21H14.25V27H16Z"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="invoice-tdata">12/11/2022</td>
+                                        <td class="invoice-tdata">#001245</td>
+                                        <td>
+                                            <button
+                                                class="text-orange-700 bg-warning/20 text-xs font-semibold px-[22px] py-1">Pending</button>
+                                        </td>
+                                        <td class="invoice-tdata">Richard John</td>
+                                        <td class="invoice-tdata">$40.00</td>
+                                        <td class="invoice-tdata">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6 16V5C6 4.73478 6.10536 4.48043 6.29289 4.29289C6.48043 4.10536 6.73478 4 7 4H19L26 11V16"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M19 4V11H26" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M6 25H8C8.53043 25 9.03914 24.7893 9.41421 24.4142C9.78929 24.0391 10 23.5304 10 23C10 22.4696 9.78929 21.9609 9.41421 21.5858C9.03914 21.2107 8.53043 21 8 21H6V27"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M27 21H23.5V27" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M26.5 24.5H23.5" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M16 27C16.7956 27 17.5587 26.6839 18.1213 26.1213C18.6839 25.5587 19 24.7956 19 24C19 23.2044 18.6839 22.4413 18.1213 21.8787C17.5587 21.3161 16.7956 21 16 21H14.25V27H16Z"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="invoice-tdata">12/11/2022</td>
+                                        <td class="invoice-tdata">#001245</td>
+                                        <td>
+                                            <button
+                                                class="text-orange-700 bg-warning/20 text-xs font-semibold px-[22px] py-1">Pending</button>
+                                        </td>
+                                        <td class="invoice-tdata">Richard John</td>
+                                        <td class="invoice-tdata">$40.00</td>
+                                        <td class="invoice-tdata">
+                                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6 16V5C6 4.73478 6.10536 4.48043 6.29289 4.29289C6.48043 4.10536 6.73478 4 7 4H19L26 11V16"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M19 4V11H26" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M6 25H8C8.53043 25 9.03914 24.7893 9.41421 24.4142C9.78929 24.0391 10 23.5304 10 23C10 22.4696 9.78929 21.9609 9.41421 21.5858C9.03914 21.2107 8.53043 21 8 21H6V27"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M27 21H23.5V27" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M26.5 24.5H23.5" stroke="#666666" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M16 27C16.7956 27 17.5587 26.6839 18.1213 26.1213C18.6839 25.5587 19 24.7956 19 24C19 23.2044 18.6839 22.4413 18.1213 21.8787C17.5587 21.3161 16.7956 21 16 21H14.25V27H16Z"
+                                                    stroke="#666666" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
                             </table>
+                        </div>
                     </div>
 
                 </div>
-                    
+
                 <!-- billing and transactions  -->
-                <div class="flex gap-x-6 mt-6">
+                <div class="flex flex-col xl:flex-row gap-6 mt-6">
 
                     <!-- billing info  -->
-                    <div class="w-[70%] p-10 bg-white rounded-[20px]">
+                    <div class="w-full xl:w-[60%] 2xl:w-[70%] p-4 sm:p-10 bg-white rounded-[20px]">
                         <h2 class="text-[24px] font-semibold text-text-500">Billing Information</h2>
                         <div class="mt-6 flex flex-col gap-y-6">
                             <div class="p-6 bg-text-10">
                                 <div class="flex justify-between mb-4">
                                     <h2 class="text-text-600 font-bold text-base">Richard Brian</h2>
-                                    <div class="action-btns flex gap-x-3 items-center">
-                                        <button class="delete-billing-info flex items-center gap-x-[10px] py-2 px-5 border border-danger rounded-[4px]">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M13.5 3.5H2.5" stroke="#E8423C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M6.5 6.5V10.5" stroke="#E8423C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M9.5 6.5V10.5" stroke="#E8423C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M12.5 3.5V13C12.5 13.1326 12.4473 13.2598 12.3536 13.3536C12.2598 13.4473 12.1326 13.5 12 13.5H4C3.86739 13.5 3.74021 13.4473 3.64645 13.3536C3.55268 13.2598 3.5 13.1326 3.5 13V3.5" stroke="#E8423C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M10.5 3.5V2.5C10.5 2.23478 10.3946 1.98043 10.2071 1.79289C10.0196 1.60536 9.76522 1.5 9.5 1.5H6.5C6.23478 1.5 5.98043 1.60536 5.79289 1.79289C5.60536 1.98043 5.5 2.23478 5.5 2.5V3.5" stroke="#E8423C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <div class="action-btns gap-x-3 items-center hidden sm:flex md:hidden lg:flex">
+                                        <button
+                                            class="delete-billing-info flex items-center gap-x-[10px] py-2 px-5 border border-danger rounded-[4px]">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.5 3.5H2.5" stroke="#E8423C" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M6.5 6.5V10.5" stroke="#E8423C" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M9.5 6.5V10.5" stroke="#E8423C" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M12.5 3.5V13C12.5 13.1326 12.4473 13.2598 12.3536 13.3536C12.2598 13.4473 12.1326 13.5 12 13.5H4C3.86739 13.5 3.74021 13.4473 3.64645 13.3536C3.55268 13.2598 3.5 13.1326 3.5 13V3.5"
+                                                    stroke="#E8423C" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M10.5 3.5V2.5C10.5 2.23478 10.3946 1.98043 10.2071 1.79289C10.0196 1.60536 9.76522 1.5 9.5 1.5H6.5C6.23478 1.5 5.98043 1.60536 5.79289 1.79289C5.60536 1.98043 5.5 2.23478 5.5 2.5V3.5"
+                                                    stroke="#E8423C" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
                                             </svg>
                                             <span class="text-sm font-medium text-danger">Delete</span>
                                         </button>
-                                        <button class="edit-billing flex items-center gap-x-[10px] py-2 px-5 border border-primary rounded-[4px]">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.79375 13.4999H3C2.86739 13.4999 2.74022 13.4473 2.64645 13.3535C2.55268 13.2597 2.5 13.1326 2.5 12.9999V10.2062C2.49978 10.1413 2.51236 10.0769 2.53702 10.0169C2.56169 9.95682 2.59796 9.90222 2.64375 9.85619L10.1438 2.3562C10.1903 2.30895 10.2457 2.27144 10.3069 2.24583C10.3681 2.22022 10.4337 2.20703 10.5 2.20703C10.5663 2.20703 10.632 2.22022 10.6931 2.24583C10.7543 2.27144 10.8097 2.30895 10.8563 2.3562L13.6438 5.1437C13.691 5.19022 13.7285 5.24568 13.7541 5.30684C13.7797 5.368 13.7929 5.43364 13.7929 5.49995C13.7929 5.56625 13.7797 5.63189 13.7541 5.69305C13.7285 5.75421 13.691 5.80967 13.6438 5.85619L6.14375 13.3562C6.09773 13.402 6.04313 13.4383 5.98307 13.4629C5.92301 13.4876 5.85868 13.5002 5.79375 13.4999V13.4999Z" stroke="#228FF3" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M8.5 4L12 7.5" stroke="#228FF3" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>    
+                                        <button
+                                            class="edit-billing flex items-center gap-x-[10px] py-2 px-5 border border-primary rounded-[4px]">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M5.79375 13.4999H3C2.86739 13.4999 2.74022 13.4473 2.64645 13.3535C2.55268 13.2597 2.5 13.1326 2.5 12.9999V10.2062C2.49978 10.1413 2.51236 10.0769 2.53702 10.0169C2.56169 9.95682 2.59796 9.90222 2.64375 9.85619L10.1438 2.3562C10.1903 2.30895 10.2457 2.27144 10.3069 2.24583C10.3681 2.22022 10.4337 2.20703 10.5 2.20703C10.5663 2.20703 10.632 2.22022 10.6931 2.24583C10.7543 2.27144 10.8097 2.30895 10.8563 2.3562L13.6438 5.1437C13.691 5.19022 13.7285 5.24568 13.7541 5.30684C13.7797 5.368 13.7929 5.43364 13.7929 5.49995C13.7929 5.56625 13.7797 5.63189 13.7541 5.69305C13.7285 5.75421 13.691 5.80967 13.6438 5.85619L6.14375 13.3562C6.09773 13.402 6.04313 13.4383 5.98307 13.4629C5.92301 13.4876 5.85868 13.5002 5.79375 13.4999V13.4999Z"
+                                                    stroke="#228FF3" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8.5 4L12 7.5" stroke="#228FF3" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
                                             <span class="text-sm font-medium text-primary">Edit</span>
                                         </button>
                                     </div>
@@ -894,27 +1126,78 @@
                                 <p class="text-text-600 font-medium text-sm">Company : Digital vision</p>
                                 <p class="text-text-600 font-medium text-sm mt-2">Email : richard@gmail.com</p>
                                 <p class="text-text-600 font-medium text-sm mt-2">VAT No. FRB12345678</p>
+                                <div class="action-btns gap-x-3 items-center flex sm:hidden md:flex lg:hidden mt-4">
+                                    <button
+                                        class="delete-billing-info flex items-center gap-x-[10px] py-2 px-5 border border-danger rounded-[4px]">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.5 3.5H2.5" stroke="#E8423C" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M6.5 6.5V10.5" stroke="#E8423C" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.5 6.5V10.5" stroke="#E8423C" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M12.5 3.5V13C12.5 13.1326 12.4473 13.2598 12.3536 13.3536C12.2598 13.4473 12.1326 13.5 12 13.5H4C3.86739 13.5 3.74021 13.4473 3.64645 13.3536C3.55268 13.2598 3.5 13.1326 3.5 13V3.5"
+                                                stroke="#E8423C" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M10.5 3.5V2.5C10.5 2.23478 10.3946 1.98043 10.2071 1.79289C10.0196 1.60536 9.76522 1.5 9.5 1.5H6.5C6.23478 1.5 5.98043 1.60536 5.79289 1.79289C5.60536 1.98043 5.5 2.23478 5.5 2.5V3.5"
+                                                stroke="#E8423C" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="text-sm font-medium text-danger">Delete</span>
+                                    </button>
+                                    <button
+                                        class="edit-billing flex items-center gap-x-[10px] py-2 px-5 border border-primary rounded-[4px]">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.79375 13.4999H3C2.86739 13.4999 2.74022 13.4473 2.64645 13.3535C2.55268 13.2597 2.5 13.1326 2.5 12.9999V10.2062C2.49978 10.1413 2.51236 10.0769 2.53702 10.0169C2.56169 9.95682 2.59796 9.90222 2.64375 9.85619L10.1438 2.3562C10.1903 2.30895 10.2457 2.27144 10.3069 2.24583C10.3681 2.22022 10.4337 2.20703 10.5 2.20703C10.5663 2.20703 10.632 2.22022 10.6931 2.24583C10.7543 2.27144 10.8097 2.30895 10.8563 2.3562L13.6438 5.1437C13.691 5.19022 13.7285 5.24568 13.7541 5.30684C13.7797 5.368 13.7929 5.43364 13.7929 5.49995C13.7929 5.56625 13.7797 5.63189 13.7541 5.69305C13.7285 5.75421 13.691 5.80967 13.6438 5.85619L6.14375 13.3562C6.09773 13.402 6.04313 13.4383 5.98307 13.4629C5.92301 13.4876 5.85868 13.5002 5.79375 13.4999V13.4999Z"
+                                                stroke="#228FF3" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M8.5 4L12 7.5" stroke="#228FF3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="text-sm font-medium text-primary">Edit</span>
+                                    </button>
+                                </div>
                             </div>
-                            
+
                             <div class="p-6 bg-text-10">
                                 <div class="flex justify-between mb-4">
                                     <h2 class="text-text-600 font-bold text-base">Fedrick Jones</h2>
-                                    <div class="action-btns flex gap-x-3 items-center">
-                                        <button class="delete-billing-info flex items-center gap-x-[10px] py-2 px-5 border border-danger rounded-[4px]">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M13.5 3.5H2.5" stroke="#E8423C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M6.5 6.5V10.5" stroke="#E8423C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M9.5 6.5V10.5" stroke="#E8423C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M12.5 3.5V13C12.5 13.1326 12.4473 13.2598 12.3536 13.3536C12.2598 13.4473 12.1326 13.5 12 13.5H4C3.86739 13.5 3.74021 13.4473 3.64645 13.3536C3.55268 13.2598 3.5 13.1326 3.5 13V3.5" stroke="#E8423C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M10.5 3.5V2.5C10.5 2.23478 10.3946 1.98043 10.2071 1.79289C10.0196 1.60536 9.76522 1.5 9.5 1.5H6.5C6.23478 1.5 5.98043 1.60536 5.79289 1.79289C5.60536 1.98043 5.5 2.23478 5.5 2.5V3.5" stroke="#E8423C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <div class="action-btns gap-x-3 items-center hidden sm:flex md:hidden lg:flex">
+                                        <button
+                                            class="delete-billing-info flex items-center gap-x-[10px] py-2 px-5 border border-danger rounded-[4px]">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.5 3.5H2.5" stroke="#E8423C" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M6.5 6.5V10.5" stroke="#E8423C" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M9.5 6.5V10.5" stroke="#E8423C" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M12.5 3.5V13C12.5 13.1326 12.4473 13.2598 12.3536 13.3536C12.2598 13.4473 12.1326 13.5 12 13.5H4C3.86739 13.5 3.74021 13.4473 3.64645 13.3536C3.55268 13.2598 3.5 13.1326 3.5 13V3.5"
+                                                    stroke="#E8423C" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M10.5 3.5V2.5C10.5 2.23478 10.3946 1.98043 10.2071 1.79289C10.0196 1.60536 9.76522 1.5 9.5 1.5H6.5C6.23478 1.5 5.98043 1.60536 5.79289 1.79289C5.60536 1.98043 5.5 2.23478 5.5 2.5V3.5"
+                                                    stroke="#E8423C" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
                                             </svg>
                                             <span class="text-sm font-medium text-danger">Delete</span>
                                         </button>
-                                        <button class="edit-billing flex items-center gap-x-[10px] py-2 px-5 border border-primary rounded-[4px]">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.79375 13.4999H3C2.86739 13.4999 2.74022 13.4473 2.64645 13.3535C2.55268 13.2597 2.5 13.1326 2.5 12.9999V10.2062C2.49978 10.1413 2.51236 10.0769 2.53702 10.0169C2.56169 9.95682 2.59796 9.90222 2.64375 9.85619L10.1438 2.3562C10.1903 2.30895 10.2457 2.27144 10.3069 2.24583C10.3681 2.22022 10.4337 2.20703 10.5 2.20703C10.5663 2.20703 10.632 2.22022 10.6931 2.24583C10.7543 2.27144 10.8097 2.30895 10.8563 2.3562L13.6438 5.1437C13.691 5.19022 13.7285 5.24568 13.7541 5.30684C13.7797 5.368 13.7929 5.43364 13.7929 5.49995C13.7929 5.56625 13.7797 5.63189 13.7541 5.69305C13.7285 5.75421 13.691 5.80967 13.6438 5.85619L6.14375 13.3562C6.09773 13.402 6.04313 13.4383 5.98307 13.4629C5.92301 13.4876 5.85868 13.5002 5.79375 13.4999V13.4999Z" stroke="#228FF3" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M8.5 4L12 7.5" stroke="#228FF3" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>    
+                                        <button
+                                            class="edit-billing flex items-center gap-x-[10px] py-2 px-5 border border-primary rounded-[4px]">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M5.79375 13.4999H3C2.86739 13.4999 2.74022 13.4473 2.64645 13.3535C2.55268 13.2597 2.5 13.1326 2.5 12.9999V10.2062C2.49978 10.1413 2.51236 10.0769 2.53702 10.0169C2.56169 9.95682 2.59796 9.90222 2.64375 9.85619L10.1438 2.3562C10.1903 2.30895 10.2457 2.27144 10.3069 2.24583C10.3681 2.22022 10.4337 2.20703 10.5 2.20703C10.5663 2.20703 10.632 2.22022 10.6931 2.24583C10.7543 2.27144 10.8097 2.30895 10.8563 2.3562L13.6438 5.1437C13.691 5.19022 13.7285 5.24568 13.7541 5.30684C13.7797 5.368 13.7929 5.43364 13.7929 5.49995C13.7929 5.56625 13.7797 5.63189 13.7541 5.69305C13.7285 5.75421 13.691 5.80967 13.6438 5.85619L6.14375 13.3562C6.09773 13.402 6.04313 13.4383 5.98307 13.4629C5.92301 13.4876 5.85868 13.5002 5.79375 13.4999V13.4999Z"
+                                                    stroke="#228FF3" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8.5 4L12 7.5" stroke="#228FF3" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
                                             <span class="text-sm font-medium text-primary">Edit</span>
                                         </button>
                                     </div>
@@ -922,77 +1205,123 @@
                                 <p class="text-text-600 font-medium text-sm">Company : Digital vision</p>
                                 <p class="text-text-600 font-medium text-sm mt-2">Email : richard@gmail.com</p>
                                 <p class="text-text-600 font-medium text-sm mt-2">VAT No. FRB12345678</p>
+                                <div class="action-btns gap-x-3 items-center flex sm:hidden md:flex lg:hidden mt-4">
+                                    <button
+                                        class="delete-billing-info flex items-center gap-x-[10px] py-2 px-5 border border-danger rounded-[4px]">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.5 3.5H2.5" stroke="#E8423C" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M6.5 6.5V10.5" stroke="#E8423C" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M9.5 6.5V10.5" stroke="#E8423C" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M12.5 3.5V13C12.5 13.1326 12.4473 13.2598 12.3536 13.3536C12.2598 13.4473 12.1326 13.5 12 13.5H4C3.86739 13.5 3.74021 13.4473 3.64645 13.3536C3.55268 13.2598 3.5 13.1326 3.5 13V3.5"
+                                                stroke="#E8423C" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M10.5 3.5V2.5C10.5 2.23478 10.3946 1.98043 10.2071 1.79289C10.0196 1.60536 9.76522 1.5 9.5 1.5H6.5C6.23478 1.5 5.98043 1.60536 5.79289 1.79289C5.60536 1.98043 5.5 2.23478 5.5 2.5V3.5"
+                                                stroke="#E8423C" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="text-sm font-medium text-danger">Delete</span>
+                                    </button>
+                                    <button
+                                        class="edit-billing flex items-center gap-x-[10px] py-2 px-5 border border-primary rounded-[4px]">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.79375 13.4999H3C2.86739 13.4999 2.74022 13.4473 2.64645 13.3535C2.55268 13.2597 2.5 13.1326 2.5 12.9999V10.2062C2.49978 10.1413 2.51236 10.0769 2.53702 10.0169C2.56169 9.95682 2.59796 9.90222 2.64375 9.85619L10.1438 2.3562C10.1903 2.30895 10.2457 2.27144 10.3069 2.24583C10.3681 2.22022 10.4337 2.20703 10.5 2.20703C10.5663 2.20703 10.632 2.22022 10.6931 2.24583C10.7543 2.27144 10.8097 2.30895 10.8563 2.3562L13.6438 5.1437C13.691 5.19022 13.7285 5.24568 13.7541 5.30684C13.7797 5.368 13.7929 5.43364 13.7929 5.49995C13.7929 5.56625 13.7797 5.63189 13.7541 5.69305C13.7285 5.75421 13.691 5.80967 13.6438 5.85619L6.14375 13.3562C6.09773 13.402 6.04313 13.4383 5.98307 13.4629C5.92301 13.4876 5.85868 13.5002 5.79375 13.4999V13.4999Z"
+                                                stroke="#228FF3" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M8.5 4L12 7.5" stroke="#228FF3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="text-sm font-medium text-primary">Edit</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- transactions -->
-                    <div class="w-[30%] p-10 bg-white rounded-[20px]">
-                        <h5 class="text-[24px] font-semibold text-text-500">Billing Information</h5>
+                    <div class="w-full xl:w-[50%] 2xl:w-[30%] p-4 sm:p-10 bg-white rounded-[20px]">
+                        <h5 class="text-base sm:text-[24px] font-semibold text-text-500">Billing Information</h5>
 
                         <!-- Newest  -->
-                        <div class="newest  mt-6">
-                            <h4 class="text-text-50 text-[22px] font-medium">Newest</h4>
-                            <div class="mt-6 flex items-center justify-between">
+                        <div class="newest mt-6">
+                            <h4 class="text-text-50 text-base sm:text-[22px] font-medium">Newest</h4>
+                            <div class="mt-2 sm:mt-6 flex items-center justify-between">
                                 <div class="flex items-center gap-x-3">
-                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="20" cy="20" r="19" fill="white" stroke="#F43E3E" stroke-width="2"/>
-                                        <path d="M13.75 17.5L20 23.75L26.25 17.5" stroke="#F43E3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <svg class="w-6 sm:w-10 h-6 sm:h-10" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="19" fill="white" stroke="#F43E3E" stroke-width="2" />
+                                        <path d="M13.75 17.5L20 23.75L26.25 17.5" stroke="#F43E3E" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                     <div class="">
-                                        <p class="text-text-400 text-base font-semibold">Netflix</p>
-                                        <p class="text-sm text-text-100">27 March 2020, at 12:30</p>
+                                        <p class="text-text-400 text-sm sm:text-base font-semibold">Netflix</p>
+                                        <p class="text-xs sm:text-sm text-text-100">27 March 2020, at 12:30</p>
                                     </div>
                                 </div>
-                                <p class="text-base font-bold text-danger">- $1000.00</p>
+                                <p class="text-xs sm:text-base font-medium sm:font-bold text-danger">- $1000.00</p>
                             </div>
-                      
+
                             <div class="mt-6 flex items-center justify-between">
                                 <div class="flex items-center gap-x-3">
-                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="20" cy="20" r="19" transform="rotate(-180 20 20)" fill="white" stroke="#01B574" stroke-width="2"/>
-                                        <path d="M13.75 22.5L20 16.25L26.25 22.5" stroke="#01B574" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>   
+                                    <svg class="w-6 sm:w-10 h-6 sm:h-10" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="19" transform="rotate(-180 20 20)" fill="white"
+                                            stroke="#01B574" stroke-width="2" />
+                                        <path d="M13.75 22.5L20 16.25L26.25 22.5" stroke="#01B574" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
                                     <div class="">
-                                        <p class="text-text-400 text-base font-semibold">Apple</p>
-                                        <p class="text-sm text-text-100">27 March 2020, at 12:30</p>
+                                        <p class="text-text-400 text-sm sm:text-base font-semibold">Apple</p>
+                                        <p class="text-xs sm:text-sm text-text-100">27 March 2020, at 12:30</p>
                                     </div>
                                 </div>
-                                <p class="text-base font-bold text-success">+$1500.00</p>
+                                <p class="text-xs sm:text-base font-medium sm:font-bold text-success">+$1500.00</p>
                             </div>
                         </div>
 
-                         <!-- Newest  -->
-                         <div class="newest  mt-6">
-                            <h4 class="text-text-50 text-[22px] font-medium">Yesterday</h4>
-                            <div class="mt-6 flex items-center justify-between">
+                        <!-- Newest  -->
+                        <div class="newest  mt-6">
+                            <h4 class="text-text-50 text-base sm:text-[22px] font-medium">Yesterday</h4>
+                            <div class="mt-2 sm:mt-6 flex items-center justify-between">
                                 <div class="flex items-center gap-x-3">
-                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="20" cy="20" r="19" transform="rotate(-180 20 20)" fill="white" stroke="#01B574" stroke-width="2"/>
-                                        <path d="M13.75 22.5L20 16.25L26.25 22.5" stroke="#01B574" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg> 
+                                    <svg class="w-6 sm:w-10 h-6 sm:h-10" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="19" transform="rotate(-180 20 20)" fill="white"
+                                            stroke="#01B574" stroke-width="2" />
+                                        <path d="M13.75 22.5L20 16.25L26.25 22.5" stroke="#01B574" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
                                     <div class="">
-                                        <p class="text-text-400 text-base font-semibold">Stripe</p>
+                                        <p class="ext-text-400 text-sm sm:text-base font-semibold">Stripe</p>
                                         <p class="text-sm text-text-100">27 March 2020, at 12:30</p>
                                     </div>
                                 </div>
-                                <p class="text-base font-bold text-danger">- $1000.00</p>
+                                <p class="text-xs sm:text-base font-medium sm:font-bold text-danger">- $1000.00</p>
                             </div>
-                      
+
                             <div class="mt-6 flex items-center justify-between">
                                 <div class="flex items-center gap-x-3">
-                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="20" cy="20" r="19" transform="rotate(-180 20 20)" fill="white" stroke="#01B574" stroke-width="2"/>
-                                        <path d="M13.75 22.5L20 16.25L26.25 22.5" stroke="#01B574" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>   
+                                    <svg class="w-6 sm:w-10 h-6 sm:h-10" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="20" cy="20" r="19" transform="rotate(-180 20 20)" fill="white"
+                                            stroke="#01B574" stroke-width="2" />
+                                        <path d="M13.75 22.5L20 16.25L26.25 22.5" stroke="#01B574" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
                                     <div class="">
-                                        <p class="text-text-400 text-base font-semibold">Hubspot</p>
+                                        <p class="ext-text-400 text-sm sm:text-base font-semibold">Hubspot</p>
                                         <p class="text-sm text-text-100">27 March 2020, at 12:30</p>
                                     </div>
                                 </div>
-                                <p class="text-base font-bold text-success">+$1500.00</p>
+                                <p class="text-xs sm:text-base font-medium sm:font-bold text-success">+$1500.00</p>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1009,21 +1338,30 @@
 
     <div id="card-modals-bg" class="fixed h-screen w-full top-0 left-0 flex items-center justify-center z-40 hidden">
         <div id="card-popup-bg" class="fixed h-screen w-full top-0 left-0 bg-black/25 z-50"></div>
-   
-        <div id="" class="w-[566px] bg-white p-6 rounded-[8px] relative z-[60]"> 
+
+        <div id="" class="w-[566px] bg-white p-6 rounded-[8px] relative z-[60]">
 
             <h4 class="text-[24px] font-semibold text-text-400">Add New Card</h4>
 
             <!-- form  -->
             <div class="mt-6 flex flex-col gap-y-6">
-                <input class="h-14 w-full border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600" type="text" name="" id="" placeholder="Card Holder Name">
-                <input class="h-14 w-full border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600" type="text" name="" id="" placeholder="Card Number">
+                <input
+                    class="h-14 w-full border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600"
+                    type="text" name="" id="" placeholder="Card Holder Name">
+                <input
+                    class="h-14 w-full border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600"
+                    type="text" name="" id="" placeholder="Card Number">
                 <div class="flex gap-x-4">
-                    <input class="h-14 w-1/2 border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600" type="text" name="" id="" placeholder="MM/YY">
-                    <input class="h-14 w-1/2 border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600" type="text" name="" id="" placeholder="CVV">
+                    <input
+                        class="h-14 w-1/2 border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600"
+                        type="text" name="" id="" placeholder="MM/YY">
+                    <input
+                        class="h-14 w-1/2 border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600"
+                        type="text" name="" id="" placeholder="CVV">
                 </div>
                 <div class="flex justify-end gap-x-4 mt-4">
-                    <button id="cancel-card-popup" class="px-10 py-[11px] border border-text-300 rounded-[4px] text-sm">cancel</button>
+                    <button id="cancel-card-popup"
+                        class="px-10 py-[11px] border border-text-300 rounded-[4px] text-sm">cancel</button>
                     <button class="px-10 py-3 border bg-primary text-white rounded-[4px] text-sm">Add Card</button>
                 </div>
             </div>
@@ -1033,21 +1371,30 @@
     <!-- edit payment  -->
     <div id="edit-payment" class="fixed h-screen w-full top-0 left-0 flex items-center justify-center z-40 hidden">
         <div id="edit-payment-bg" class="fixed h-screen w-full top-0 left-0 bg-black/25 z-50"></div>
-   
-        <div id="" class="w-[566px] bg-white p-6 rounded-[8px] relative z-[60]"> 
+
+        <div id="" class="w-[566px] bg-white p-6 rounded-[8px] relative z-[60]">
 
             <h4 class="text-[24px] font-semibold text-text-400">Edit Payment Method</h4>
 
             <!-- form  -->
             <div class="mt-6 flex flex-col gap-y-6">
-                <input class="h-14 w-full border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600" type="text" name="" id="" placeholder="Robert Hook">
-                <input class="h-14 w-full border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600" type="text" name="" id="" placeholder="1254 1251 1254 4575">
+                <input
+                    class="h-14 w-full border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600"
+                    type="text" name="" id="" placeholder="Robert Hook">
+                <input
+                    class="h-14 w-full border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600"
+                    type="text" name="" id="" placeholder="1254 1251 1254 4575">
                 <div class="flex gap-x-4">
-                    <input class="h-14 w-1/2 border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600" type="text" name="" id="" placeholder="12/23">
-                    <input class="h-14 w-1/2 border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600" type="text" name="" id="" placeholder="***">
+                    <input
+                        class="h-14 w-1/2 border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600"
+                        type="text" name="" id="" placeholder="12/23">
+                    <input
+                        class="h-14 w-1/2 border border-text-50 placeholder:text-text-600 text-base px-4 rounded-[4px] text-text-600"
+                        type="text" name="" id="" placeholder="***">
                 </div>
                 <div class="flex justify-end gap-x-4 mt-4">
-                    <button id="cancel-edit-card" class="px-10 py-[11px] border border-text-300 rounded-[4px] text-sm">cancel</button>
+                    <button id="cancel-edit-card"
+                        class="px-10 py-[11px] border border-text-300 rounded-[4px] text-sm">cancel</button>
                     <button class="px-10 py-3 border bg-primary text-white rounded-[4px] text-sm">Save</button>
                 </div>
             </div>
@@ -1058,14 +1405,17 @@
     <!-- delete modal  -->
     <div id="delete-modal" class="fixed h-screen w-full top-0 left-0 flex items-center justify-center z-40 hidden">
         <div id="edit-payment-bg" class="fixed h-screen w-full top-0 left-0 bg-black/25 z-50"></div>
-   
-        <div id="" class="w-[566px] bg-white p-6 rounded-[8px] relative z-[60]"> 
+
+        <div id="" class="w-[566px] bg-white p-6 rounded-[8px] relative z-[60]">
 
             <h4 class="text-[24px] font-semibold text-text-400">Are you sure you want to delete this?</h4>
-            <p class="text-xs font-semibold text-[#696F8C] mt-2">Once your delete this, There is no getting back. May sure your want to do this.</p>
+            <p class="text-xs font-semibold text-[#696F8C] mt-2">Once your delete this, There is no getting back. May
+                sure your want to do this.</p>
             <div class="flex justify-end gap-x-4 mt-6">
-                <button class="close-delete-modal px-10 py-[11px] border border-primary text-primary rounded-[4px] text-sm">cancel</button>
-                <button class="close-delete-modal px-10 py-3 border bg-danger text-white rounded-[4px] text-sm">Delete</button>
+                <button
+                    class="close-delete-modal px-10 py-[11px] border border-primary text-primary rounded-[4px] text-sm">cancel</button>
+                <button
+                    class="close-delete-modal px-10 py-3 border bg-danger text-white rounded-[4px] text-sm">Delete</button>
             </div>
         </div>
     </div>
@@ -1073,8 +1423,8 @@
     <!-- edit billing info  -->
     <div id="edit-billing" class="fixed h-screen w-full top-0 left-0 flex items-center justify-center z-40 hidden">
         <div id="edit-billing-bg" class="fixed h-screen w-full top-0 left-0 bg-black/25 z-50"></div>
-   
-        <div id="" class="w-[566px] bg-white p-6 rounded-[8px] relative z-[60]"> 
+
+        <div id="" class="w-[566px] bg-white p-6 rounded-[8px] relative z-[60]">
 
             <h4 class="text-[24px] font-semibold text-text-400">Edit Payment Method</h4>
 
@@ -1096,21 +1446,23 @@
                     <input class="w-full h-[56px] outline-none border p-4" type="text" value="FRB12345678">
                     <label class="text-base text-text-100">VAT NO</label>
                 </div>
-               
+
                 <div class="flex justify-end gap-x-4 mt-4">
-                    <button id="cancel-edit-billing" class="px-10 py-[11px] border border-text-300 rounded-[4px] text-sm">cancel</button>
+                    <button id="cancel-edit-billing"
+                        class="px-10 py-[11px] border border-text-300 rounded-[4px] text-sm">cancel</button>
                     <button class="px-10 py-3 border bg-primary text-white rounded-[4px] text-sm">Save</button>
                 </div>
             </div>
         </div>
     </div>
-    
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./../assets/js/custom/headerSidenav.js"></script> 
+    <script src="./../assets/js/custom/headerSidenav.js"></script>
     <script src="./../assets/js/custom/billing.js"></script>
-    
+
 </body>
+
 </html>
