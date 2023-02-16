@@ -221,22 +221,22 @@
                             <div id="application-menus" class="hidden">
                                 <ul class="ml-[12px]">
                                     <li>
-                                        <a href="./datatable.html" class="menu-style  menu-active-btn">
+                                        <a href="./datatable.html" class="menu-style">
                                             <span>
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="9" y="9" width="6" height="6" fill="#228FF3" />
+                                                    <rect x="9" y="9" width="6" height="6" fill="#757575"/>
                                                 </svg>
                                             </span>
                                             <span>Data Table</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="./calender.html" class="menu-style">
+                                        <a href="./calender.html" class="menu-style  menu-active-btn">
                                             <span>
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                    <rect x="9" y="9" width="6" height="6" fill="#228FF3"/>
                                                 </svg>
                                             </span>
                                             <span>Calender</span>
@@ -424,8 +424,8 @@
         <!-- right header and content   -->
         <aside class="right-aside bg-[#F5F5F5] md:ml-[280px] pb-10">
     
-             <!-- header  -->
-             <header class="h-10 sm:h-[76px] py-2 sm:py-4 md:pr-10 shadow-md bg-white fixed top-0 w-full md:w-[calc(100%-280px)] px-4 md:px-0 flex justify-between items-center z-[20]">
+            <!-- header  -->
+            <header class="h-10 sm:h-[76px] py-2 sm:py-4 md:pr-10 shadow-md bg-white fixed top-0 w-full md:w-[calc(100%-280px)] px-4 md:px-0 flex justify-between items-center z-[20]">
                 <!-- mobile menu btn -->
                 <div class="block md:hidden">
                     <button id="mobile-menu-trigger">
@@ -688,11 +688,11 @@
     
             <div class="main-content pt-14 sm:pt-32 mx-4 sm:mx-10">
     
-                <!-- breadcrumb -->
-                <div class="breadcrumb ">
+                 <!-- breadcrumb -->
+                 <div class="breadcrumb">
                     <ul class="text-sm flex flex-row gap-x-2 items-center">
                         <li>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            <svg class="w-[14px] sm:w-4 h-[14px] sm:h-4" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M13.6751 6.48171L8.67513 1.93796C8.49079 1.76931 8.24999 1.67578 8.00013 1.67578C7.75028 1.67578 7.50948 1.76931 7.32513 1.93796L2.32513 6.48171C2.22276 6.57537 2.141 6.6893 2.08505 6.81627C2.0291 6.94324 2.00018 7.08046 2.00013 7.21921V12.9755C1.99607 13.2276 2.08507 13.4723 2.25013 13.663C2.34381 13.7695 2.45922 13.8547 2.58858 13.9129C2.71795 13.9712 2.85827 14.001 3.00013 14.0005H6.00013C6.13274 14.0005 6.25992 13.9478 6.35369 13.854C6.44745 13.7602 6.50013 13.6331 6.50013 13.5005V10.5005C6.50013 10.3679 6.55281 10.2407 6.64658 10.1469C6.74035 10.0531 6.86753 10.0005 7.00013 10.0005H9.00013C9.13274 10.0005 9.25992 10.0531 9.35369 10.1469C9.44746 10.2407 9.50013 10.3679 9.50013 10.5005V13.5005C9.50013 13.6331 9.55281 13.7602 9.64658 13.854C9.74035 13.9478 9.86753 14.0005 10.0001 14.0005H13.0001C13.166 14.0019 13.3295 13.9611 13.4751 13.8817C13.6336 13.7954 13.766 13.6681 13.8584 13.513C13.9507 13.358 13.9997 13.1809 14.0001 13.0005V7.21921C14.0001 7.08046 13.9712 6.94324 13.9152 6.81627C13.8593 6.6893 13.7775 6.57537 13.6751 6.48171V6.48171Z"
@@ -700,23 +700,20 @@
                             </svg>
                         </li>
                         <li>
-                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.25 1.625L5.625 6L1.25 10.375" stroke="#575757" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                            <svg class="w-[14px] sm:w-4 h-[14px] sm:h-4" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.25 2.625L9.625 7L5.25 11.375" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </li>
-                        <li class="text-text-300">Application</li>
+                        <li class="text-text-300 text-[10px] sm:text-base">Application</li>
                         <li>
-                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.25 1.625L5.625 6L1.25 10.375" stroke="#757575" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                            <svg class="w-[12px] sm:w-4 h-[12px] sm:h-4" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.25 2.625L9.625 7L5.25 11.375" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </li>
-                        <li class="text-text-80">Calender</li>
+                        <li class="text-text-80 text-[10px] sm:text-base">Calendar</li>
                     </ul>
-                </div> 
+                </div>
+
                 
                 
                 <div class="mt-5 sm:mt-10 flex flex-col xl:flex-row items-start gap-6">

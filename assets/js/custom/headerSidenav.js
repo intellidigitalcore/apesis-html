@@ -36,22 +36,7 @@ $( ".show-dropdown" ).click(function() {
 
 $( "#mobile-menu-trigger" ).click(function() {
     $( "#menu-bar" ).toggle(50);
+    $("body").css("overflow","hidden");
 })
 
-// $( "#menu-bar" ).click(function() {
-//     $( "#menu-bar" ).toggle(100);
-//     // $(".dashboard").prop('disabled', true);
-   
-    
-// })
 
-// function toogleMenu(e){
-//     e.preventDefault();
-//     e.stopPropagation();
-    
-//     // $(".management").prop('disabled', true);
-//     $(".dashboard").unbind("click", toogleMenu);
-//     $( "#menu-bar" ).hide(100);
-//     gotoNext();
-// }
-// $( "#menu-bar" ).click(toogleMenu);

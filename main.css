@@ -208,11 +208,7 @@ input:checked + .slider:before {
   @apply !bg-success px-5 !outline-none !border-0 relative left-14;
 }
 .fc-prev-button.fc-button.fc-button-primary {
-  position: relative;
-  left: -83px;
-  background-color: white;
-  border: 0px;
-  box-shadow: none;
+  @apply relative left-[-70px] sm:left-[-83px] bg-white border-0 shadow-none;
 }
 .fc-icon-chevron-left::before {
   color: black;
@@ -265,7 +261,7 @@ input:checked + .slider:before {
 }
 
 .fc-today-button.fc-button.fc-button-primary{
-  @apply !text-[10px];
+  @apply !text-[10px] sm:!text-base;
 }
 
 /*============ 
