@@ -198,6 +198,8 @@ input:checked + .slider:before {
   @apply text-text-200 font-normal text-xs sm:text-sm py-[26px] px-4;
 }
 
+
+/* calender  */
 .fc-non-business {
   background-color: white !important;
 }
@@ -254,6 +256,17 @@ input:checked + .slider:before {
   @apply !bg-primary/20 text-text-400 border-none;
 }
 
+/* .fc-day.fc-day-past.fc-day-other.fc-daygrid-day{
+  height: 20px !important;
+} */
+
+.fc-toolbar-title{
+  @apply !text-base sm:!text-[24px] ; 
+}
+
+.fc-today-button.fc-button.fc-button-primary{
+  @apply !text-[10px];
+}
 
 /*============ 
   kanban  
