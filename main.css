@@ -199,7 +199,9 @@ input:checked + .slider:before {
 }
 
 
-/* calender  */
+/* =========== 
+  calender  
+==============*/
 .fc-non-business {
   background-color: white !important;
 }
@@ -252,9 +254,6 @@ input:checked + .slider:before {
   @apply !bg-primary/20 text-text-400 border-none;
 }
 
-/* .fc-day.fc-day-past.fc-day-other.fc-daygrid-day{
-  height: 20px !important;
-} */
 
 .fc-toolbar-title{
   @apply !text-base sm:!text-[24px] ; 
@@ -263,6 +262,16 @@ input:checked + .slider:before {
 .fc-today-button.fc-button.fc-button-primary{
   @apply !text-[10px] sm:!text-base;
 }
+
+/*===============
+ order-details  
+================*/
+.tracking-logo::after{
+  content: "";
+  @apply h-10 w-1 bg-success absolute top-10;
+}
+
+
 
 /*============ 
   kanban  

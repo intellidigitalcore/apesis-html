@@ -127,11 +127,11 @@
                                         </a>
                                     </li>
                                     <li >
-                                        <a href="./newuser.html" class="menu-style menu-active-btn">
+                                        <a href="./newuser.html" class="menu-style">
                                             <span>
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="9" y="9" width="6" height="6"fill="#228FF3"/>
+                                                    <rect x="9" y="9" width="6" height="6"  fill="#757575"/>
                                                 </svg>
                                             </span>
                                             <span>New User</span>
@@ -351,11 +351,11 @@
                             <div id="orders-menus" class="hidden">
                                 <ul class="ml-[12px]">
                                     <li >
-                                        <a href="./orderlist.html" class="menu-style">
+                                        <a href="./orderlist.html" class="menu-style menu-active-btn">
                                             <span>
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="9" y="9" width="6" height="6" fill="#757575" />
+                                                    <rect x="9" y="9" width="6" height="6"  fill="#228FF3"/>
                                                 </svg>
                                             </span>
                                             <span>Order List</span>
@@ -400,7 +400,7 @@
             </div>
         </aside>
 
-        <!-- h-[100vh] -->
+        <!-- content -->
         <aside class="right-aside bg-[#F5F5F5] md:ml-[280px] pb-10">
 
             <!-- header  -->
@@ -660,23 +660,23 @@
                                 <path d="M5.25 2.625L9.625 7L5.25 11.375" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </li>
-                        <li class="text-text-300 text-[10px] sm:text-base">Pages</li>
+                        <li class="text-text-300 text-[10px] sm:text-base">Orders</li>
                         <li>
                             <svg class="w-[12px] sm:w-4 h-[12px] sm:h-4" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.25 2.625L9.625 7L5.25 11.375" stroke="#575757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </li>
-                        <li class="text-text-80 text-[10px] sm:text-base">New user</li>
+                        <li class="text-text-80 text-[10px] sm:text-base">Order List</li>
                     </ul>
                 </div>
 
-                <div class="inner-content p-10 bg-white mt-10 rounded-[16px] w-full">
+                <div class="inner-content p-4 sm:p-10 bg-white mt-5 sm:mt-10 rounded-[16px] w-full">
 
-                    <div class="flex items-center justify-between">
-                        <h2 class="text-text-400 text-[24px] font-semibold">Order List</h2>
-                        <div class="flex gap-x-4 items-center">
+                    <div class="flex flex-col sm:flex-row md:flex-col lg:flex-row items-start sm:items-center md:items-start lg:items-center justify-between">
+                        <h2 class="text-text-400 text-base sm:text-[24px] font-semibold">Order List</h2>
+                        <div class="flex gap-x-4 items-center mt-3 sm:mt-0 md:mt-3 lg:mt-0">
                             <button
-                                class="flex items-center gap-x-2 border px-7 py-[11px] border-primary text-primary rounded-[4px]">
+                                class="flex items-center gap-x-2 border px-5 sm:px-7 py-[11px] border-primary text-primary rounded-[4px]">
                                 <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -684,10 +684,10 @@
                                         stroke="#228FF3" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-                                <span class="text-sm font-semibold">Filter</span>
+                                <span class="text-xs sm:text-sm font-semibold">Filter</span>
                             </button>
                             <button
-                                class="flex items-center gap-x-2 border px-7 py-3 text-white rounded-[4px] bg-primary">
+                                class="flex items-center gap-x-2 border px-5 sm:px-7 py-3 text-white rounded-[4px] bg-primary">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.375 6.875L8 9.5L10.625 6.875" stroke="white" stroke-width="2"
@@ -699,7 +699,7 @@
                                         stroke="white" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-                                <span class="text-sm font-semibold">Export CSV</span>
+                                <span class="text-xs sm:text-sm font-semibold">Export CSV</span>
                             </button>
                         </div>
                     </div>
@@ -720,13 +720,13 @@
 
 
                     <!-- table  -->
-                    <div class="mt-6 border-b pb-4">
-                        <table class="table-auto w-full">
+                    <div class="mt-6 border-b pb-4 overflow-x-auto w-full">
+                        <table class="table-auto w-full whitespace-nowrap">
                             <thead>
                                 <tr>
                                     <th class="text-left text-base font-semibold text-text-400 px-4 py-3">#ID</th>
-                                    <th class="text-left text-base font-semibold text-text-400 px-4 py-3">Products</th>
-                                    <th class="text-left text-base font-semibold text-text-400 px-4 py-3">Customer</th>
+                                    <th class="text-left text-base font-semibold text-text-400 px-4 py-3 min-w-[200px] table">Products</th>
+                                    <th class="text-left text-base font-semibold text-text-400 px-4 py-3 min-w-[180px] table]">Customer</th>
                                     <th class="text-left text-base font-semibold text-text-400 px-4 py-3">Date</th>
                                     <th class="text-left text-base font-semibold text-text-400 px-4 py-3">Status</th>
                                     <th class="text-left text-base font-semibold text-text-400 px-4 py-3">Revenue</th>
@@ -887,7 +887,7 @@
                     </div>
 
                     <!-- lower next page section  -->
-                    <div class="my-5 flex justify-between items-center">
+                    <div class="my-5 flex flex-col sm:flex-row md:flex-col lg:flex-row justify-between items-center gap-y-5">
                         <p class="text-text-100 text-base font-normal">Showing 1 to 10 of 12 entries</p>
                         <div class="">
                             <ul class="flex items-center gap-x-3">
