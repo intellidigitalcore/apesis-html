@@ -292,7 +292,7 @@ input:checked + .slider:before {
 
 .tox.tox-tinymce {
   height: 122px !important;
-  border: 1px solid #ebeaea;
+  border: 1px solid #c9c7c7 !important;
   border-radius: 4px !important;
   color: green !important;
 }
